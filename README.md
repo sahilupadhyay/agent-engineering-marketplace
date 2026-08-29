@@ -20,7 +20,7 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 `validate`, `node --test`, `node evals/run.mjs`, `node benchmarks/run.mjs`,
 shellcheck, and repo secret scan on every pull request and on pushes to `main`.
 
-Thirteen plugins ship in `.cursor-plugin/marketplace.json`:
+Fourteen plugins ship in `.cursor-plugin/marketplace.json`:
 
 | Plugin | Recommended tier | Status |
 | --- | --- | --- |
@@ -29,6 +29,7 @@ Thirteen plugins ship in `.cursor-plugin/marketplace.json`:
 | `git-workflow` | Default On | Shipped |
 | `code-quality` | Default On | Shipped |
 | `testing` | Default On | Shipped |
+| `session-closeout` | Default On | Shipped |
 | `cost-efficiency` | Default Off | Shipped |
 | `backend-node` | Default Off | Shipped |
 | `backend-python` | Default Off | Shipped |
@@ -39,7 +40,7 @@ Thirteen plugins ship in `.cursor-plugin/marketplace.json`:
 | `cloud-aws` | Default Off | Shipped |
 
 **Recommended installation today:** Engineering Core, Security Core, Git Workflow,
-Code Quality, Testing.
+Code Quality, Testing, Session Closeout.
 
 **Optional stack plugins:** Enable `backend-node`, `backend-python`, or
 `frontend-react` when your repository matches that stack (see
@@ -104,6 +105,7 @@ Cursor smoke testing. Team-marketplace import by URL works after the public flip
 - [Philosophy](docs/philosophy.md)
 - [Performance and efficiency](docs/performance.md)
 - [Installation](docs/installation.md)
+- [Catalog expansion roadmap](docs/roadmap/README.md)
 - [Eval harness](docs/evals.md)
 - [Behavioral benchmarks](docs/benchmarks.md)
 - [Marketplace submission](docs/marketplace-submit.md)

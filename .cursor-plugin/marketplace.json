@@ -98,6 +98,13 @@
       "description": "Glob-scoped AWS, Terraform, and CloudFormation guidance with deployment validation skills and destructive-command hooks.",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "session-closeout",
+      "source": "./plugins/session-closeout",
+      "description": "Always-on Agent-mode closeout: skills used, confidence, quality, security, and performance.",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }

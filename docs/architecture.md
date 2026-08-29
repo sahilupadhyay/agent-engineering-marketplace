@@ -59,26 +59,22 @@ plugin installs independently so developers load only what their stack needs.
 user choice for a language or framework. **Platform** plugins cover cloud,
 CI/CD, and deployment tooling.
 
-## Shipped today (Milestone 1)
+## Shipped today
 
 | Plugin | Recommended tier | Role |
 | --- | --- | --- |
 | `engineering-core` | Required | Task intake, evidence, minimal change, verification, context efficiency |
 | `security-core` | Required | Security rules + POSIX hooks |
 | `git-workflow` | Default On | Commit identity, branch/PR rules, review commands |
+| `code-quality` / `testing` / `session-closeout` | Default On | Quality, verification ladder, Agent-mode closeout |
+| Stack / cloud / integration plugins | Default Off | See [roadmap](roadmap/README.md) |
 
 Manifest: [`.cursor-plugin/marketplace.json`](../.cursor-plugin/marketplace.json).
 Tier metadata lives in each plugin's `plugin-meta.json` (see [tiers.md](tiers.md)).
 
-## Planned (Milestone 2+)
-
-| Plugin | Tier | Milestone |
-| --- | --- | --- |
-| `code-quality` | Default On | 2 |
-| `testing` | Default On | 2 |
-| `cost-efficiency` | Default Off | 2 |
-| Stack plugins (`backend-node`, `backend-python`, …) | Default Off | 3 |
-| `cloud-aws` | Default Off | 3 |
+Catalog expansion (HTML/CSS, Angular, Vue, Java, Go, databases, Docker, K8s, …)
+is tracked in [roadmap/README.md](roadmap/README.md). Do not fold those stacks
+into Required plugins.
 
 ## Quality harness
 

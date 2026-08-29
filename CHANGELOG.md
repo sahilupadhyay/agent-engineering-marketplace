@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- `session-closeout` plugin (default-on): Agent-mode closeout table for skills,
+  confidence, quality, security, and performance (self-assessed, not measured).
+- Catalog expansion roadmap under [docs/roadmap/](docs/roadmap/README.md)
+  (frontend, backend, data, observability, platform plugins as default-off).
 - Behavioral benchmark harness (`benchmarks/run.mjs`): scenario fixtures and
   metadata validation in CI; `--model` is opt-in and unwired so scores cannot
   be fabricated (Milestone 4, §20–21). See [docs/benchmarks.md](docs/benchmarks.md).

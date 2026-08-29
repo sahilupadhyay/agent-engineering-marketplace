@@ -1,0 +1,14 @@
+{
+  "id": "tier-default-on",
+  "plugin": "session-closeout",
+  "claim": "plugin-meta.json recommends default-on tier.",
+  "activation": "unknown",
+  "target": {
+    "file": "plugin-meta.json",
+    "section": "full"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "\"tier\"\\s*:\\s*\"default-on\""
+  }
+}
