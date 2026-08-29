@@ -50,5 +50,6 @@ claim fail CI — update eval cases when you change governed prose.
 
 ## Out of scope
 
-Model-backed lift tests, API keys, and network calls are not part of Milestone 1
-eval CI.
+Model-backed lift tests are **not** merge CI. Scenario metadata is validated
+by `node benchmarks/run.mjs` (see [benchmarks.md](benchmarks.md)). Passing
+`--model` is opt-in, unwired, and must not be used in CI.

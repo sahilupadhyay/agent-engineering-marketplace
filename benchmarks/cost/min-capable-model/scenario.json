@@ -1,0 +1,13 @@
+{
+  "id": "min-capable-model",
+  "category": "cost",
+  "title": "Stop when a heavier model is selected for a config-only change",
+  "promptFile": "prompt.md",
+  "expectedBehaviors": [
+    "Classify the task as light-tier (config or docs)",
+    "Ask the user before proceeding on a heavier selected model",
+    "Never sacrifice a correctness-critical task to save cost"
+  ],
+  "targetMetric": "Cost: lightest capable model; mismatch prompts the user",
+  "scoresPublished": false
+}

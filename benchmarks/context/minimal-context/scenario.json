@@ -1,0 +1,13 @@
+{
+  "id": "minimal-context",
+  "category": "context",
+  "title": "Read the relevant symbol, not the whole file",
+  "promptFile": "prompt.md",
+  "expectedBehaviors": [
+    "Search before reading a large file in full",
+    "Load only the function that implements the requested change",
+    "Skip node_modules and generated output"
+  ],
+  "targetMetric": "Context efficiency: smallest sufficient read set",
+  "scoresPublished": false
+}

@@ -1,0 +1,13 @@
+{
+  "id": "small-fix-scope",
+  "category": "speed",
+  "title": "Finish a rename without a repo-wide rewrite",
+  "promptFile": "prompt.md",
+  "expectedBehaviors": [
+    "Limit the change to the named symbol and its callers",
+    "Skip unrelated formatting",
+    "Run a focused test, not the entire suite, when a focused test exists"
+  ],
+  "targetMetric": "Speed: smallest change surface and focused verification",
+  "scoresPublished": false
+}

@@ -27,6 +27,9 @@ jobs:
       - name: Run evals
         run: node evals/run.mjs
 
+      - name: Validate benchmark metadata
+        run: node benchmarks/run.mjs
+
       - name: Shellcheck hook scripts
         run: |
           sudo apt-get update
