@@ -1,0 +1,16 @@
+---
+description: Match test effort to change risk and scope; avoid over- and under-testing.
+alwaysApply: true
+---
+
+# Test proportionality
+
+Scale test work to the change:
+
+- **Low risk** (copy, config comment, isolated typo): run existing tests; add a test only when it closes an obvious gap.
+- **Normal** (logic change, new branch, API tweak): add or update focused tests for the changed behavior.
+- **High risk** (auth, payments, data migration, security, concurrency): broaden coverage and edge cases.
+
+Do not write exhaustive suites for trivial fixes. Do not ship risky changes with only "looks fine."
+
+Prefer one focused test over a large speculative harness.

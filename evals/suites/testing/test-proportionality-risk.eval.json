@@ -1,0 +1,15 @@
+{
+  "id": "test-proportionality-risk",
+  "plugin": "testing",
+  "claim": "The test proportionality rule scales effort to change risk.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/020-test-proportionality.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "high risk|low risk|scale test",
+    "flags": "i"
+  }
+}

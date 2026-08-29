@@ -28,7 +28,7 @@ Four plugins ship in `.cursor-plugin/marketplace.json`:
 | `security-core` | Required | Shipped |
 | `git-workflow` | Default On | Shipped |
 | `code-quality` | Default On | Shipped |
-| `testing` | Default On | Milestone 2 |
+| `testing` | Default On | Shipped |
 | `cost-efficiency` | Default Off | Milestone 2 |
 | Stack / cloud plugins | Default Off | Milestone 3+ |
 

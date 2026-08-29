@@ -1,0 +1,14 @@
+---
+description: When to add, update, or run tests before claiming done.
+alwaysApply: true
+---
+
+# When to test
+
+Add or update tests when you change behavior, fix a bug, or add a feature users rely on.
+
+Locate existing test patterns and frameworks before writing new tests. Reuse helpers, fixtures, and naming conventions.
+
+Do not add tests for docs-only, comment-only, or formatting-only changes unless the user asks.
+
+Do not skip tests because the change looks small — check risk and existing coverage first.

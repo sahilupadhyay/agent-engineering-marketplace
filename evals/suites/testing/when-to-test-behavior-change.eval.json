@@ -1,0 +1,15 @@
+{
+  "id": "when-to-test-behavior-change",
+  "plugin": "testing",
+  "claim": "The when-to-test rule requires tests for behavior changes and bug fixes.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-when-to-test.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "fix a bug|change behavior|add or update tests",
+    "flags": "i"
+  }
+}
