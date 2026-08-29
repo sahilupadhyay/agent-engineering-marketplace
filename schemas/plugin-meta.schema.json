@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sahilupadhyay/agent-engineering-marketplace/schemas/plugin-meta.schema.json",
+  "title": "Plugin metadata",
+  "description": "Repository metadata beside .cursor-plugin/plugin.json. Cursor manifests reject unknown properties; tier and budgets live here.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tier"],
+  "properties": {
+    "tier": {
+      "type": "string",
+      "enum": ["required", "default-on", "default-off"],
+      "description": "Recommended install tier for team admins. Not a Cursor manifest field."
+    },
+    "contextBudget": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Maximum bytes of always-applied rule content for this plugin."
+    },
+    "stackTags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "pairings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rule", "skill"],
+        "properties": {
+          "rule": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Relative path to a rule file, for example rules/010-task-intake.mdc"
+          },
+          "skill": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Relative path to a skill directory or SKILL.md"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "tier": { "const": "required" } },
+        "required": ["tier"]
+      },
+      "then": {
+        "properties": {
+          "contextBudget": { "maximum": 4096 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "tier": { "const": "default-on" } },
+        "required": ["tier"]
+      },
+      "then": {
+        "properties": {
+          "contextBudget": { "maximum": 2048 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "tier": { "const": "default-off" } },
+        "required": ["tier"]
+      },
+      "then": {
+        "properties": {
+          "contextBudget": { "maximum": 0 }
+        }
+      }
+    }
+  ]
+}

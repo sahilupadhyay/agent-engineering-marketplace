@@ -32,6 +32,14 @@ Examples:
 
 Contributions are accepted under the existing MIT [LICENSE](LICENSE).
 
+## Authoring contract
+
+Plugin, rule, skill, command, and hook requirements live in
+[docs/authoring.md](docs/authoring.md). Recommended tiers and context budgets
+live in [docs/tiers.md](docs/tiers.md). JSON Schemas under [schemas/](schemas/)
+encode the same contract. Pull requests 3–5 will add a validator and CI; until
+then, this document and the PR checklist enforce the rules below.
+
 ## Hard rules for every later PR
 
 - No third-party runtime dependencies.
@@ -39,7 +47,10 @@ Contributions are accepted under the existing MIT [LICENSE](LICENSE).
 - Claims about Cursor behavior must cite a current docs URL.
 - Do not add `plugins/` or `.cursor-plugin/marketplace.json` until the
   designated plugin pull requests.
-- Skills must not use `alwaysApply`, `globs`, or `priority` (dead config).
+- Skills must not use `alwaysApply`, `globs`, or `priority` (dead config). See
+  [docs/authoring.md](docs/authoring.md).
+- Match tier and budget rules in [docs/tiers.md](docs/tiers.md) when adding
+  `plugin-meta.json`.
 
 ## Pull request checklist
 
