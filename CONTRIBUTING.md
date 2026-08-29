@@ -75,6 +75,19 @@ Plugin pull requests must include or update eval cases under
   `plugin-meta.json`.
 - Every marketplace-listed plugin must include a `README.md` at the plugin root.
 
+## MCP plugins
+
+No plugin in this repository ships `mcp.json` today. Before adding one, read
+[docs/mcp-governance.md](docs/mcp-governance.md) and complete this checklist in
+the pull request description:
+
+- [ ] Skill-only workflow is insufficient (explain why)
+- [ ] Server source is pinned and team-approved
+- [ ] No secrets or credentials in committed files
+- [ ] Plugin README documents connection, data flows, and disable path
+- [ ] Eval suite updated; hooks added if MCP execution is risky
+- [ ] `SECURITY.md` updated when credentials or PII are involved
+
 ## Pull request checklist
 
 Match the items in [`.github/pull_request_template.md`](.github/pull_request_template.md):
