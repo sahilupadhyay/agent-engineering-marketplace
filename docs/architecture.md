@@ -95,5 +95,5 @@ See [evals.md](evals.md) for honest limits on what evals can prove.
 - **Per-plugin install** — never one monolithic plugin for all stacks.
 - **Zero runtime npm dependencies** — Node 20+ only for tooling.
 - **Skills over bundled MCP servers** for integrations unless governance
-  requirements change (see future [mcp-governance.md](mcp-governance.md)).
+  requirements change (see [mcp-governance.md](mcp-governance.md)).
 - **Recommended tiers are documentation**, not enforced Cursor dashboard settings.
