@@ -1,3 +1,4 @@
+# shellcheck shell=sh
 # Shared POSIX sh helpers for security-core hooks.
 
 hook_read_stdin() {
