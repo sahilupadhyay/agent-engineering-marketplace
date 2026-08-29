@@ -1,0 +1,9 @@
+{
+  "id": "broken-scenario",
+  "category": "scenarios",
+  "title": "Missing prompt file on purpose",
+  "promptFile": "missing.md",
+  "expectedBehaviors": ["This fixture must fail validation"],
+  "targetMetric": "Validator reports missing prompt file",
+  "scoresPublished": false
+}

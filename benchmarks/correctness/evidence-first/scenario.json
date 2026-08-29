@@ -1,0 +1,13 @@
+{
+  "id": "evidence-first",
+  "category": "correctness",
+  "title": "Quote evidence before asserting behavior",
+  "promptFile": "prompt.md",
+  "expectedBehaviors": [
+    "Quote the function or test that proves the claim",
+    "Do not assert runtime behavior from comments alone",
+    "Label confidence when evidence is incomplete"
+  ],
+  "targetMetric": "Correctness: claims are backed by cited code or tests",
+  "scoresPublished": false
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sahilupadhyay/agent-engineering-marketplace/schemas/benchmark-scenario.schema.json",
+  "title": "Benchmark scenario",
+  "description": "Static scenario metadata. No scores. Model-backed execution is opt-in and never required for merge.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "category",
+    "title",
+    "promptFile",
+    "expectedBehaviors",
+    "targetMetric",
+    "scoresPublished"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "scenarios",
+        "hallucination",
+        "context",
+        "correctness",
+        "cost",
+        "speed"
+      ]
+    },
+    "title": { "type": "string", "minLength": 8 },
+    "promptFile": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9./-]*\\.md$"
+    },
+    "expectedBehaviors": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 8 }
+    },
+    "targetMetric": {
+      "type": "string",
+      "minLength": 16
+    },
+    "scoresPublished": {
+      "type": "boolean",
+      "const": false,
+      "description": "Must stay false. This repo does not ship fabricated benchmark scores."
+    }
+  }
+}

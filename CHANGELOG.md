@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Behavioral benchmark harness (`benchmarks/run.mjs`): scenario fixtures and
+  metadata validation in CI; `--model` is opt-in and unwired so scores cannot
+  be fabricated (Milestone 4, §20–21). See [docs/benchmarks.md](docs/benchmarks.md).
+- Marketplace submission checklist ([docs/marketplace-submit.md](docs/marketplace-submit.md));
+  listing remains blocked until the repository is public (Milestone 4, §36).
 - Integration plugins `jira-workflow`, `diagram-workflow`, and `api-docs` (default-off
   tier, skills-only, no bundled `mcp.json`, eval suites) (Milestone 3, §11).
 - `cloud-aws` plugin (default-off tier, glob-scoped rules, deployment skills,

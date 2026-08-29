@@ -1,0 +1,13 @@
+{
+  "id": "complex-refactor",
+  "category": "scenarios",
+  "title": "Extract a helper only when duplication is proven",
+  "promptFile": "prompt.md",
+  "expectedBehaviors": [
+    "Show two call sites that share behavior before extracting",
+    "Keep public APIs unchanged unless the user asked",
+    "Run existing tests after the extract"
+  ],
+  "targetMetric": "Refactor only with evidence of duplication; no speculative cleanup",
+  "scoresPublished": false
+}

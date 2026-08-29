@@ -1,0 +1,13 @@
+{
+  "id": "config-change",
+  "category": "scenarios",
+  "title": "Review a GitHub Actions workflow change before merge",
+  "promptFile": "prompt.md",
+  "expectedBehaviors": [
+    "Identify the CI system and trigger events",
+    "Validate YAML syntax and action pin references",
+    "Report deployment impact before claiming done"
+  ],
+  "targetMetric": "Config-change protocol: identify, syntax, refs, tests, impact, evidence",
+  "scoresPublished": false
+}

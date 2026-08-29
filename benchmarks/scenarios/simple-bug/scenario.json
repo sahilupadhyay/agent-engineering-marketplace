@@ -1,0 +1,13 @@
+{
+  "id": "simple-bug",
+  "category": "scenarios",
+  "title": "Reproduce then fix a one-line off-by-one",
+  "promptFile": "prompt.md",
+  "expectedBehaviors": [
+    "Cite the failing test or reproduction before editing",
+    "Change only the code required to pass the reproduction",
+    "Run the focused test after the fix"
+  ],
+  "targetMetric": "Correct smallest-scope fix with evidence; no drive-by refactors",
+  "scoresPublished": false
+}

@@ -6,7 +6,7 @@ locally by `node scripts/validate.mjs`.
 CI runs the same checks on every pull request. Run them locally before pushing:
 
 ```bash
-node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs
+node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs && node benchmarks/run.mjs
 ```
 
 ## Branching

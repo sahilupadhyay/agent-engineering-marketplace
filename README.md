@@ -17,8 +17,8 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 ## Status
 
 **Milestone 1 complete** (pending public visibility flip). GitHub Actions runs
-`validate`, `node --test`, `node evals/run.mjs`, shellcheck, and repo secret scan
-on every pull request and on pushes to `main`.
+`validate`, `node --test`, `node evals/run.mjs`, `node benchmarks/run.mjs`,
+shellcheck, and repo secret scan on every pull request and on pushes to `main`.
 
 Thirteen plugins ship in `.cursor-plugin/marketplace.json`:
 
@@ -62,11 +62,17 @@ GitHub settings.
 After clone (Node 20+):
 
 ```bash
-node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs
+node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs && node benchmarks/run.mjs
 ./scripts/link-local.sh   # optional local smoke test
 ```
 
-See [docs/evals.md](docs/evals.md) and [docs/installation.md](docs/installation.md).
+See [docs/evals.md](docs/evals.md), [docs/benchmarks.md](docs/benchmarks.md),
+and [docs/installation.md](docs/installation.md).
+
+## Benchmark targets (no scores)
+
+Qualitative targets live in [docs/benchmarks.md](docs/benchmarks.md). CI runs
+`node benchmarks/run.mjs` (metadata only). There are **no published pass rates**.
 
 ## Why plugins, not a flat skill tree
 
@@ -99,6 +105,8 @@ Cursor smoke testing. Team-marketplace import by URL works after the public flip
 - [Performance and efficiency](docs/performance.md)
 - [Installation](docs/installation.md)
 - [Eval harness](docs/evals.md)
+- [Behavioral benchmarks](docs/benchmarks.md)
+- [Marketplace submission](docs/marketplace-submit.md)
 - [Authoring contract](docs/authoring.md)
 - [MCP governance](docs/mcp-governance.md)
 - [Release policy](docs/release.md)
