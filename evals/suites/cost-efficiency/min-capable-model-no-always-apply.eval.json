@@ -1,0 +1,14 @@
+{
+  "id": "min-capable-model-no-always-apply",
+  "plugin": "cost-efficiency",
+  "claim": "min-capable-model rule must not set alwaysApply true on default-off tier.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-min-capable-model.mdc",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "notRegex",
+    "pattern": "alwaysApply:\\s*true"
+  }
+}
