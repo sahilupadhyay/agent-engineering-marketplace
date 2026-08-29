@@ -1,5 +1,11 @@
 {
   "tier": "required",
   "contextBudget": 4096,
-  "stackTags": ["engineering"]
+  "stackTags": ["engineering"],
+  "pairings": [
+    {
+      "rule": "rules/070-config-change-trigger.mdc",
+      "skill": "skills/config-change-review/SKILL.md"
+    }
+  ]
 }

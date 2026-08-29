@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- `config-change-review` skill and glob-scoped `070-config-change-trigger.mdc` with
+  pairing and eval cases (Milestone 2, §24).
 - `engineering-core` rule `060-human-escalation.mdc` with eval cases for banner,
   severity levels, and no-auto-proceed (Milestone 2, §23).
 - Documentation pack: [docs/architecture.md](docs/architecture.md),

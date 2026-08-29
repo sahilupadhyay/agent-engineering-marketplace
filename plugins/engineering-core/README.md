@@ -18,6 +18,13 @@ setting.
 | `040-verification.mdc` | Inspect diff and run focused checks before done. |
 | `050-context-efficiency.mdc` | Search and read narrowly; avoid context dumps. |
 | `060-human-escalation.mdc` | Standard banner for consequential human decisions. |
+| `070-config-change-trigger.mdc` | Glob-scoped trigger for config-change-review skill. |
+
+## Skills
+
+| Skill | Summary |
+| --- | --- |
+| `config-change-review` | Review CI, infra, env, and dependency manifest changes. |
 
 ## Context budget
 

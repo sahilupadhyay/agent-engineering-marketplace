@@ -1,0 +1,10 @@
+---
+description: When editing CI, infra, env, or dependency config, run config-change-review.
+globs: ["**/.github/**", "**/Dockerfile*", "**/docker-compose*.yml", "**/docker-compose*.yaml", "**/*.tf", "**/helm/**", "**/k8s/**", "**/kubernetes/**", "**/.env*", "**/package.json", "**/pyproject.toml", "**/go.mod", "**/pom.xml", "**/Cargo.toml"]
+---
+
+# Config change trigger
+
+When these paths change, load the `config-change-review` skill before claiming done.
+
+Follow: identify system → validate syntax → validate references → validate tests/build → deployment impact → report verified evidence.

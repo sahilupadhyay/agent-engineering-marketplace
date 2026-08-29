@@ -1,0 +1,15 @@
+{
+  "id": "config-change-skill-use-when",
+  "plugin": "engineering-core",
+  "claim": "The config-change-review skill description includes a Use when trigger.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/config-change-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Use when",
+    "flags": "i"
+  }
+}
