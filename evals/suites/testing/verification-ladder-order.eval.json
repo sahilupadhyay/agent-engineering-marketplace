@@ -1,0 +1,15 @@
+{
+  "id": "verification-ladder-order",
+  "plugin": "testing",
+  "claim": "The verification ladder lists syntax, typecheck, lint, tests, and build in order.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/030-verification-ladder.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Syntax.*Typecheck.*Lint.*Tests.*Build",
+    "flags": "is"
+  }
+}
