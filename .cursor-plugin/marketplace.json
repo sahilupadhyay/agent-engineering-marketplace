@@ -37,6 +37,13 @@
       "license": "MIT"
     },
     {
+      "name": "testing",
+      "source": "./plugins/testing",
+      "description": "When to test, test proportionality, and the verification ladder before claiming done.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
       "name": "cost-efficiency",
       "source": "./plugins/cost-efficiency",
       "description": "Model selection and task triage for minimal capable model without sacrificing correctness.",

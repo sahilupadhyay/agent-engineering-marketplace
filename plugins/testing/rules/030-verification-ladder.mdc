@@ -1,0 +1,16 @@
+---
+description: Run available checks in order before claiming done — syntax through build.
+alwaysApply: true
+---
+
+# Verification ladder
+
+Before claiming done, run project checks in this order when available:
+
+1. **Syntax** — parse or compile errors first.
+2. **Typecheck** — static types before runtime tests.
+3. **Lint** — style and static analysis.
+4. **Tests** — focused unit or integration tests for the change.
+5. **Build** — package or deploy artifact when the repo defines one.
+
+Stop at the first failure; fix and rerun from that step. Skip steps the project does not define. Report what you ran and the outcome.
