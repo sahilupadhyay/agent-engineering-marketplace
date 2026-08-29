@@ -1,0 +1,15 @@
+{
+  "id": "human-escalation-no-auto-proceed",
+  "plugin": "engineering-core",
+  "claim": "The human escalation rule forbids proceeding without human decision.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/060-human-escalation.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Do not proceed",
+    "ignoreCase": true
+  }
+}

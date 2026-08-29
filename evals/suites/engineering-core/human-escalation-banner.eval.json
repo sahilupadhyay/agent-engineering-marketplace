@@ -1,0 +1,15 @@
+{
+  "id": "human-escalation-banner",
+  "plugin": "engineering-core",
+  "claim": "The human escalation rule defines the HUMAN ACTION REQUIRED banner.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/060-human-escalation.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "HUMAN ACTION REQUIRED",
+    "ignoreCase": false
+  }
+}

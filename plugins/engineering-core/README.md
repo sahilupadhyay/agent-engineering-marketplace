@@ -17,6 +17,7 @@ setting.
 | `030-minimal-change.mdc` | Smallest correct change; no drive-by edits. |
 | `040-verification.mdc` | Inspect diff and run focused checks before done. |
 | `050-context-efficiency.mdc` | Search and read narrowly; avoid context dumps. |
+| `060-human-escalation.mdc` | Standard banner for consequential human decisions. |
 
 ## Context budget
 
