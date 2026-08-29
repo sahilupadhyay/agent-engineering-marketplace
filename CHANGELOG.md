@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- MCP governance policy ([docs/mcp-governance.md](docs/mcp-governance.md)) and
+  CONTRIBUTING checklist for future `mcp.json` plugins (Milestone 2, §32).
 - Validator README gate: marketplace-listed plugins must ship `README.md`
   (`scripts/lib/doccheck.mjs`, fixture `fail-missing-readme`).
 - `testing` plugin (default-on tier): when-to-test, test proportionality, and
