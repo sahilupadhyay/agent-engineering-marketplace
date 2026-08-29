@@ -25,7 +25,7 @@ giving it more capabilities.
 | Minimal context | `engineering-core` context-efficiency rule |
 | Minimal capable model | `cost-efficiency` plugin (Milestone 2, Default Off) |
 | Deterministic automation | Validator, eval harness, CI |
-| Human approval | `engineering-core` escalation rule (Milestone 2) |
+| Human approval | `engineering-core` escalation rule (`060-human-escalation.mdc`) |
 | Security and supply chain | `security-core` rules and hooks |
 
 See [architecture.md](architecture.md) for the full marketplace layout.

@@ -1,0 +1,21 @@
+---
+description: Escalate consequential decisions with a standard human-action banner.
+alwaysApply: true
+---
+
+# Human escalation
+
+When a decision is consequential and needs human approval before proceeding, lead with:
+
+🚨 HUMAN ACTION REQUIRED
+
+Include:
+
+- **Severity:** CRITICAL, HIGH, MEDIUM, LOW, or INFO
+- **Reason:** what triggered escalation
+- **Required decision:** what the human must choose
+- **Agent status:** whether the agent already applied the change (usually has NOT)
+
+Use for production impact, security, IAM, deployments, data loss risk, destructive git, breaking API changes, and ambiguous requirements.
+
+Do not proceed with the consequential action until the human decides.

@@ -1,0 +1,15 @@
+{
+  "id": "human-escalation-severity",
+  "plugin": "engineering-core",
+  "claim": "The human escalation rule lists all severity levels.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/060-human-escalation.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "CRITICAL.*HIGH.*MEDIUM.*LOW.*INFO",
+    "flags": "s"
+  }
+}
