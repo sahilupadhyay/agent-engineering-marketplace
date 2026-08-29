@@ -1,0 +1,16 @@
+---
+description: Branch, commit-message, and pull-request conventions for feature work.
+alwaysApply: true
+---
+
+# Branch and pull request
+
+Cut branches from updated `main`: `feat/<nn>-<slug>` (two-digit sequence, kebab-case). One concern per pull request.
+
+Use Conventional Commits: `feat|fix|docs|test|ci|chore: <subject>` with subject at or under 72 characters.
+
+Before opening a PR: run `git status`, review the full diff against the base branch, and read recent `git log` for message style. Run `node scripts/validate.mjs` and tests when plugin content changes.
+
+PR summaries should cover behavior change, tests run, and risks. Use `gh pr create` when the user asks; do not open a PR unless explicitly requested.
+
+For review feedback, use the `resolve-review-feedback` skill or `/fix`; keep the smallest safe diff.

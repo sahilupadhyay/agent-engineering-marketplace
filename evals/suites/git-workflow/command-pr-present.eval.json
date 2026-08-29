@@ -1,0 +1,14 @@
+{
+  "id": "command-pr-present",
+  "plugin": "git-workflow",
+  "claim": "pr command exists with name frontmatter.",
+  "activation": "unknown",
+  "target": {
+    "file": "commands/pr.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "name:\\s*pr"
+  }
+}

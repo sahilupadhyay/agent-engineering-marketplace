@@ -1,0 +1,14 @@
+{
+  "id": "command-fix-present",
+  "plugin": "git-workflow",
+  "claim": "fix command exists with name frontmatter.",
+  "activation": "unknown",
+  "target": {
+    "file": "commands/fix.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "name:\\s*fix"
+  }
+}

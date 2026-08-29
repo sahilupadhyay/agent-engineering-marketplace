@@ -1,0 +1,14 @@
+{
+  "id": "rules-no-dead-paths",
+  "plugin": "git-workflow",
+  "claim": "No rule body references a dead plugin path.",
+  "activation": "unknown",
+  "target": {
+    "allRules": true,
+    "section": "body"
+  },
+  "assert": {
+    "type": "pathsExist",
+    "root": "plugin"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "no-git-config",
+  "plugin": "git-workflow",
+  "claim": "A rule forbids changing git user identity via git config.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-commit-identity.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "git config|user\\.name|user\\.email",
+    "flags": "i"
+  }
+}

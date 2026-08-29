@@ -21,6 +21,13 @@
       "description": "Required security principles for every session.",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "git-workflow",
+      "source": "./plugins/git-workflow",
+      "description": "Git identity safety, branch/PR conventions, review commands, and review-feedback skill.",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }

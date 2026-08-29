@@ -1,0 +1,15 @@
+{
+  "id": "conventional-commits",
+  "plugin": "git-workflow",
+  "claim": "A rule references Conventional Commits-style subjects.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/020-branch-pr.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Conventional Commits",
+    "ignoreCase": true
+  }
+}
