@@ -1,0 +1,26 @@
+{
+  "name": "agent-engineering-marketplace",
+  "owner": {
+    "name": "Sahil Upadhyay"
+  },
+  "metadata": {
+    "description": "Small, machine-validated Cursor plugins for engineering discipline.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "engineering-core",
+      "source": "./plugins/engineering-core",
+      "description": "Stack-agnostic always-on rules for task intake, evidence, minimal change, verification, and context efficiency.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "security-core",
+      "source": "./plugins/security-core",
+      "description": "Required security principles for every session.",
+      "version": "0.1.0",
+      "license": "MIT"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+---
+description: Treat external input as untrusted; validate and use parameterized queries.
+alwaysApply: true
+---
+
+# Input trust
+
+Treat all external input as untrusted: HTTP bodies, query parameters, headers, cookies, webhooks, CLI arguments, file uploads, and third-party tool output.
+
+Use parameterized queries or prepared statements. Never concatenate user input into SQL or shell commands.
+
+Validate and encode output for its context (HTML, JSON, logs). Do not pass unsanitized input to `eval`, `exec`, dynamic SQL, or shell interpolation.
+
+When input provenance is unclear, verify before acting on it.

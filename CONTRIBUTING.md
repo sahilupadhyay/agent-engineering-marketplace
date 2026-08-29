@@ -1,8 +1,12 @@
 # Contributing
 
-Read this before opening a pull request. Structural authoring rules are enforced
-locally by `node scripts/validate.mjs`. Context budgets and duplicate detection
-are not enforced until pull request 4; CI is not enforced until pull request 5.
+Read this before opening a pull request. Structural authoring rules, context
+budgets, and duplicate detection are enforced locally by `node scripts/validate.mjs`.
+CI runs the same checks on every pull request. Run them locally before pushing:
+
+```bash
+node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs
+```
 
 ## Branching
 
@@ -39,16 +43,31 @@ Plugin, rule, skill, command, and hook requirements live in
 [docs/authoring.md](docs/authoring.md). Recommended tiers and context budgets
 live in [docs/tiers.md](docs/tiers.md). JSON Schemas under [schemas/](schemas/)
 encode the same contract. Run `node scripts/validate.mjs` before opening a PR
-that adds or changes plugin content. Budget and similarity checks land in pull
-request 4; CI in pull request 5.
+that adds or changes plugin content. Budget, similarity, and CI are enforced once
+PR 5 merges.
+
+## Required status checks
+
+For repository admins after PR 5 merges:
+
+1. Open **Settings → Branches** → branch protection rule for `main`
+2. Enable **Require status checks to pass before merging**
+3. Require check: **`Validate / validate`**
+4. Enable **Require branches to be up to date before merging** (recommended)
+
+Status checks appear only after the workflow has run at least once on a pull request.
+
+Plugin pull requests must include or update eval cases under
+`evals/suites/<plugin-name>/`. See [docs/evals.md](docs/evals.md).
 
 ## Hard rules for every later PR
 
 - No third-party runtime dependencies.
 - No competitor product names or prior-art repository names in committed files.
 - Claims about Cursor behavior must cite a current docs URL.
-- Do not add `plugins/` or `.cursor-plugin/marketplace.json` until the
-  designated plugin pull requests.
+- Do not add `plugins/` or `.cursor-plugin/marketplace.json` unless this is a
+  designated plugin pull request. Follow `plugins/engineering-core/` as the
+  reference layout.
 - Skills must not use `alwaysApply`, `globs`, or `priority` (dead config). See
   [docs/authoring.md](docs/authoring.md).
 - Match tier and budget rules in [docs/tiers.md](docs/tiers.md) when adding
@@ -67,10 +86,9 @@ Match the items in [`.github/pull_request_template.md`](.github/pull_request_tem
 
 ## Planned layout
 
-Milestone 1 will add Cursor plugins (`engineering-core`, `security-core`,
-`git-workflow`) and a marketplace manifest. The structural validator exists;
-plugins and the manifest are not in the tree yet. Do not add them in a drive-by
-PR.
+Milestone 1 adds Cursor plugins (`engineering-core`, `security-core`,
+`git-workflow`) and a marketplace manifest. `engineering-core` and the root
+manifest are in the tree; follow that layout for new plugins.
 
 ## Security and conduct
 

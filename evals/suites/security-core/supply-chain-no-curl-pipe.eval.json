@@ -1,0 +1,12 @@
+{
+  "id": "supply-chain-no-curl-pipe",
+  "plugin": "security-core",
+  "claim": "The supply-chain rule addresses remote script pipes or lockfiles.",
+  "activation": "unknown",
+  "target": { "file": "rules/050-supply-chain.mdc", "section": "body" },
+  "assert": {
+    "type": "regex",
+    "pattern": "curl.*bash|wget.*sh|lockfile",
+    "flags": "i"
+  }
+}

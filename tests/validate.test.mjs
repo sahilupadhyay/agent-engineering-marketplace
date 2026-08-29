@@ -30,10 +30,10 @@ test("validateRoot pass-paired-rule-skill returns no errors", () => {
   assert.equal(errors.length, 0);
 });
 
-test("CLI exits 0 on repo root with no plugins", () => {
+test("CLI exits 0 on repo root with marketplace and engineering-core", () => {
   const result = runValidate(REPO_ROOT);
   assert.equal(result.status, 0);
-  assert.match(result.stdout, /No marketplace manifest or plugins to validate/);
+  assert.match(result.stdout, /Validation passed/);
 });
 
 test("CLI pass-plugin fixture exits 0", () => {

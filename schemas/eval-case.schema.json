@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sahilupadhyay/agent-engineering-marketplace/schemas/eval-case.schema.json",
+  "title": "Eval case",
+  "description": "Deterministic semantic eval case for plugin content. activation is honesty metadata only; Cursor does not expose whether rules or skills activated in a session.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "plugin", "claim", "activation", "target", "assert"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable kebab-case identifier unique within the plugin suite."
+    },
+    "plugin": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Plugin directory name under plugins/."
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Human-readable statement of what this case proves."
+    },
+    "activation": {
+      "type": "string",
+      "const": "unknown",
+      "description": "Always unknown; evals do not measure runtime activation."
+    },
+    "target": {
+      "oneOf": [
+        { "$ref": "#/$defs/targetFile" },
+        { "$ref": "#/$defs/targetAllSkills" },
+        { "$ref": "#/$defs/targetAllRules" }
+      ]
+    },
+    "assert": {
+      "oneOf": [
+        { "$ref": "#/$defs/assertRegex" },
+        { "$ref": "#/$defs/assertContains" },
+        { "$ref": "#/$defs/assertNotContains" },
+        { "$ref": "#/$defs/assertNotRegex" },
+        { "$ref": "#/$defs/assertPathsExist" }
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "string",
+      "enum": ["full", "body", "frontmatter"]
+    },
+    "targetFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "section"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1 },
+        "section": { "$ref": "#/$defs/section" }
+      }
+    },
+    "targetAllSkills": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allSkills", "section"],
+      "properties": {
+        "allSkills": { "const": true },
+        "section": { "$ref": "#/$defs/section" }
+      }
+    },
+    "targetAllRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allRules", "section"],
+      "properties": {
+        "allRules": { "const": true },
+        "section": { "$ref": "#/$defs/section" }
+      }
+    },
+    "assertRegex": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "pattern"],
+      "properties": {
+        "type": { "const": "regex" },
+        "pattern": { "type": "string", "minLength": 1 },
+        "flags": { "type": "string", "pattern": "^[ims]*$" }
+      }
+    },
+    "assertContains": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "value"],
+      "properties": {
+        "type": { "const": "contains" },
+        "value": { "type": "string" },
+        "ignoreCase": { "type": "boolean" }
+      }
+    },
+    "assertNotContains": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "value"],
+      "properties": {
+        "type": { "const": "notContains" },
+        "value": { "type": "string" }
+      }
+    },
+    "assertNotRegex": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "pattern"],
+      "properties": {
+        "type": { "const": "notRegex" },
+        "pattern": { "type": "string", "minLength": 1 },
+        "flags": { "type": "string", "pattern": "^[ims]*$" }
+      }
+    },
+    "assertPathsExist": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": { "const": "pathsExist" },
+        "root": { "type": "string", "enum": ["plugin", "repo"] }
+      }
+    }
+  }
+}

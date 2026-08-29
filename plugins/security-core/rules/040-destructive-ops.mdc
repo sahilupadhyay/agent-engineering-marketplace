@@ -1,0 +1,14 @@
+---
+description: Confirm before irreversible or production-impacting operations.
+alwaysApply: true
+---
+
+# Destructive operations
+
+Confirm with the user before production deletes, destructive database migrations, `DROP` or `TRUNCATE`, `git push --force` (including `--force-with-lease`), `git reset --hard`, `git clean -fd`, or `git checkout -- .`.
+
+Never run catastrophic filesystem deletes: `rm -rf /`, `rm -rf ~`, or broad `rm -rf` outside known artifact directories (`node_modules`, `dist`, `build`, `.next`, `coverage`, `__pycache__`, `.venv`).
+
+Confirm before destructive cloud or infrastructure commands: `terraform destroy`, `pulumi destroy`, `cdk destroy`, and destructive AWS deletes (S3 bucket removal, DynamoDB table delete, RDS delete, stack delete, mass EC2 terminate).
+
+Prefer reversible operations. Do not run destructive commands to "fix" a task without explicit approval.

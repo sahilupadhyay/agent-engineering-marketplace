@@ -73,6 +73,27 @@ export function fileExists(filePath) {
 }
 
 /**
+ * @param {string} root
+ * @returns {string[]}
+ */
+export function listMarketplacePluginNames(root) {
+  const marketPath = marketplacePath(root);
+  if (!marketPath) {
+    return [];
+  }
+  const market = readJsonFile(marketPath);
+  const plugins = Array.isArray(market.plugins) ? market.plugins : [];
+  /** @type {string[]} */
+  const names = [];
+  for (const entry of plugins) {
+    if (entry && typeof entry === "object" && typeof entry.name === "string") {
+      names.push(entry.name);
+    }
+  }
+  return names;
+}
+
+/**
  * @param {string} dir
  * @param {string} globLike
  * @returns {string[]}

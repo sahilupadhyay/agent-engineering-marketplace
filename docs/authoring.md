@@ -2,17 +2,15 @@
 
 This document defines how to author plugins, rules, skills, commands, and
 hooks for this marketplace. JSON Schemas under [schemas/](../schemas/) encode
-the same contract. A machine validator and CI arrive in pull requests 3–5; until
-then, [CONTRIBUTING.md](../CONTRIBUTING.md) and the pull request checklist are
-the enforcement layer.
+the same contract. Structural validation, budgets, duplicate detection, and CI are
+enforced; see [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 Every claim about Cursor behavior below cites current documentation. If Cursor
 changes, update the doc URL—not guesswork.
 
-## Plugin layout (planned)
+## Plugin layout
 
-No plugin directories exist in the tree yet. When they land (starting in pull
-request 6), each plugin follows this layout:
+Reference plugin: `plugins/engineering-core/`. Each plugin follows this layout:
 
 ```text
 plugins/<plugin-name>/
@@ -30,8 +28,8 @@ plugins/<plugin-name>/
 Multi-plugin repos also ship `.cursor-plugin/marketplace.json` at the repository
 root ([plugins reference](https://cursor.com/docs/reference/plugins)).
 
-Do not add `plugins/` or a marketplace manifest until the designated plugin
-pull requests.
+Add new plugins only in designated plugin pull requests; follow
+`plugins/engineering-core/` as the reference layout.
 
 ## Manifests
 
@@ -164,10 +162,10 @@ request 7 with the eval harness.
 | --- | --- |
 | Schema validation, frontmatter lint, orphan paths | 3 (`feat/03-validator-core`) |
 | Context budgets, duplicate detection, pairing waivers | Enforced locally by `node scripts/validate.mjs` |
-| CI merge gate | 5 (`feat/05-ci`) |
-| Deterministic eval cases | 7 (`feat/07-eval-harness`) |
+| CI merge gate | Enforced by GitHub Actions (`Validate / validate`) once PR 5 merges |
+| Deterministic eval cases | Enforced by `node evals/run.mjs` (see [evals.md](evals.md)) |
 
-Structural validation, context budgets, and duplicate detection run locally
-today. CI and deterministic eval cases arrive in later pull requests. Until CI
-lands, reviewers also use [CONTRIBUTING.md](../CONTRIBUTING.md) and
+Structural validation, context budgets, duplicate detection, and CI run today.
+Deterministic eval cases arrive in PR 7. Reviewers also use
+[CONTRIBUTING.md](../CONTRIBUTING.md) and
 [.github/pull_request_template.md](../.github/pull_request_template.md).

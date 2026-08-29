@@ -1,0 +1,5 @@
+{
+  "tier": "required",
+  "contextBudget": 4096,
+  "stackTags": ["security"]
+}

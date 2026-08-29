@@ -1,0 +1,48 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate marketplace structure
+        run: node scripts/validate.mjs
+
+      - name: Run tests
+        run: node --test
+
+      - name: Run evals
+        run: node evals/run.mjs
+
+      - name: Shellcheck hook scripts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          mapfile -t HOOK_SCRIPTS < <(
+            find plugins tests/fixtures -type f -name '*.sh' 2>/dev/null | sort
+          )
+          if [ "${#HOOK_SCRIPTS[@]}" -gt 0 ]; then
+            for script in "${HOOK_SCRIPTS[@]}"; do
+              dir=$(dirname "$script")
+              base=$(basename "$script")
+              (cd "$dir" && shellcheck -x "$base")
+            done
+          else
+            echo "No hook scripts to shellcheck."
+          fi
+
+      - name: Secret scan
+        run: node scripts/secret-scan-repo.mjs

@@ -1,0 +1,8 @@
+---
+description: Demo rule for eval fixtures.
+alwaysApply: true
+---
+
+# Demo
+
+This rule contains the expected keyword for passing evals.

@@ -18,3 +18,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   `contextBudget`.
 - Shingle-similarity duplicate detection with `pairings` waivers for rule+skill
   overlap.
+- GitHub Actions workflow (`validate`, tests, shellcheck, secret scan).
+- `scripts/secret-scan-repo.mjs` for local and CI secret scanning.
+- First plugin: `engineering-core` with five always-on rules decomposed from core
+  engineering discipline.
+- Root `.cursor-plugin/marketplace.json` listing `engineering-core`.
+- Deterministic eval harness (`evals/run.mjs`), `schemas/eval-case.schema.json`,
+  and eval suites for `engineering-core` and `security-core`.
+- `security-core` plugin (five always-on security rules) and marketplace entry.
+- Security-core POSIX hooks (`protect-shell`, `protect-read`, `secret-scan`) with
+  fixture tests in `tests/hooks.test.mjs`.

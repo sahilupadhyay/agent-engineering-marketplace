@@ -1,0 +1,12 @@
+{
+  "id": "auth-no-weaken-tls",
+  "plugin": "security-core",
+  "claim": "The auth and transport rule forbids weakening TLS or authorization without explicit instruction.",
+  "activation": "unknown",
+  "target": { "file": "rules/020-auth-transport.mdc", "section": "body" },
+  "assert": {
+    "type": "regex",
+    "pattern": "TLS|authorization|authentication",
+    "flags": "i"
+  }
+}
