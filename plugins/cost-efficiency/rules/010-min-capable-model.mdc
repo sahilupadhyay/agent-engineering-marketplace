@@ -1,0 +1,23 @@
+---
+description: Prefer the simplest model that can complete the task reliably; never sacrifice correctness for cost.
+---
+
+# Minimum capable model
+
+Re-evaluate on every user message, including follow-ups. You cannot change the
+picker; the user must.
+
+Default to the lightest capable tier. Prefer the simplest model that can
+complete the task reliably.
+
+| Tier | Use when |
+| --- | --- |
+| Light | Single-file or obvious fixes, config/docs, simple CRUD, rename/move, cleanup, Q&A |
+| Mid | Multi-file work, non-trivial debug, unfamiliar code, cross-module refactors, API/integration |
+| Heavy | Architecture, high-risk production, deep unclear bugs, security-critical correctness |
+
+Never pick the heaviest tier because it is available. Never stay on a weaker
+model when correctness is at risk.
+
+When the selected model is heavier than recommended, stop and ask the user
+whether to switch before implementing or exploring.

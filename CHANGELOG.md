@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- `cost-efficiency` plugin (default-off tier): min-capable-model rule, task-triage
+  skill, and eval suite (Milestone 2, §10).
 - `git-workflow` commands `/pr-summary`, `/pr-risk`, and `/check-actions` with
   eval cases for each (Milestone 2).
 - `code-quality` plugin (default-on tier): scope discipline, readability, and
