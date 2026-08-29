@@ -12,3 +12,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   issue/PR templates.
 - Authoring contract: [docs/authoring.md](docs/authoring.md),
   [docs/tiers.md](docs/tiers.md), and JSON Schemas under [schemas/](schemas/).
+- Structural validator: [scripts/validate.mjs](scripts/validate.mjs) with
+  `node --test` fixtures under [tests/](tests/).

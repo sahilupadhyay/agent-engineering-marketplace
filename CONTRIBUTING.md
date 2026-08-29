@@ -1,7 +1,8 @@
 # Contributing
 
-This document is the quality contract for this repository until a machine
-validator exists. Read it before opening a pull request.
+Read this before opening a pull request. Structural authoring rules are enforced
+locally by `node scripts/validate.mjs`. Context budgets and duplicate detection
+are not enforced until pull request 4; CI is not enforced until pull request 5.
 
 ## Branching
 
@@ -37,8 +38,9 @@ Contributions are accepted under the existing MIT [LICENSE](LICENSE).
 Plugin, rule, skill, command, and hook requirements live in
 [docs/authoring.md](docs/authoring.md). Recommended tiers and context budgets
 live in [docs/tiers.md](docs/tiers.md). JSON Schemas under [schemas/](schemas/)
-encode the same contract. Pull requests 3–5 will add a validator and CI; until
-then, this document and the PR checklist enforce the rules below.
+encode the same contract. Run `node scripts/validate.mjs` before opening a PR
+that adds or changes plugin content. Budget and similarity checks land in pull
+request 4; CI in pull request 5.
 
 ## Hard rules for every later PR
 
@@ -66,8 +68,9 @@ Match the items in [`.github/pull_request_template.md`](.github/pull_request_tem
 ## Planned layout
 
 Milestone 1 will add Cursor plugins (`engineering-core`, `security-core`,
-`git-workflow`), a marketplace manifest, and a local validator. Those files
-are not in the tree yet. Do not add them in a drive-by PR.
+`git-workflow`) and a marketplace manifest. The structural validator exists;
+plugins and the manifest are not in the tree yet. Do not add them in a drive-by
+PR.
 
 ## Security and conduct
 

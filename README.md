@@ -7,9 +7,17 @@ deterministic evals)—not a large pile of rules.
 
 ## Status
 
-**Milestone 1 is in progress.** This repository does not yet ship plugins, a
-marketplace manifest, a validator, or CI. It is **not installable**. There is
-nothing to `git clone && node …` until those files exist.
+**Milestone 1 is in progress.** This repository ships a **local structural
+validator** (`scripts/validate.mjs`) but no plugins, marketplace manifest, or
+CI yet. It is **not installable** as a Cursor marketplace. After clone (Node
+20+):
+
+```bash
+node scripts/validate.mjs && node --test
+```
+
+Context budgets, duplicate detection, and GitHub Actions arrive in later pull
+requests.
 
 ## Why plugins, not a flat skill tree
 
