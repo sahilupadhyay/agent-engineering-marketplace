@@ -5,7 +5,7 @@ budgets, and duplicate detection are enforced locally by `node scripts/validate.
 CI runs the same checks on every pull request. Run them locally before pushing:
 
 ```bash
-node scripts/validate.mjs && node --test && node scripts/secret-scan-repo.mjs
+node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs
 ```
 
 ## Branching
@@ -56,6 +56,9 @@ For repository admins after PR 5 merges:
 4. Enable **Require branches to be up to date before merging** (recommended)
 
 Status checks appear only after the workflow has run at least once on a pull request.
+
+Plugin pull requests must include or update eval cases under
+`evals/suites/<plugin-name>/`. See [docs/evals.md](docs/evals.md).
 
 ## Hard rules for every later PR
 

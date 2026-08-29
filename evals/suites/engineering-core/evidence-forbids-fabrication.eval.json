@@ -1,0 +1,15 @@
+{
+  "id": "evidence-forbids-fabrication",
+  "plugin": "engineering-core",
+  "claim": "The evidence hierarchy rule forbids fabricating facts when evidence is missing.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/020-evidence-hierarchy.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "do not fabricate|state uncertainty",
+    "flags": "i"
+  }
+}

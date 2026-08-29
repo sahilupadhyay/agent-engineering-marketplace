@@ -1,0 +1,15 @@
+{
+  "id": "skills-use-when-trigger",
+  "plugin": "engineering-core",
+  "claim": "Every skill frontmatter description includes a Use when trigger phrase when skills exist.",
+  "activation": "unknown",
+  "target": {
+    "allSkills": true,
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Use when",
+    "flags": "i"
+  }
+}

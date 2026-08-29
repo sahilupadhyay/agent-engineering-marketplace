@@ -1,0 +1,13 @@
+{
+  "id": "bad-schema",
+  "plugin": "demo-plugin",
+  "claim": "Missing activation field on purpose.",
+  "target": {
+    "file": "rules/010-demo.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "x"
+  }
+}

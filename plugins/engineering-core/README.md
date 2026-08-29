@@ -30,4 +30,5 @@ private until Milestone 1 completes.
 
 ## Eval suite
 
-No eval suite ships with this plugin until PR 7 lands in the marketplace repo.
+No eval suite ships with this plugin; see `evals/suites/engineering-core/` in
+the marketplace repo for deterministic content checks.

@@ -12,11 +12,12 @@ shellcheck (when hook scripts exist), and repo secret scan on every pull request
 and on pushes to `main`. The first plugin **`engineering-core`** ships with five
 always-on rules and a root marketplace manifest. The repository is still
 **private** and **not** published to the Cursor Marketplace. Deterministic eval
-suite arrives in PR 7. After clone (Node 20+):
+Deterministic eval suite ships in PR 7 (`evals/run.mjs`). After clone (Node 20+):
 
 ```bash
-node scripts/validate.mjs && node --test && node scripts/secret-scan-repo.mjs
-```
+node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs
+
+See [docs/evals.md](docs/evals.md) for semantic eval cases.
 
 Coming in later pull requests: `security-core` (PR 8), `git-workflow` (PR 10).
 
@@ -55,6 +56,7 @@ come after Milestone 1.
 
 ## Links
 
+- [Eval harness](docs/evals.md)
 - [Authoring contract](docs/authoring.md)
 - [Recommended tiers](docs/tiers.md)
 - [Contributing](CONTRIBUTING.md)
