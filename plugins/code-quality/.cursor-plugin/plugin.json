@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "description": "Always-on code quality discipline: scope, readability, and refactor only when needed.",
+  "version": "0.1.0",
+  "license": "MIT"
+}

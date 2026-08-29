@@ -30,6 +30,13 @@
       "license": "MIT"
     },
     {
+      "name": "code-quality",
+      "source": "./plugins/code-quality",
+      "description": "Always-on scope discipline, readability, and refactor-only-when-needed guidance.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
       "name": "cost-efficiency",
       "source": "./plugins/cost-efficiency",
       "description": "Model selection and task triage for minimal capable model without sacrificing correctness.",

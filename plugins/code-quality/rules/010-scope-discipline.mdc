@@ -1,0 +1,12 @@
+---
+description: Stay within task scope; no drive-by refactors or unrelated edits.
+alwaysApply: true
+---
+
+# Scope discipline
+
+Solve the request as stated. Change only what the task requires.
+
+Do not refactor, rename, reformat, or upgrade dependencies outside the scope of the request.
+
+Do not expand the change surface to clean up neighboring code unless the user asked or the fix is impossible without it.

@@ -20,21 +20,22 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 `validate`, `node --test`, `node evals/run.mjs`, shellcheck, and repo secret scan
 on every pull request and on pushes to `main`.
 
-Three plugins ship in `.cursor-plugin/marketplace.json`:
+Four plugins ship in `.cursor-plugin/marketplace.json`:
 
 | Plugin | Recommended tier | Status |
 | --- | --- | --- |
 | `engineering-core` | Required | Shipped |
 | `security-core` | Required | Shipped |
 | `git-workflow` | Default On | Shipped |
-| `code-quality` | Default On | Milestone 2 |
+| `code-quality` | Default On | Shipped |
 | `testing` | Default On | Milestone 2 |
-| `cost-efficiency` | Default Off | Milestone 2 |
+| `cost-efficiency` | Default Off | Shipped |
 | Stack / cloud plugins | Default Off | Milestone 3+ |
 
-**Recommended installation today:** Engineering Core, Security Core, Git Workflow.
+**Recommended installation today:** Engineering Core, Security Core, Git Workflow,
+Code Quality.
 
-**Optional (coming):** Code Quality, Testing, Cost Efficiency, AWS, Docker,
+**Optional (coming):** Testing, Cost Efficiency, AWS, Docker,
 Kubernetes, Python, React, Terraform, and other stack plugins.
 
 The repository remains **private** until a maintainer runs the pre-public
@@ -62,7 +63,7 @@ Recommended tiers are documented in [docs/tiers.md](docs/tiers.md) as
 
 ## Milestone 1 stack
 
-- Plugins: `engineering-core`, `security-core`, `git-workflow`
+- Plugins: `engineering-core`, `security-core`, `git-workflow`, `code-quality`
 - Root `.cursor-plugin/marketplace.json`
 - Runtime: Node 20+, zero third-party runtime dependencies
 

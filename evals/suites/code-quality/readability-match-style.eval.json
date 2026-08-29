@@ -1,0 +1,15 @@
+{
+  "id": "readability-match-style",
+  "plugin": "code-quality",
+  "claim": "The readability rule requires matching existing naming and style.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/020-readability.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "match existing naming|match existing",
+    "flags": "i"
+  }
+}
