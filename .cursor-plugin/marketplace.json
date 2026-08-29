@@ -70,6 +70,27 @@
       "description": "Glob-scoped React and TSX guidance for components, hooks, and UI state.",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "jira-workflow",
+      "source": "./plugins/jira-workflow",
+      "description": "Skills-only Jira issue triage and workflow guidance via user-connected MCP tools.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "diagram-workflow",
+      "source": "./plugins/diagram-workflow",
+      "description": "Skills-only architecture and diagram workflows via user-connected MCP tools.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "api-docs",
+      "source": "./plugins/api-docs",
+      "description": "Skills-only OpenAPI and API documentation review guidance.",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }
