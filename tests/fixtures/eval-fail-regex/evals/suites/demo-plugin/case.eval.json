@@ -1,0 +1,14 @@
+{
+  "id": "fail-regex",
+  "plugin": "demo-plugin",
+  "claim": "This case should fail because the regex does not match.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-demo.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "NONEXISTENT_PATTERN_XYZ"
+  }
+}

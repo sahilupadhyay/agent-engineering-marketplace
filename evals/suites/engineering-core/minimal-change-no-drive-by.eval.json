@@ -1,0 +1,15 @@
+{
+  "id": "minimal-change-no-drive-by",
+  "plugin": "engineering-core",
+  "claim": "The minimal change rule forbids drive-by refactors and scope expansion.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/030-minimal-change.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "drive-by refactor|do not drive-by",
+    "flags": "i"
+  }
+}

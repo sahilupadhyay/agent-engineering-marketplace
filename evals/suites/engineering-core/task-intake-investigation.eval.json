@@ -1,0 +1,15 @@
+{
+  "id": "task-intake-investigation",
+  "plugin": "engineering-core",
+  "claim": "The task intake rule requires investigation before editing.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-task-intake.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "investigation",
+    "ignoreCase": true
+  }
+}

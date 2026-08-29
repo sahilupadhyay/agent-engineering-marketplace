@@ -1,0 +1,12 @@
+{
+  "name": "eval-fixture",
+  "owner": {
+    "name": "Fixture"
+  },
+  "plugins": [
+    {
+      "name": "demo-plugin",
+      "source": "./plugins/demo-plugin"
+    }
+  ]
+}

@@ -24,6 +24,9 @@ jobs:
       - name: Run tests
         run: node --test
 
+      - name: Run evals
+        run: node evals/run.mjs
+
       - name: Shellcheck hook scripts
         run: |
           sudo apt-get update

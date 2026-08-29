@@ -1,0 +1,15 @@
+{
+  "id": "context-efficiency-search",
+  "plugin": "engineering-core",
+  "claim": "The context efficiency rule prefers search before reading whole files.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/050-context-efficiency.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Search before reading",
+    "ignoreCase": true
+  }
+}

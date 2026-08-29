@@ -1,0 +1,15 @@
+{
+  "id": "verification-before-claiming",
+  "plugin": "engineering-core",
+  "claim": "The verification rule requires running checks before claiming done.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/040-verification.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "tests|typecheck|lint",
+    "flags": "i"
+  }
+}

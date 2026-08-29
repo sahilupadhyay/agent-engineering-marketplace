@@ -1,0 +1,14 @@
+{
+  "id": "fail-dead-path",
+  "plugin": "demo-plugin",
+  "claim": "Rule references a path that must exist.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-demo.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "pathsExist",
+    "root": "plugin"
+  }
+}

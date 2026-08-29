@@ -163,7 +163,7 @@ request 7 with the eval harness.
 | Schema validation, frontmatter lint, orphan paths | 3 (`feat/03-validator-core`) |
 | Context budgets, duplicate detection, pairing waivers | Enforced locally by `node scripts/validate.mjs` |
 | CI merge gate | Enforced by GitHub Actions (`Validate / validate`) once PR 5 merges |
-| Deterministic eval cases | 7 (`feat/07-eval-harness`) |
+| Deterministic eval cases | Enforced by `node evals/run.mjs` (see [evals.md](evals.md)) |
 
 Structural validation, context budgets, duplicate detection, and CI run today.
 Deterministic eval cases arrive in PR 7. Reviewers also use
