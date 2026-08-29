@@ -8,9 +8,10 @@ import test from "node:test";
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const HOOKS_ROOT = path.join(REPO_ROOT, "plugins", "security-core", "hooks");
+const CLOUD_AWS_HOOKS_ROOT = path.join(REPO_ROOT, "plugins", "cloud-aws", "hooks");
 
-function runHook(scriptName, stdin, env = {}) {
-  const script = path.join(HOOKS_ROOT, scriptName);
+function runHook(scriptName, stdin, env = {}, hooksRoot = HOOKS_ROOT) {
+  const script = path.join(hooksRoot, scriptName);
   const result = spawnSync("sh", [script], {
     input: stdin,
     encoding: "utf8",
@@ -138,4 +139,44 @@ test("secret-scan denies staged secret on git commit", () => {
   );
   fs.rmSync(tmpDir, { recursive: true, force: true });
   assert.equal(r.payload.permission, "deny");
+});
+
+test("dangerous-aws-command allows describe", () => {
+  const r = runHook(
+    "dangerous-aws-command.sh",
+    '{"command":"aws ec2 describe-instances"}',
+    {},
+    CLOUD_AWS_HOOKS_ROOT,
+  );
+  assert.equal(r.payload.permission, "allow");
+});
+
+test("dangerous-aws-command asks on kubectl delete", () => {
+  const r = runHook(
+    "dangerous-aws-command.sh",
+    '{"command":"kubectl delete namespace prod"}',
+    {},
+    CLOUD_AWS_HOOKS_ROOT,
+  );
+  assert.equal(r.payload.permission, "ask");
+});
+
+test("dangerous-aws-command asks on helm uninstall", () => {
+  const r = runHook(
+    "dangerous-aws-command.sh",
+    '{"command":"helm uninstall my-release -n prod"}',
+    {},
+    CLOUD_AWS_HOOKS_ROOT,
+  );
+  assert.equal(r.payload.permission, "ask");
+});
+
+test("dangerous-aws-command asks on eks delete-cluster", () => {
+  const r = runHook(
+    "dangerous-aws-command.sh",
+    '{"command":"aws eks delete-cluster --name prod"}',
+    {},
+    CLOUD_AWS_HOOKS_ROOT,
+  );
+  assert.equal(r.payload.permission, "ask");
 });

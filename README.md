@@ -20,7 +20,7 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 `validate`, `node --test`, `node evals/run.mjs`, shellcheck, and repo secret scan
 on every pull request and on pushes to `main`.
 
-Twelve plugins ship in `.cursor-plugin/marketplace.json`:
+Thirteen plugins ship in `.cursor-plugin/marketplace.json`:
 
 | Plugin | Recommended tier | Status |
 | --- | --- | --- |
@@ -36,7 +36,7 @@ Twelve plugins ship in `.cursor-plugin/marketplace.json`:
 | `jira-workflow` | Default Off | Shipped (skills-only) |
 | `diagram-workflow` | Default Off | Shipped (skills-only) |
 | `api-docs` | Default Off | Shipped (skills-only) |
-| Cloud / infra plugins | Default Off | Milestone 3+ |
+| `cloud-aws` | Default Off | Shipped |
 
 **Recommended installation today:** Engineering Core, Security Core, Git Workflow,
 Code Quality, Testing.
@@ -50,7 +50,10 @@ Code Quality, Testing.
 MCP tools, or OpenAPI/API documentation workflows. Connect MCP servers in Cursor
 settings; see [docs/mcp-governance.md](docs/mcp-governance.md).
 
-**Coming:** AWS, Docker, Kubernetes, Terraform, and other cloud/infra plugins.
+**Optional cloud plugin:** Enable `cloud-aws` when the repository uses AWS
+infrastructure (Terraform, CloudFormation, CDK, or AWS CLI automation).
+
+**Coming:** Docker, Kubernetes, and other platform-specific plugins.
 
 The repository remains **private** until a maintainer runs the pre-public
 checklist in [docs/installation.md](docs/installation.md) and flips visibility in

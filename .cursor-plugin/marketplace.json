@@ -91,6 +91,13 @@
       "description": "Skills-only OpenAPI and API documentation review guidance.",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "cloud-aws",
+      "source": "./plugins/cloud-aws",
+      "description": "Glob-scoped AWS, Terraform, and CloudFormation guidance with deployment validation skills and destructive-command hooks.",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }

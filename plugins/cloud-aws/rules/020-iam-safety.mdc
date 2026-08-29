@@ -1,0 +1,18 @@
+---
+description: IAM and access-control safety for AWS infrastructure changes.
+globs: ["**/*.tf", "**/*.tfvars", "**/cloudformation/**", "**/*cloudformation*", "**/template.{yaml,yml,json}", "**/.aws/**", "**/aws/**", "**/cdk/**", "**/infrastructure/**", "**/infra/**"]
+---
+
+# IAM safety
+
+Apply least privilege. Do not add `*` actions, `*` resources, or administrator
+policies unless the repository already uses that pattern with explicit guardrails.
+
+Prefer IAM roles, instance profiles, and IRSA over long-lived access keys. Never
+hardcode access keys, secret ARNs, or session tokens in source or IaC.
+
+When editing policies or trust relationships, verify principals, conditions, and
+external IDs match existing modules. Do not broaden trust to `*` principals.
+
+Review policy diffs for new `iam:PassRole`, `sts:AssumeRole`, or cross-account
+access before apply.

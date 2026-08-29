@@ -1,0 +1,20 @@
+---
+description: AWS account and resource safety for infrastructure and CLI changes.
+globs: ["**/*.tf", "**/*.tfvars", "**/cloudformation/**", "**/*cloudformation*", "**/template.{yaml,yml,json}", "**/.aws/**", "**/aws/**", "**/cdk/**", "**/infrastructure/**", "**/infra/**"]
+---
+
+# AWS safety
+
+Match the repository's existing IaC layout, modules, and environment naming before
+adding or changing AWS resources.
+
+Confirm the target account, region, and environment (dev/stage/prod) before any
+apply, deploy, or CLI mutation. Do not assume default profiles or regions.
+
+Prefer read-only discovery (`describe`, `list`, `get`, `plan`) before mutating
+commands. Never run destructive AWS operations to "fix" a task without explicit
+user approval.
+
+Reuse established patterns for tagging, encryption, logging, and backup. Do not
+introduce one-off resource names or untagged resources when the codebase already
+standardizes them.

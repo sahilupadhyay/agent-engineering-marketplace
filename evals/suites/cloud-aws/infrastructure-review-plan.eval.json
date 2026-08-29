@@ -1,0 +1,15 @@
+{
+  "id": "infrastructure-review-plan",
+  "plugin": "cloud-aws",
+  "claim": "The infrastructure-review skill requires plan or diff before apply.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/infrastructure-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "terraform plan|cdk diff|change-set",
+    "flags": "i"
+  }
+}
