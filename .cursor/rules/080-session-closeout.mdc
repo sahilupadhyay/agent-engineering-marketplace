@@ -1,0 +1,23 @@
+---
+description: After Agent-mode work, report skills used, confidence, quality, security, and performance.
+alwaysApply: true
+---
+
+# Session closeout
+
+After finishing a user-requested Agent-mode task (code, docs, PRs, or multi-step work), end the reply with this block. Skip one-line acknowledgements.
+
+Do not invent scores. Self-assess from this session only. Do not claim a skill was used unless you opened and followed it in this session.
+
+## Session closeout
+
+| Field | How to fill |
+| --- | --- |
+| **Skills used** | Names of skills actually opened and followed; else `none` |
+| **Confidence** | `[Certain]`, `[Likely]`, or `[Guessing]` for the main outcome |
+| **Code quality** | Integer **1–5** (5 = small, clear, tested change) plus one sentence |
+| **Security gaps** | Concrete issues in *this* diff, or `none observed` |
+| **Performance** | Concrete regressions in *this* diff, or `none observed` |
+| **Vulnerabilities** | Specific CWE-style or class (injection, secrets, authz) that *might* follow from this change, or `none identified` |
+
+Do not pad the table with handbook-wide advice. If the task was docs-only, say so under code quality.

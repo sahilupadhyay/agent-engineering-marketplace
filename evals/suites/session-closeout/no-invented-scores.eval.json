@@ -1,0 +1,15 @@
+{
+  "id": "no-invented-scores",
+  "plugin": "session-closeout",
+  "claim": "Closeout forbids inventing scores and claiming unread skills.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-session-closeout.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Do not invent scores[\\s\\S]*Do not claim a skill was used",
+    "flags": "i"
+  }
+}

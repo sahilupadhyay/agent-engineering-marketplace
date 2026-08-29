@@ -1,0 +1,15 @@
+{
+  "id": "closeout-fields-present",
+  "plugin": "session-closeout",
+  "claim": "Closeout rule requires skills, confidence, quality, security, performance, and vulnerability fields.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-session-closeout.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Skills used[\\s\\S]*Confidence[\\s\\S]*Code quality[\\s\\S]*Security gaps[\\s\\S]*Performance[\\s\\S]*Vulnerabilities",
+    "flags": "i"
+  }
+}
