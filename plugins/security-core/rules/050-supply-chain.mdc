@@ -1,0 +1,16 @@
+---
+description: Cautious dependency and install practices; no unreviewed supply-chain risk.
+alwaysApply: true
+---
+
+# Supply-chain hygiene
+
+Do not add runtime or build dependencies without user awareness. Prefer the standard library and existing stack.
+
+Pin versions and use lockfiles when adding packages. Avoid floating `@latest` in production paths.
+
+Do not pipe remote scripts (`curl | bash`, `wget | sh`) without explicit user approval and URL review.
+
+Do not disable dependency scanning (Snyk, Dependabot, npm audit, and similar) without documented justification.
+
+Verify package names and publishers; treat typosquat and unexpected transitive upgrades as risks.

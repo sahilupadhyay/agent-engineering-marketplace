@@ -9,8 +9,8 @@ deterministic evals)—not a large pile of rules.
 
 **Milestone 1 is in progress.** GitHub Actions runs `validate`, `node --test`,
 shellcheck (when hook scripts exist), and repo secret scan on every pull request
-and on pushes to `main`. The first plugin **`engineering-core`** ships with five
-always-on rules and a root marketplace manifest. The repository is still
+and on pushes to `main`. Plugins **`engineering-core`** and **`security-core`** ship
+with always-on rules and a root marketplace manifest. The repository is still
 **private** and **not** published to the Cursor Marketplace. Deterministic eval
 Deterministic eval suite ships in PR 7 (`evals/run.mjs`). After clone (Node 20+):
 
@@ -36,12 +36,13 @@ Recommended tiers are documented in [docs/tiers.md](docs/tiers.md) as
 Present today:
 
 - Plugin: `engineering-core` (five always-on rules)
+- Plugin: `security-core` (five always-on security rules)
 - Root `.cursor-plugin/marketplace.json`
 - Runtime: Node 20+, zero third-party runtime dependencies
 
 Still coming:
 
-- Plugins: `security-core`, `git-workflow`
+- Plugin: `git-workflow`
 - Deterministic eval harness (PR 7)
 
 Authoring rules and planned layout are in [docs/authoring.md](docs/authoring.md)
