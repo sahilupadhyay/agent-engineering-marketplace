@@ -1,0 +1,8 @@
+---
+description: Two headings should fail.
+alwaysApply: true
+---
+
+# First heading
+
+# Second heading

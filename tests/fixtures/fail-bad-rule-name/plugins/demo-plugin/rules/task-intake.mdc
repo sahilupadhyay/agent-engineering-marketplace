@@ -1,0 +1,8 @@
+---
+description: Missing numeric prefix in filename.
+alwaysApply: true
+---
+
+# Bad filename
+
+Should fail the filename pattern check.
