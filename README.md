@@ -1,8 +1,18 @@
 # Agent Engineering Marketplace
 
+**A production-grade, cost-efficient developer agent toolkit for Cursor and
+compatible AI coding agents.**
+
 Cursor **multi-plugin** marketplace for a small, high-signal engineering stack.
 Machine-enforced quality: context budgets, duplicate detection, tested hooks,
 and deterministic evals—not a large pile of rules.
+
+This project does **not** promise zero hallucinations. Evals and hooks reduce
+risk; they cannot guarantee perfect agent behavior. See [docs/evals.md](docs/evals.md).
+
+## Philosophy
+
+Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.md).
 
 ## Status
 
@@ -12,9 +22,20 @@ on every pull request and on pushes to `main`.
 
 Three plugins ship in `.cursor-plugin/marketplace.json`:
 
-- `engineering-core` (Required tier)
-- `security-core` (Required tier, with POSIX hooks)
-- `git-workflow` (Default On tier)
+| Plugin | Recommended tier | Status |
+| --- | --- | --- |
+| `engineering-core` | Required | Shipped |
+| `security-core` | Required | Shipped |
+| `git-workflow` | Default On | Shipped |
+| `code-quality` | Default On | Milestone 2 |
+| `testing` | Default On | Milestone 2 |
+| `cost-efficiency` | Default Off | Milestone 2 |
+| Stack / cloud plugins | Default Off | Milestone 3+ |
+
+**Recommended installation today:** Engineering Core, Security Core, Git Workflow.
+
+**Optional (coming):** Code Quality, Testing, Cost Efficiency, AWS, Docker,
+Kubernetes, Python, React, Terraform, and other stack plugins.
 
 The repository remains **private** until a maintainer runs the pre-public
 checklist in [docs/installation.md](docs/installation.md) and flips visibility in
@@ -55,6 +76,9 @@ Cursor smoke testing. Team-marketplace import by URL works after the public flip
 
 ## Links
 
+- [Architecture](docs/architecture.md)
+- [Philosophy](docs/philosophy.md)
+- [Performance and efficiency](docs/performance.md)
 - [Installation](docs/installation.md)
 - [Eval harness](docs/evals.md)
 - [Authoring contract](docs/authoring.md)

@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Documentation pack: [docs/architecture.md](docs/architecture.md),
+  [docs/philosophy.md](docs/philosophy.md), [docs/performance.md](docs/performance.md);
+  README tagline, install matrix, and philosophy links (Milestone 2).
 - Repository governance: community health files, editor hygiene, and GitHub
   issue/PR templates.
 - Authoring contract: [docs/authoring.md](docs/authoring.md),
