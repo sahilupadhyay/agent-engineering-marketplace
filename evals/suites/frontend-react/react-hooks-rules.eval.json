@@ -1,0 +1,15 @@
+{
+  "id": "react-hooks-rules",
+  "plugin": "frontend-react",
+  "claim": "The react component discipline rule documents Rules of Hooks constraints.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-react-component-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Rules of Hooks|top level",
+    "flags": "i"
+  }
+}

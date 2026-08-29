@@ -1,0 +1,14 @@
+{
+  "id": "tier-default-off",
+  "plugin": "frontend-react",
+  "claim": "plugin-meta.json recommends default-off tier.",
+  "activation": "unknown",
+  "target": {
+    "file": "plugin-meta.json",
+    "section": "full"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "\"tier\"\\s*:\\s*\"default-off\""
+  }
+}

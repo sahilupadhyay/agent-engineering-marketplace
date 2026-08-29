@@ -1,0 +1,15 @@
+{
+  "id": "python-parameterized-queries",
+  "plugin": "backend-python",
+  "claim": "The python server discipline rule forbids SQL string concatenation from user input.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-python-server-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "parameterized queries|never build SQL with string",
+    "flags": "i"
+  }
+}

@@ -1,0 +1,24 @@
+---
+description: Python backend discipline for APIs, services, and data access.
+globs: ["**/*.py"]
+---
+
+# Python server discipline
+
+Follow the project's existing framework, package layout, and async/sync conventions
+before adding endpoints, services, or data-access code.
+
+Validate external input at API boundaries using the same pydantic, serializer, or
+form patterns the codebase already uses.
+
+Use parameterized queries or the project's ORM — never build SQL with string
+concatenation from user input.
+
+Match existing typing style: add type hints when the surrounding modules use them;
+do not introduce a conflicting style in one file.
+
+Prefer the project's configured virtual environment and dependency manifests —
+do not assume global packages.
+
+Do not add heavyweight dependencies when an existing project library already
+covers the need.

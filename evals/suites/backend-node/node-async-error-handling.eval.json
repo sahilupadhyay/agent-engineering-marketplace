@@ -1,0 +1,15 @@
+{
+  "id": "node-async-error-handling",
+  "plugin": "backend-node",
+  "claim": "The node server discipline rule requires explicit async error handling.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-node-server-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "async error|rejected promises",
+    "flags": "i"
+  }
+}

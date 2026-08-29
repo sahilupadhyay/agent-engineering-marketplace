@@ -1,0 +1,22 @@
+---
+description: Node/TypeScript server discipline for routes, handlers, and async I/O.
+globs: ["**/*.{ts,js,mjs,cjs}", "**/server/**", "**/api/**", "**/routes/**", "**/controllers/**", "**/middleware/**"]
+---
+
+# Node server discipline
+
+Match the project's existing framework, routing, and error-handling patterns before
+adding handlers or middleware.
+
+Validate and sanitize external input at route boundaries. Do not trust query params,
+headers, or request bodies without the same checks the codebase already uses.
+
+Handle async errors explicitly — use existing error middleware or try/catch in
+handlers so rejected promises do not crash the process silently.
+
+Avoid blocking the event loop with synchronous CPU-heavy work or large sync I/O in
+request paths. Prefer existing job queues or background workers when the repo
+already uses them.
+
+Do not introduce new HTTP clients, ORMs, or auth libraries without evidence the
+project lacks a suitable existing dependency.
