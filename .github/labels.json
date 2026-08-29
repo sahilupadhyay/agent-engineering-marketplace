@@ -1,0 +1,52 @@
+[
+  {
+    "name": "plugin",
+    "color": "0E8A16",
+    "description": "New or changed marketplace plugin"
+  },
+  {
+    "name": "rule",
+    "color": "1D76DB",
+    "description": "Rule (.mdc) change"
+  },
+  {
+    "name": "skill",
+    "color": "5319E7",
+    "description": "Skill (SKILL.md) change"
+  },
+  {
+    "name": "hook",
+    "color": "B60205",
+    "description": "POSIX hook or hooks.json change"
+  },
+  {
+    "name": "mcp",
+    "color": "FBCA04",
+    "description": "MCP server configuration proposal"
+  },
+  {
+    "name": "security",
+    "color": "D93F0B",
+    "description": "Security rules, hooks, or reports"
+  },
+  {
+    "name": "performance",
+    "color": "0052CC",
+    "description": "Context efficiency or runtime performance"
+  },
+  {
+    "name": "cost",
+    "color": "C2E0C6",
+    "description": "Model or token cost efficiency"
+  },
+  {
+    "name": "documentation",
+    "color": "0075CA",
+    "description": "Docs-only change"
+  },
+  {
+    "name": "breaking-change",
+    "color": "B60205",
+    "description": "Breaking change for plugin consumers"
+  }
+]

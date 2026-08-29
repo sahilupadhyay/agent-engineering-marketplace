@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- GitHub issue label set (`.github/labels.json`) and `scripts/sync-github-labels.mjs`
+  (Milestone 2, §29).
+- Release policy ([docs/release.md](docs/release.md)), `scripts/release-notes.mjs`, and
+  tag-triggered `.github/workflows/release.yml` (Milestone 2, §30–31).
 - MCP governance policy ([docs/mcp-governance.md](docs/mcp-governance.md)) and
   CONTRIBUTING checklist for future `mcp.json` plugins (Milestone 2, §32).
 - Validator README gate: marketplace-listed plugins must ship `README.md`
