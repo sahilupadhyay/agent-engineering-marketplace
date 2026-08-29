@@ -1,0 +1,14 @@
+{
+  "id": "command-pr-summary-present",
+  "plugin": "git-workflow",
+  "claim": "pr-summary command exists with name frontmatter.",
+  "activation": "unknown",
+  "target": {
+    "file": "commands/pr-summary.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "name:\\s*pr-summary"
+  }
+}

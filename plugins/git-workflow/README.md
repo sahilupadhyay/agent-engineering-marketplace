@@ -10,6 +10,9 @@ Set **Default On** in Dashboard → Plugins.
 
 - `/review` — diff review without edits
 - `/pr` — PR summary without opening unless asked
+- `/pr-summary` — branch diff to PR description draft
+- `/pr-risk` — severity-ranked rollout risk assessment
+- `/check-actions` — GitHub Actions status for branch or PR
 - `/fix` — defect investigation and minimal fix
 
 ## Skill
