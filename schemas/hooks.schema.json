@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sahilupadhyay/agent-engineering-marketplace/schemas/hooks.schema.json",
+  "title": "Cursor plugin hooks configuration",
+  "description": "hooks/hooks.json in Cursor camelCase format. Not the Claude-format hooks.json some plugins also ship. See https://cursor.com/docs/reference/plugins",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "hooks"],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "hooks": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sessionStart": { "$ref": "#/$defs/hookHandlers" },
+        "sessionEnd": { "$ref": "#/$defs/hookHandlers" },
+        "preToolUse": { "$ref": "#/$defs/hookHandlers" },
+        "postToolUse": { "$ref": "#/$defs/hookHandlers" },
+        "postToolUseFailure": { "$ref": "#/$defs/hookHandlers" },
+        "subagentStart": { "$ref": "#/$defs/hookHandlers" },
+        "subagentStop": { "$ref": "#/$defs/hookHandlers" },
+        "beforeShellExecution": { "$ref": "#/$defs/hookHandlers" },
+        "afterShellExecution": { "$ref": "#/$defs/hookHandlers" },
+        "beforeMCPExecution": { "$ref": "#/$defs/hookHandlers" },
+        "afterMCPExecution": { "$ref": "#/$defs/hookHandlers" },
+        "beforeReadFile": { "$ref": "#/$defs/hookHandlers" },
+        "afterFileEdit": { "$ref": "#/$defs/hookHandlers" },
+        "beforeSubmitPrompt": { "$ref": "#/$defs/hookHandlers" },
+        "preCompact": { "$ref": "#/$defs/hookHandlers" },
+        "stop": { "$ref": "#/$defs/hookHandlers" },
+        "afterAgentResponse": { "$ref": "#/$defs/hookHandlers" },
+        "afterAgentThought": { "$ref": "#/$defs/hookHandlers" },
+        "beforeTabFileRead": { "$ref": "#/$defs/hookHandlers" },
+        "afterTabFileEdit": { "$ref": "#/$defs/hookHandlers" },
+        "workspaceOpen": { "$ref": "#/$defs/hookHandlers" }
+      }
+    }
+  },
+  "$defs": {
+    "hookHandlers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["command"],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Path to a hook script relative to the plugin root."
+          },
+          "matcher": {
+            "type": "string",
+            "description": "Optional pattern to filter when the hook runs."
+          }
+        }
+      }
+    }
+  }
+}

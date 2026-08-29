@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sahilupadhyay/agent-engineering-marketplace/schemas/command.schema.json",
+  "title": "Cursor command frontmatter",
+  "description": "YAML frontmatter for commands/*.md files. See https://cursor.com/docs/reference/plugins",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "description"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$",
+      "description": "Command identifier (kebab-case)."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Brief description of what the command does."
+    }
+  }
+}

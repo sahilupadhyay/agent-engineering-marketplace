@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sahilupadhyay/agent-engineering-marketplace/schemas/skill.schema.json",
+  "title": "Cursor skill frontmatter",
+  "description": "YAML frontmatter for skills/<name>/SKILL.md. Skills are on-demand only. See https://cursor.com/docs/reference/plugins",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "description"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$",
+      "description": "Skill identifier (kebab-case)."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What the skill does and when to use it. Include a Use when trigger phrase."
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sahilupadhyay/agent-engineering-marketplace/schemas/rule.schema.json",
+  "title": "Cursor rule frontmatter",
+  "description": "YAML frontmatter for rules/*.mdc files. See https://cursor.com/docs/reference/plugins",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["description"],
+  "properties": {
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Brief description of what the rule does."
+    },
+    "alwaysApply": {
+      "type": "boolean",
+      "description": "When true, the rule applies to all files in scope."
+    },
+    "globs": {
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      ],
+      "description": "File patterns the rule applies to when alwaysApply is false."
+    }
+  }
+}
