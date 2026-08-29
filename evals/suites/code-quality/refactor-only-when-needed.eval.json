@@ -1,0 +1,15 @@
+{
+  "id": "refactor-only-when-needed",
+  "plugin": "code-quality",
+  "claim": "The refactor rule limits refactoring to user request or correctness needs.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/030-refactor-when-needed.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "user asks|user requests|only when",
+    "flags": "i"
+  }
+}

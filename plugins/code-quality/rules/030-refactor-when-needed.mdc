@@ -1,0 +1,12 @@
+---
+description: Refactor only when the user requests it or correctness requires it.
+alwaysApply: true
+---
+
+# Refactor when needed
+
+Refactor when the user asks, when tests or types require it, or when a minimal fix is impossible without a small structural change.
+
+Do not preemptively extract helpers, rename symbols, or restructure modules while you are here.
+
+If a larger refactor would help but is not required, mention it briefly and stay within the requested scope unless the user opts in.

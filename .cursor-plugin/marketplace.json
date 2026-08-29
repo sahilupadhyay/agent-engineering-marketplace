@@ -28,6 +28,13 @@
       "description": "Git identity safety, branch/PR conventions, review commands, and review-feedback skill.",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "code-quality",
+      "source": "./plugins/code-quality",
+      "description": "Always-on scope discipline, readability, and refactor-only-when-needed guidance.",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }

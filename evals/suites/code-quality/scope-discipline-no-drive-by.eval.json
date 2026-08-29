@@ -1,0 +1,15 @@
+{
+  "id": "scope-discipline-no-drive-by",
+  "plugin": "code-quality",
+  "claim": "The scope discipline rule forbids drive-by refactors and scope expansion.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-scope-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "drive-by refactor|do not refactor",
+    "flags": "i"
+  }
+}

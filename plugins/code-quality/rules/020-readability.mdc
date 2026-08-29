@@ -1,0 +1,12 @@
+---
+description: Match existing naming, structure, and style in the codebase.
+alwaysApply: true
+---
+
+# Readability
+
+Read surrounding code before writing. Match existing naming, file layout, import style, and abstraction level.
+
+New code should look native to the file — not a different author or style guide.
+
+Do not impose new patterns, lint preferences, or formatting conventions the codebase does not already use.
