@@ -24,4 +24,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   engineering discipline.
 - Root `.cursor-plugin/marketplace.json` listing `engineering-core`.
 - Deterministic eval harness (`evals/run.mjs`), `schemas/eval-case.schema.json`,
-  and `evals/suites/engineering-core/` suite.
+  and eval suites for `engineering-core` and `security-core`.
+- `security-core` plugin (five always-on security rules) and marketplace entry.

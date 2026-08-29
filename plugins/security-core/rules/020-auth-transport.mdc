@@ -1,0 +1,14 @@
+---
+description: Do not weaken authentication, encryption, TLS, or authorization without explicit instruction.
+alwaysApply: true
+---
+
+# Auth and transport
+
+Do not disable, bypass, or weaken authentication or authorization checks.
+
+Do not disable TLS, HTTPS, certificate validation, or encryption at rest without explicit user instruction.
+
+Do not add `skipAuth`, `insecure: true`, `NODE_TLS_REJECT_UNAUTHORIZED=0`, or equivalent without explicit approval.
+
+Prefer fail-closed defaults. Expose only the endpoints and data the task requires (least privilege).

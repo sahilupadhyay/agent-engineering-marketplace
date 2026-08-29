@@ -1,0 +1,8 @@
+{
+  "id": "input-parameterized-queries",
+  "plugin": "security-core",
+  "claim": "The input trust rule requires parameterized queries or prepared statements.",
+  "activation": "unknown",
+  "target": { "file": "rules/030-input-trust.mdc", "section": "body" },
+  "assert": { "type": "contains", "value": "parameterized", "ignoreCase": true }
+}

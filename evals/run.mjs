@@ -206,6 +206,32 @@ function runAssertion(text, assert) {
 }
 
 /**
+ * @param {string} captured
+ * @returns {boolean}
+ */
+function looksLikePath(captured) {
+  if (!captured || captured.startsWith("#")) {
+    return false;
+  }
+  if (/^(https?:|mailto:)/i.test(captured)) {
+    return false;
+  }
+  if (/\s/.test(captured) || captured.includes("*")) {
+    return false;
+  }
+  if (captured.startsWith(".") && !captured.startsWith("./")) {
+    return false;
+  }
+  if (/^(references|rules|skills|commands|hooks)\//i.test(captured)) {
+    return true;
+  }
+  if (captured.includes("/")) {
+    return true;
+  }
+  return /^[a-zA-Z0-9_][a-zA-Z0-9_.-]*\.[a-z0-9]{1,8}$/i.test(captured);
+}
+
+/**
  * @param {string} text
  * @param {string} pluginDir
  * @param {string} repoRoot
@@ -222,10 +248,7 @@ function checkPathsExist(text, pluginDir, repoRoot, assert) {
   let match;
   while ((match = backtickRe.exec(text)) !== null) {
     const captured = match[1].trim();
-    if (!captured || captured.startsWith("#")) {
-      continue;
-    }
-    if (/^(https?:|mailto:)/i.test(captured)) {
+    if (!looksLikePath(captured)) {
       continue;
     }
     const resolved = path.resolve(base, captured);
@@ -237,10 +260,7 @@ function checkPathsExist(text, pluginDir, repoRoot, assert) {
   const linkRe = /\[[^\]]*\]\(([^)]+)\)/g;
   while ((match = linkRe.exec(text)) !== null) {
     const captured = match[1].trim();
-    if (!captured || captured.startsWith("#")) {
-      continue;
-    }
-    if (/^(https?:|mailto:)/i.test(captured)) {
+    if (!looksLikePath(captured)) {
       continue;
     }
     const resolved = path.resolve(base, captured);
