@@ -20,7 +20,7 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 `validate`, `node --test`, `node evals/run.mjs`, shellcheck, and repo secret scan
 on every pull request and on pushes to `main`.
 
-Four plugins ship in `.cursor-plugin/marketplace.json`:
+Five plugins ship in `.cursor-plugin/marketplace.json`:
 
 | Plugin | Recommended tier | Status |
 | --- | --- | --- |
@@ -33,9 +33,9 @@ Four plugins ship in `.cursor-plugin/marketplace.json`:
 | Stack / cloud plugins | Default Off | Milestone 3+ |
 
 **Recommended installation today:** Engineering Core, Security Core, Git Workflow,
-Code Quality.
+Code Quality, Testing.
 
-**Optional (coming):** Testing, Cost Efficiency, AWS, Docker,
+**Optional (coming):** Cost Efficiency, AWS, Docker,
 Kubernetes, Python, React, Terraform, and other stack plugins.
 
 The repository remains **private** until a maintainer runs the pre-public
