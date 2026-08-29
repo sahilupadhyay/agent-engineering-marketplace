@@ -15,7 +15,9 @@ import {
   resolveFromRoot,
   sourcePathFromEntry,
 } from "./lib/manifest.mjs";
+import { checkPluginBudget } from "./lib/budget.mjs";
 import { lintPlugin } from "./lib/lint.mjs";
+import { checkPluginSimilarity } from "./lib/similarity.mjs";
 import { validateAgainstSchemaFile } from "./lib/schema.mjs";
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -92,8 +94,10 @@ export function validateRoot(root) {
     }
 
     const pluginMetaPath = path.join(pluginDir, "plugin-meta.json");
+    /** @type {Record<string, unknown> | null} */
+    let pluginMeta = null;
     if (fileExists(pluginMetaPath)) {
-      const pluginMeta = readJsonFile(pluginMetaPath);
+      pluginMeta = readJsonFile(pluginMetaPath);
       errors.push(
         ...validateAgainstSchemaFile(
           path.join(SCHEMA_DIR, "plugin-meta.schema.json"),
@@ -105,6 +109,11 @@ export function validateRoot(root) {
 
     const lintResult = lintPlugin(pluginDir, SCHEMA_DIR);
     errors.push(...lintResult.errors);
+
+    if (pluginMeta) {
+      errors.push(...checkPluginBudget(pluginDir, pluginMeta));
+      errors.push(...checkPluginSimilarity(pluginDir, pluginMeta));
+    }
   }
 
   return errors;

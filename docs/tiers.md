@@ -49,10 +49,8 @@ content for that plugin. Defaults to the tier maximum above when omitted. Must
 not exceed the tier cap. For `default-off`, the cap is **0** (no always-applied
 bytes).
 
-The future validator sums the body bytes of every rule with
-`alwaysApply: true` in the plugin and compares the total to `contextBudget` or
-the tier default. That check lands in pull request 4; it is **not** enforced
-yet.
+The validator sums the body bytes of every rule with `alwaysApply: true` in the
+plugin and compares the total to `contextBudget` or the tier default.
 
 ## `stackTags`
 
