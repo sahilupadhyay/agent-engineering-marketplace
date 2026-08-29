@@ -1,0 +1,19 @@
+---
+description: Go service discipline for wrapped errors, context on I/O, and module layout.
+globs: ["**/*.go", "**/go.mod"]
+---
+
+# Go service discipline
+
+Wrap returned errors with fmt.Errorf and `%w` so callers can unwrap.
+Do not return bare strings in place of errors.
+
+Pass context.Context through I/O, RPC, and database calls. Do not ignore
+err with a blank identifier unless the surrounding package already documents
+that case.
+
+Keep module paths and versions consistent with go.mod. Do not add a new
+major module path for a local fix.
+
+Match existing layout (cmd, internal, or flat). Do not introduce a
+second HTTP router when one already exists.

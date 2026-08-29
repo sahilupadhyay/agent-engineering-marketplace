@@ -20,7 +20,7 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 `validate`, `node --test`, `node evals/run.mjs`, `node benchmarks/run.mjs`,
 shellcheck, and repo secret scan on every pull request and on pushes to `main`.
 
-Fourteen plugins ship in `.cursor-plugin/marketplace.json`:
+Thirty-one plugins ship in `.cursor-plugin/marketplace.json`:
 
 | Plugin | Recommended tier | Status |
 | --- | --- | --- |
@@ -33,28 +33,44 @@ Fourteen plugins ship in `.cursor-plugin/marketplace.json`:
 | `cost-efficiency` | Default Off | Shipped |
 | `backend-node` | Default Off | Shipped |
 | `backend-python` | Default Off | Shipped |
+| `backend-java` | Default Off | Shipped |
+| `backend-go` | Default Off | Shipped |
 | `frontend-react` | Default Off | Shipped |
+| `frontend-htmlcss` | Default Off | Shipped |
+| `frontend-javascript` | Default Off | Shipped |
+| `frontend-angular` | Default Off | Shipped |
+| `frontend-vue` | Default Off | Shipped |
+| `data-postgres` | Default Off | Shipped |
+| `data-mysql` | Default Off | Shipped |
+| `data-dynamodb` | Default Off | Shipped |
+| `data-redis` | Default Off | Shipped |
+| `data-databricks` | Default Off | Shipped |
 | `jira-workflow` | Default Off | Shipped (skills-only) |
+| `atlassian-confluence` | Default Off | Shipped (skills-only) |
 | `diagram-workflow` | Default Off | Shipped (skills-only) |
 | `api-docs` | Default Off | Shipped (skills-only) |
+| `obs-coralogix` | Default Off | Shipped (skills-only) |
+| `obs-heap` | Default Off | Shipped (skills-only) |
+| `quality-sonarqube` | Default Off | Shipped |
 | `cloud-aws` | Default Off | Shipped |
+| `platform-docker` | Default Off | Shipped |
+| `platform-kubernetes` | Default Off | Shipped |
 
 **Recommended installation today:** Engineering Core, Security Core, Git Workflow,
 Code Quality, Testing, Session Closeout.
 
-**Optional stack plugins:** Enable `backend-node`, `backend-python`, or
-`frontend-react` when your repository matches that stack (see
-`scripts/detect-stack.mjs`).
+**Optional stack plugins:** Enable backend, frontend, data, or platform plugins
+that match the repository (see `scripts/detect-stack.mjs`). Detection
+**recommends only** and never auto-installs. Enable one of `data-postgres` or
+`data-mysql` when SQL files could match either dialect.
 
 **Optional integration plugins (skills-only, no bundled MCP):** Enable
-`jira-workflow`, `diagram-workflow`, or `api-docs` when you use Jira, diagram
-MCP tools, or OpenAPI/API documentation workflows. Connect MCP servers in Cursor
-settings; see [docs/mcp-governance.md](docs/mcp-governance.md).
+`jira-workflow`, `atlassian-confluence`, `diagram-workflow`, `api-docs`,
+`obs-coralogix`, or `obs-heap` when you use those products. Connect MCP servers
+in Cursor settings; see [docs/mcp-governance.md](docs/mcp-governance.md).
 
-**Optional cloud plugin:** Enable `cloud-aws` when the repository uses AWS
-infrastructure (Terraform, CloudFormation, CDK, or AWS CLI automation).
-
-**Coming:** Docker, Kubernetes, and other platform-specific plugins.
+**Optional cloud and containers:** Enable `cloud-aws` for AWS IaC, `platform-docker`
+for Dockerfiles, and `platform-kubernetes` for Helm/`k8s` trees.
 
 The repository remains **private** until a maintainer runs the pre-public
 checklist in [docs/installation.md](docs/installation.md) and flips visibility in

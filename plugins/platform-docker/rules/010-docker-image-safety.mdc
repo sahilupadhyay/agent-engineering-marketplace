@@ -1,0 +1,17 @@
+---
+description: Docker image safety for non-root users, pinned tags, and secret-free ENV.
+globs: ["**/Dockerfile*", "**/docker-compose*.{yml,yaml}", "**/.dockerignore"]
+---
+
+# Docker image safety
+
+Run as a non-root user when the project's existing images already do. Do not
+switch a root image to non-root (or the reverse) unless that is the task.
+
+Pin tags or digests when surrounding Dockerfiles already pin. Do not float
+`latest` in a file that previously pinned.
+
+Never put secrets in `ENV` or `ARG` that land in image layers. Use runtime
+secret mounts the repo already uses.
+
+Do not run `docker build --network=host` without asking the user.

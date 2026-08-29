@@ -1,0 +1,15 @@
+{
+  "id": "vue-no-new-pinia",
+  "plugin": "frontend-vue",
+  "claim": "The Vue rule forbids adding Pinia when Vuex already exists.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-vue-sfc-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Pinia when\\s+Vuex|Vuex already",
+    "flags": "i"
+  }
+}

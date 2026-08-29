@@ -1,0 +1,15 @@
+{
+  "id": "k8s-no-prod-apply",
+  "plugin": "platform-kubernetes",
+  "claim": "The Kubernetes rule forbids privileged unless existing and production apply without confirmation.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-k8s-workload-safety.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "privileged: true|production context",
+    "flags": "i"
+  }
+}

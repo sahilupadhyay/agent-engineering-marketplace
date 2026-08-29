@@ -1,0 +1,14 @@
+{
+  "tier": "default-off",
+  "stackTags": [
+    "mysql",
+    "sql",
+    "data"
+  ],
+  "pairings": [
+    {
+      "rule": "rules/010-mysql-safety.mdc",
+      "skill": "skills/mysql-review/SKILL.md"
+    }
+  ]
+}

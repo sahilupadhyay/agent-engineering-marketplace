@@ -1,0 +1,15 @@
+{
+  "id": "coralogix-connected-mcp",
+  "plugin": "obs-coralogix",
+  "claim": "The Coralogix skill requires already-connected MCP tools and forbids invented query language.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/coralogix-telemetry/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "already connected|invent a query language",
+    "flags": "i"
+  }
+}

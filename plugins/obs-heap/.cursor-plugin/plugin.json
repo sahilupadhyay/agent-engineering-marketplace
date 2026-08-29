@@ -1,0 +1,6 @@
+{
+  "name": "obs-heap",
+  "description": "Skills-only Heap analytics guidance for events, properties, and identity.",
+  "version": "0.1.0",
+  "license": "MIT"
+}

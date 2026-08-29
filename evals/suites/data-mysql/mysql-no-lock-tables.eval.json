@@ -1,0 +1,15 @@
+{
+  "id": "mysql-no-lock-tables",
+  "plugin": "data-mysql",
+  "claim": "The MySQL rule warns against LOCK TABLES and requires charset/collation discipline.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-mysql-safety.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "LOCK TABLES|charset and collation",
+    "flags": "i"
+  }
+}

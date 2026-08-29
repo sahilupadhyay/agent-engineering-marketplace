@@ -1,0 +1,15 @@
+{
+  "id": "redis-no-unbounded-keys",
+  "plugin": "data-redis",
+  "claim": "The Redis rule requires TTLs and forbids unbounded KEYS in app paths.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-redis-cache.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "KEYS|TTL",
+    "flags": "i"
+  }
+}

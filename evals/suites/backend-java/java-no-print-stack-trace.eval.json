@@ -1,0 +1,15 @@
+{
+  "id": "java-no-print-stack-trace",
+  "plugin": "backend-java",
+  "claim": "The Java rule forbids printStackTrace in new code and JDK upgrades in-task.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-java-service-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "printStackTrace|upgrade the JDK",
+    "flags": "i"
+  }
+}

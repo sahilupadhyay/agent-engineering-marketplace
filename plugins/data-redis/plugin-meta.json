@@ -1,0 +1,14 @@
+{
+  "tier": "default-off",
+  "stackTags": [
+    "redis",
+    "cache",
+    "data"
+  ],
+  "pairings": [
+    {
+      "rule": "rules/010-redis-cache.mdc",
+      "skill": "skills/redis-review/SKILL.md"
+    }
+  ]
+}

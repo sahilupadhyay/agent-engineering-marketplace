@@ -1,0 +1,15 @@
+{
+  "id": "angular-take-until-destroyed",
+  "plugin": "frontend-angular",
+  "claim": "The Angular rule requires takeUntilDestroyed or equivalent RxJS teardown.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-angular-component-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "takeUntilDestroyed",
+    "flags": "i"
+  }
+}

@@ -24,6 +24,10 @@ const REACT_DEPS = [
   "preact",
 ];
 
+const VUE_DEPS = ["vue", "nuxt", "nuxt3", "@vue/runtime-dom"];
+
+const ANGULAR_DEPS = ["@angular/core"];
+
 /**
  * @param {Record<string, string> | undefined} deps
  * @param {string[]} names
@@ -57,6 +61,12 @@ function readPackageJson(root) {
 
     if (hasDependency(deps, REACT_DEPS)) {
       signals.push({ file: "package.json", kind: "react", detail: "react dependency" });
+    }
+    if (hasDependency(deps, VUE_DEPS)) {
+      signals.push({ file: "package.json", kind: "vue", detail: "vue dependency" });
+    }
+    if (hasDependency(deps, ANGULAR_DEPS)) {
+      signals.push({ file: "package.json", kind: "angular", detail: "@angular/core dependency" });
     }
     if (hasDependency(deps, NODE_BACKEND_DEPS)) {
       signals.push({ file: "package.json", kind: "node-backend", detail: "server framework dependency" });
@@ -100,6 +110,27 @@ function readMarkerFile(root, fileName, kind) {
 }
 
 /**
+ * @param {string} root
+ * @param {string} dirName
+ * @param {string} kind
+ * @returns {StackSignal[]}
+ */
+function readMarkerDir(root, dirName, kind) {
+  const dirPath = path.join(root, dirName);
+  if (!fs.existsSync(dirPath)) {
+    return [];
+  }
+  try {
+    if (fs.statSync(dirPath).isDirectory()) {
+      return [{ file: `${dirName}/`, kind }];
+    }
+  } catch {
+    return [];
+  }
+  return [];
+}
+
+/**
  * @param {StackSignal[]} signals
  * @returns {string[]}
  */
@@ -107,9 +138,16 @@ export function recommendPlugins(signals) {
   /** @type {Set<string>} */
   const recommended = new Set();
   const kinds = new Set(signals.map((signal) => signal.kind));
+  const frontendKinds = kinds.has("react") || kinds.has("vue") || kinds.has("angular");
 
   if (kinds.has("react")) {
     recommended.add("frontend-react");
+  }
+  if (kinds.has("vue")) {
+    recommended.add("frontend-vue");
+  }
+  if (kinds.has("angular")) {
+    recommended.add("frontend-angular");
   }
   if (kinds.has("node-backend")) {
     recommended.add("backend-node");
@@ -117,8 +155,23 @@ export function recommendPlugins(signals) {
   if (kinds.has("python")) {
     recommended.add("backend-python");
   }
-  if (kinds.has("node") && !kinds.has("react") && !kinds.has("node-backend")) {
+  if (kinds.has("node") && !frontendKinds && !kinds.has("node-backend")) {
     recommended.add("backend-node");
+  }
+  if (kinds.has("go")) {
+    recommended.add("backend-go");
+  }
+  if (kinds.has("java")) {
+    recommended.add("backend-java");
+  }
+  if (kinds.has("docker")) {
+    recommended.add("platform-docker");
+  }
+  if (kinds.has("kubernetes")) {
+    recommended.add("platform-kubernetes");
+  }
+  if (kinds.has("databricks")) {
+    recommended.add("data-databricks");
   }
 
   return [...recommended].sort();
@@ -140,7 +193,14 @@ export function detectStack(root) {
     ...readPythonManifests(resolved),
     ...readMarkerFile(resolved, "go.mod", "go"),
     ...readMarkerFile(resolved, "pom.xml", "java"),
+    ...readMarkerFile(resolved, "build.gradle", "java"),
+    ...readMarkerFile(resolved, "build.gradle.kts", "java"),
     ...readMarkerFile(resolved, "Cargo.toml", "rust"),
+    ...readMarkerFile(resolved, "Dockerfile", "docker"),
+    ...readMarkerFile(resolved, "databricks.yml", "databricks"),
+    ...readMarkerDir(resolved, "helm", "kubernetes"),
+    ...readMarkerDir(resolved, "k8s", "kubernetes"),
+    ...readMarkerDir(resolved, "kubernetes", "kubernetes"),
   ];
 
   return {

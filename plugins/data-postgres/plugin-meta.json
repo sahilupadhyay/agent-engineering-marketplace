@@ -1,0 +1,14 @@
+{
+  "tier": "default-off",
+  "stackTags": [
+    "postgres",
+    "sql",
+    "data"
+  ],
+  "pairings": [
+    {
+      "rule": "rules/010-postgres-safety.mdc",
+      "skill": "skills/postgres-review/SKILL.md"
+    }
+  ]
+}

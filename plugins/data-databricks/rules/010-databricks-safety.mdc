@@ -1,0 +1,18 @@
+---
+description: Databricks workspace, catalog, and job safety for notebooks and bundles.
+globs: ["**/databricks.yml", "**/*.ipynb", "**/notebooks/**", "**/*dlt*"]
+---
+
+# Databricks safety
+
+Match Unity Catalog and workspace names already used in the repo. Do not point
+jobs at a different catalog or workspace in a local fix.
+
+Do not use `SELECT *` in production jobs without a limit or explicit column
+list the surrounding notebooks already follow.
+
+Never commit personal access tokens, cluster credentials, or `DATABRICKS_TOKEN`
+values. Use the project's secret scope.
+
+Honor existing cluster policies. Do not request unrestricted clusters when
+the repo pins a policy.

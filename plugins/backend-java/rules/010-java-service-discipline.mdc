@@ -1,0 +1,18 @@
+---
+description: Java service discipline for package layout, queries, and error handling.
+globs: ["**/*.java", "**/pom.xml", "**/build.gradle", "**/build.gradle.kts"]
+---
+
+# Java service discipline
+
+Match existing package layout, build tool, and dependency versions. Do not
+upgrade the JDK or rewrite the build in-task.
+
+Use parameterized queries or the project's ORM. Never concatenate untrusted
+input into SQL.
+
+Do not call `e.printStackTrace()` in new code. Use the project's logger and
+existing exception mapping.
+
+Reuse established HTTP, validation, and auth libraries. Do not add a second
+web framework.

@@ -1,0 +1,18 @@
+---
+description: Redis cache safety for TTLs, key scans, and secret storage.
+globs: ["**/*redis*", "**/*redis*.lua", "**/*redis*.conf"]
+---
+
+# Redis cache safety
+
+Set a TTL on cache keys unless the surrounding code already treats the key as
+durable state. Do not grow an unbounded keyspace.
+
+Do not use the `KEYS` command in application paths. Prefer `SCAN` or the
+project's existing index pattern.
+
+Never store secrets, session tokens, or raw PII in Redis when the repo already
+keeps those in a secret store or encrypted field.
+
+Match existing key prefixes and serialization. Do not introduce a second
+client library.

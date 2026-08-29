@@ -1,0 +1,14 @@
+{
+  "tier": "default-off",
+  "stackTags": [
+    "dynamodb",
+    "aws",
+    "data"
+  ],
+  "pairings": [
+    {
+      "rule": "rules/010-dynamodb-access.mdc",
+      "skill": "skills/dynamodb-review/SKILL.md"
+    }
+  ]
+}

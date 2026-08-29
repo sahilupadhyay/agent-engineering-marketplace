@@ -1,0 +1,17 @@
+---
+description: SonarQube quality-gate honesty for project properties and CI config.
+globs: ["**/sonar-project.properties", "**/*sonar*.yml"]
+---
+
+# Sonar quality gate
+
+Do not weaken quality gates, coverage thresholds, or issue severities just to
+greenwash a failing PR.
+
+Never commit Sonar tokens or sonar.login secrets. Use CI secret stores.
+
+Treat **new issues on changed lines** first. Do not expand the task into a
+repo-wide cleanup unless asked.
+
+Match existing sonar.sources and exclusions. Do not hide paths to silence
+the gate.

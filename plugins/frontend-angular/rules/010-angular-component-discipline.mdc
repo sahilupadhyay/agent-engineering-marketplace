@@ -1,0 +1,16 @@
+---
+description: Angular component and RxJS discipline matching the repository's module style.
+globs: ["**/*.component.ts", "**/*.component.html", "**/angular.json"]
+---
+
+# Angular component discipline
+
+Match the repository's standalone vs NgModule style. Do not convert a feature to
+standalone (or the reverse) in-task unless that is the requested change.
+
+Reuse the existing state pattern (services, NgRx, signals, or component state).
+Do not add a new state library.
+
+Unsubscribe from RxJS in new subscriptions: prefer `takeUntilDestroyed` or the
+project's established teardown helper. Do not leave open subscriptions on
+destroyed components.

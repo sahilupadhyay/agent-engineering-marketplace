@@ -1,0 +1,7 @@
+{
+  "name": "angular-fixture",
+  "private": true,
+  "dependencies": {
+    "@angular/core": "19.0.0"
+  }
+}

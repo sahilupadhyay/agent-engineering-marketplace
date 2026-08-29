@@ -1,0 +1,13 @@
+{
+  "tier": "default-off",
+  "stackTags": [
+    "databricks",
+    "data"
+  ],
+  "pairings": [
+    {
+      "rule": "rules/010-databricks-safety.mdc",
+      "skill": "skills/databricks-job-review/SKILL.md"
+    }
+  ]
+}

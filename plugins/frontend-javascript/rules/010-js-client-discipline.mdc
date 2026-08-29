@@ -1,0 +1,17 @@
+---
+description: Client JavaScript and TypeScript discipline for typed boundaries and existing toolchains.
+globs: ["**/public/**/*.{js,ts}", "**/client/**/*.{js,ts}", "**/src/**/*.{js,ts}"]
+---
+
+# JavaScript client discipline
+
+Do not use `eval`, `new Function`, or string-built `setTimeout` handlers in
+new or edited client code.
+
+Keep typed boundaries: do not strip types or add `any` at module edges when the
+surrounding files already use TypeScript.
+
+Match the project's existing module format (ESM vs CommonJS) and path aliases.
+
+Do not add a bundler, transpiler, or test runner the repository does not already
+use. Extend the current toolchain instead.

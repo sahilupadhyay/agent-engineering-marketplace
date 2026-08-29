@@ -1,0 +1,16 @@
+---
+description: DynamoDB key, GSI, and access-pattern safety for table definitions.
+globs: ["**/*dynamodb*", "**/tables*.json"]
+---
+
+# DynamoDB access
+
+Design keys and GSIs around known access patterns. Do not add a GSI "just in
+case" without a query that needs it.
+
+Do not use `Scan` on hot paths. Prefer `Query` with the existing key schema.
+
+Be honest about capacity: on-demand vs provisioned must match how the table is
+already billed. Do not silently switch billing mode in a small fix.
+
+Never store secrets or raw credentials as item attributes.

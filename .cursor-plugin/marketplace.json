@@ -65,6 +65,20 @@
       "license": "MIT"
     },
     {
+      "name": "backend-java",
+      "source": "./plugins/backend-java",
+      "description": "Glob-scoped Java service guidance for package layout, queries, and error handling.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "backend-go",
+      "source": "./plugins/backend-go",
+      "description": "Glob-scoped Go service guidance for wrapped errors, context, and modules.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
       "name": "frontend-react",
       "source": "./plugins/frontend-react",
       "description": "Glob-scoped React and TSX guidance for components, hooks, and UI state.",
@@ -72,9 +86,79 @@
       "license": "MIT"
     },
     {
+      "name": "frontend-htmlcss",
+      "source": "./plugins/frontend-htmlcss",
+      "description": "Glob-scoped HTML and CSS guidance for markup, accessibility, and existing design tokens.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "frontend-javascript",
+      "source": "./plugins/frontend-javascript",
+      "description": "Glob-scoped JavaScript and TypeScript client guidance for typed boundaries and existing bundlers.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "frontend-angular",
+      "source": "./plugins/frontend-angular",
+      "description": "Glob-scoped Angular guidance for components, modules, and RxJS teardown.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "frontend-vue",
+      "source": "./plugins/frontend-vue",
+      "description": "Glob-scoped Vue SFC guidance for Composition vs Options API and existing stores.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "data-postgres",
+      "source": "./plugins/data-postgres",
+      "description": "Glob-scoped Postgres SQL and migration guidance with a schema-review skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "data-mysql",
+      "source": "./plugins/data-mysql",
+      "description": "Glob-scoped MySQL SQL guidance with a schema-review skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "data-dynamodb",
+      "source": "./plugins/data-dynamodb",
+      "description": "Glob-scoped DynamoDB table guidance plus a key-and-access review skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "data-redis",
+      "source": "./plugins/data-redis",
+      "description": "Glob-scoped Redis cache guidance plus a TTL and key-review skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "data-databricks",
+      "source": "./plugins/data-databricks",
+      "description": "Glob-scoped Databricks workspace guidance plus a job and notebook review skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
       "name": "jira-workflow",
       "source": "./plugins/jira-workflow",
       "description": "Skills-only Jira issue triage and workflow guidance via user-connected MCP tools.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "atlassian-confluence",
+      "source": "./plugins/atlassian-confluence",
+      "description": "Skills-only Confluence page guidance using user-connected Atlassian MCP tools.",
       "version": "0.1.0",
       "license": "MIT"
     },
@@ -93,9 +177,44 @@
       "license": "MIT"
     },
     {
+      "name": "obs-coralogix",
+      "source": "./plugins/obs-coralogix",
+      "description": "Skills-only Coralogix telemetry guidance using user-connected MCP tools.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "obs-heap",
+      "source": "./plugins/obs-heap",
+      "description": "Skills-only Heap analytics guidance for events, properties, and identity.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "quality-sonarqube",
+      "source": "./plugins/quality-sonarqube",
+      "description": "Glob-scoped SonarQube quality-gate guidance plus an issue-triage skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
       "name": "cloud-aws",
       "source": "./plugins/cloud-aws",
       "description": "Glob-scoped AWS, Terraform, and CloudFormation guidance with deployment validation skills and destructive-command hooks.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "platform-docker",
+      "source": "./plugins/platform-docker",
+      "description": "Glob-scoped Docker image and Compose guidance for users, pins, and secrets.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "platform-kubernetes",
+      "source": "./plugins/platform-kubernetes",
+      "description": "Glob-scoped Kubernetes and Helm guidance plus a manifest-review skill.",
       "version": "0.1.0",
       "license": "MIT"
     },
