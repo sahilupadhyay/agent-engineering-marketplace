@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Validator README gate: marketplace-listed plugins must ship `README.md`
+  (`scripts/lib/doccheck.mjs`, fixture `fail-missing-readme`).
 - `testing` plugin (default-on tier): when-to-test, test proportionality, and
   verification ladder rules with eval suite (Milestone 2, §4, §9).
 - `cost-efficiency` plugin (default-off tier): min-capable-model rule, task-triage

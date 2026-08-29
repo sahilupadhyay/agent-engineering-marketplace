@@ -16,6 +16,7 @@ import {
   sourcePathFromEntry,
 } from "./lib/manifest.mjs";
 import { checkPluginBudget } from "./lib/budget.mjs";
+import { checkPluginReadme } from "./lib/doccheck.mjs";
 import { lintPlugin } from "./lib/lint.mjs";
 import { checkPluginSimilarity } from "./lib/similarity.mjs";
 import { validateAgainstSchemaFile } from "./lib/schema.mjs";
@@ -58,6 +59,7 @@ export function validateRoot(root) {
   }
 
   const seen = new Set(pluginDirs.map((dir) => path.resolve(dir)));
+  const marketplacePluginDirs = new Set();
 
   if (marketPath) {
     const market = readJsonFile(marketPath);
@@ -73,7 +75,9 @@ export function validateRoot(root) {
         errors.push(`${marketPath}: missing plugin source directory ${source}`);
         continue;
       }
-      seen.add(path.resolve(pluginDir));
+      const resolved = path.resolve(pluginDir);
+      seen.add(resolved);
+      marketplacePluginDirs.add(resolved);
     }
   }
 
@@ -109,6 +113,10 @@ export function validateRoot(root) {
 
     const lintResult = lintPlugin(pluginDir, SCHEMA_DIR);
     errors.push(...lintResult.errors);
+
+    if (marketplacePluginDirs.has(path.resolve(pluginDir))) {
+      errors.push(...checkPluginReadme(pluginDir));
+    }
 
     if (pluginMeta) {
       errors.push(...checkPluginBudget(pluginDir, pluginMeta));
