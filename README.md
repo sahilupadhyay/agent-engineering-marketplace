@@ -7,16 +7,18 @@ deterministic evals)—not a large pile of rules.
 
 ## Status
 
-**Milestone 1 is in progress.** This repository ships a **local validator**
-(`scripts/validate.mjs`) that enforces structural checks, context budgets, and
-duplicate detection, but no plugins, marketplace manifest, or CI yet. It is
-**not installable** as a Cursor marketplace. After clone (Node 20+):
+**Milestone 1 is in progress.** GitHub Actions runs `validate`, `node --test`,
+shellcheck (when hook scripts exist), and repo secret scan on every pull request
+and on pushes to `main`. The validator enforces structural checks, context
+budgets, and duplicate detection locally. This repository still has no production
+plugins or marketplace manifest and is **not installable** as a Cursor marketplace.
+After clone (Node 20+):
 
 ```bash
-node scripts/validate.mjs && node --test
+node scripts/validate.mjs && node --test && node scripts/secret-scan-repo.mjs
 ```
 
-GitHub Actions arrive in a later pull request.
+Deterministic eval harness CI arrives in PR 7.
 
 ## Why plugins, not a flat skill tree
 

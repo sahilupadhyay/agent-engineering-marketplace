@@ -18,3 +18,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   `contextBudget`.
 - Shingle-similarity duplicate detection with `pairings` waivers for rule+skill
   overlap.
+- GitHub Actions workflow (`validate`, tests, shellcheck, secret scan).
+- `scripts/secret-scan-repo.mjs` for local and CI secret scanning.

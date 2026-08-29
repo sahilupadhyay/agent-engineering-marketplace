@@ -1,8 +1,12 @@
 # Contributing
 
-Read this before opening a pull request. Structural authoring rules are enforced
-locally by `node scripts/validate.mjs`. Context budgets and duplicate detection
-are not enforced until pull request 4; CI is not enforced until pull request 5.
+Read this before opening a pull request. Structural authoring rules, context
+budgets, and duplicate detection are enforced locally by `node scripts/validate.mjs`.
+CI runs the same checks on every pull request. Run them locally before pushing:
+
+```bash
+node scripts/validate.mjs && node --test && node scripts/secret-scan-repo.mjs
+```
 
 ## Branching
 
@@ -39,8 +43,19 @@ Plugin, rule, skill, command, and hook requirements live in
 [docs/authoring.md](docs/authoring.md). Recommended tiers and context budgets
 live in [docs/tiers.md](docs/tiers.md). JSON Schemas under [schemas/](schemas/)
 encode the same contract. Run `node scripts/validate.mjs` before opening a PR
-that adds or changes plugin content. Budget and similarity checks land in pull
-request 4; CI in pull request 5.
+that adds or changes plugin content. Budget, similarity, and CI are enforced once
+PR 5 merges.
+
+## Required status checks
+
+For repository admins after PR 5 merges:
+
+1. Open **Settings → Branches** → branch protection rule for `main`
+2. Enable **Require status checks to pass before merging**
+3. Require check: **`Validate / validate`**
+4. Enable **Require branches to be up to date before merging** (recommended)
+
+Status checks appear only after the workflow has run at least once on a pull request.
 
 ## Hard rules for every later PR
 
