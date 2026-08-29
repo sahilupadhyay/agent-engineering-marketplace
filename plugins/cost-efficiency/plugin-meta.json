@@ -1,0 +1,10 @@
+{
+  "tier": "default-off",
+  "stackTags": ["engineering", "cost"],
+  "pairings": [
+    {
+      "rule": "rules/010-min-capable-model.mdc",
+      "skill": "skills/task-triage/SKILL.md"
+    }
+  ]
+}

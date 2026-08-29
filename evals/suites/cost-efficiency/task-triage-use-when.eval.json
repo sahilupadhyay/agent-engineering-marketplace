@@ -1,0 +1,15 @@
+{
+  "id": "task-triage-use-when",
+  "plugin": "cost-efficiency",
+  "claim": "task-triage skill description includes Use when trigger for model mismatch.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/task-triage/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

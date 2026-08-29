@@ -29,13 +29,13 @@ Five plugins ship in `.cursor-plugin/marketplace.json`:
 | `git-workflow` | Default On | Shipped |
 | `code-quality` | Default On | Shipped |
 | `testing` | Default On | Shipped |
-| `cost-efficiency` | Default Off | Milestone 2 |
+| `cost-efficiency` | Default Off | Shipped |
 | Stack / cloud plugins | Default Off | Milestone 3+ |
 
 **Recommended installation today:** Engineering Core, Security Core, Git Workflow,
 Code Quality, Testing.
 
-**Optional (coming):** Cost Efficiency, AWS, Docker,
+**Optional (coming):** AWS, Docker,
 Kubernetes, Python, React, Terraform, and other stack plugins.
 
 The repository remains **private** until a maintainer runs the pre-public
