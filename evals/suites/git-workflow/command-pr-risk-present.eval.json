@@ -1,0 +1,14 @@
+{
+  "id": "command-pr-risk-present",
+  "plugin": "git-workflow",
+  "claim": "pr-risk command exists with name frontmatter.",
+  "activation": "unknown",
+  "target": {
+    "file": "commands/pr-risk.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "name:\\s*pr-risk"
+  }
+}

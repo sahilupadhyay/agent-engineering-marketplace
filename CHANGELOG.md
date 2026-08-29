@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- `git-workflow` commands `/pr-summary`, `/pr-risk`, and `/check-actions` with
+  eval cases for each (Milestone 2).
 - `code-quality` plugin (default-on tier): scope discipline, readability, and
   refactor-when-needed rules with eval suite (Milestone 2, m2-code-quality).
 - `config-change-review` skill and glob-scoped `070-config-change-trigger.mdc` with
