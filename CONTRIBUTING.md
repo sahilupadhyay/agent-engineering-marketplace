@@ -1,7 +1,8 @@
 # Contributing
 
 Read this before opening a pull request. Structural authoring rules, context
-budgets, and duplicate detection are enforced locally by `node scripts/validate.mjs`.
+budgets, duplicate detection, and marketplace README requirements are enforced
+locally by `node scripts/validate.mjs`.
 CI runs the same checks on every pull request. Run them locally before pushing:
 
 ```bash
@@ -72,6 +73,7 @@ Plugin pull requests must include or update eval cases under
   [docs/authoring.md](docs/authoring.md).
 - Match tier and budget rules in [docs/tiers.md](docs/tiers.md) when adding
   `plugin-meta.json`.
+- Every marketplace-listed plugin must include a `README.md` at the plugin root.
 
 ## Pull request checklist
 

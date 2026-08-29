@@ -89,6 +89,10 @@ const failCases = [
     name: "fail-duplicate-rules",
     needle: "content similarity",
   },
+  {
+    name: "fail-missing-readme",
+    needle: "missing README.md",
+  },
 ];
 
 for (const failCase of failCases) {
