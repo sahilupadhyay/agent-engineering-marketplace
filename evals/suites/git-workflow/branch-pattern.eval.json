@@ -1,0 +1,14 @@
+{
+  "id": "branch-pattern",
+  "plugin": "git-workflow",
+  "claim": "Branch naming documents feat/<nn>-<slug> pattern.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/020-branch-pr.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "feat/<nn>-<slug>|feat/\\d{2}-"
+  }
+}

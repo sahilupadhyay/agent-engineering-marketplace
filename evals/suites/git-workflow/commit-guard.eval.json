@@ -1,0 +1,15 @@
+{
+  "id": "commit-guard",
+  "plugin": "git-workflow",
+  "claim": "A rule forbids git commit without explicit user request.",
+  "activation": "unknown",
+  "target": {
+    "allRules": true,
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "do not.{0,40}git commit|never.{0,40}commit unless|unless.{0,40}explicitly",
+    "flags": "i"
+  }
+}

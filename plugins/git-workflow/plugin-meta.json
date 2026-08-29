@@ -1,0 +1,11 @@
+{
+  "tier": "default-on",
+  "contextBudget": 2048,
+  "stackTags": ["git", "github"],
+  "pairings": [
+    {
+      "rule": "rules/020-branch-pr.mdc",
+      "skill": "skills/resolve-review-feedback/SKILL.md"
+    }
+  ]
+}

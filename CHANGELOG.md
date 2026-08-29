@@ -28,3 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `security-core` plugin (five always-on security rules) and marketplace entry.
 - Security-core POSIX hooks (`protect-shell`, `protect-read`, `secret-scan`) with
   fixture tests in `tests/hooks.test.mjs`.
+- `git-workflow` plugin (default-on tier): commit identity, branch/PR rules,
+  review/pr/fix commands, and `resolve-review-feedback` skill.
+- `scripts/link-local.sh` for local marketplace symlink testing.
+- [docs/installation.md](docs/installation.md) with team import and public-flip checklist.

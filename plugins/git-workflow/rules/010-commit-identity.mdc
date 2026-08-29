@@ -1,0 +1,20 @@
+---
+description: Git commit safety — never commit, amend, or push without explicit user consent and correct preconditions.
+alwaysApply: true
+---
+
+# Commit identity
+
+Do not run `git commit` unless the user explicitly asks.
+
+Never run `git config` to set user.name or user.email.
+
+`git commit --amend` only when the user asked, HEAD was created in this session by the agent, and the commit was not pushed. If a hook rejected a commit, create a new commit — never amend a failed commit.
+
+Do not run `git reset --hard`, `git clean -fd`, or `git checkout -- .` unless explicitly requested.
+
+Never use `--no-verify` or `--no-gpg-sign` unless the user explicitly requests.
+
+Warn before force-push to `main` or `master`; never force-push default branches without explicit instruction.
+
+Do not stage `.env`, credentials files, `*.pem`, or obvious secret paths; warn if the user asks to commit them.

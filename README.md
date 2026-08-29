@@ -1,25 +1,33 @@
 # Agent Engineering Marketplace
 
 Cursor **multi-plugin** marketplace for a small, high-signal engineering stack.
-The differentiator is a *planned* machine-enforced quality contract (context
-budgets, single-responsibility skills, duplicate detection, tested hooks,
-deterministic evals)—not a large pile of rules.
+Machine-enforced quality: context budgets, duplicate detection, tested hooks,
+and deterministic evals—not a large pile of rules.
 
 ## Status
 
-**Milestone 1 is in progress.** GitHub Actions runs `validate`, `node --test`,
-shellcheck (when hook scripts exist), and repo secret scan on every pull request
-and on pushes to `main`. Plugins **`engineering-core`** and **`security-core`** ship
-with always-on rules and a root marketplace manifest. The repository is still
-**private** and **not** published to the Cursor Marketplace. Deterministic eval
-Deterministic eval suite ships in PR 7 (`evals/run.mjs`). After clone (Node 20+):
+**Milestone 1 complete** (pending public visibility flip). GitHub Actions runs
+`validate`, `node --test`, `node evals/run.mjs`, shellcheck, and repo secret scan
+on every pull request and on pushes to `main`.
+
+Three plugins ship in `.cursor-plugin/marketplace.json`:
+
+- `engineering-core` (Required tier)
+- `security-core` (Required tier, with POSIX hooks)
+- `git-workflow` (Default On tier)
+
+The repository remains **private** until a maintainer runs the pre-public
+checklist in [docs/installation.md](docs/installation.md) and flips visibility in
+GitHub settings.
+
+After clone (Node 20+):
 
 ```bash
 node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs
+./scripts/link-local.sh   # optional local smoke test
+```
 
-See [docs/evals.md](docs/evals.md) for semantic eval cases.
-
-Coming in later pull requests: `security-core` (PR 8), `git-workflow` (PR 10).
+See [docs/evals.md](docs/evals.md) and [docs/installation.md](docs/installation.md).
 
 ## Why plugins, not a flat skill tree
 
@@ -31,32 +39,23 @@ settings. This repository cannot ship those fields. See the
 Recommended tiers are documented in [docs/tiers.md](docs/tiers.md) as
 `plugin-meta.json` metadata, not as enforced Cursor settings.
 
-## Milestone 1 destination (partial)
+## Milestone 1 stack
 
-Present today:
-
-- Plugin: `engineering-core` (five always-on rules)
-- Plugin: `security-core` (five always-on security rules)
+- Plugins: `engineering-core`, `security-core`, `git-workflow`
 - Root `.cursor-plugin/marketplace.json`
 - Runtime: Node 20+, zero third-party runtime dependencies
 
-Still coming:
-
-- Plugin: `git-workflow`
-- Deterministic eval harness (PR 7)
-
-Authoring rules and planned layout are in [docs/authoring.md](docs/authoring.md)
-and [CONTRIBUTING.md](CONTRIBUTING.md). Do not treat those as a checked-in
-directory listing.
+Authoring rules and layout are in [docs/authoring.md](docs/authoring.md) and
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## How to use today
 
-Clone the repo and read the contributing docs. Team-marketplace import and
-publishing at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish)
-come after Milestone 1.
+Clone the repo, run validation locally, or use `./scripts/link-local.sh` for
+Cursor smoke testing. Team-marketplace import by URL works after the public flip.
 
 ## Links
 
+- [Installation](docs/installation.md)
 - [Eval harness](docs/evals.md)
 - [Authoring contract](docs/authoring.md)
 - [Recommended tiers](docs/tiers.md)

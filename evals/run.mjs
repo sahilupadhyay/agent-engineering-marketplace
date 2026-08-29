@@ -219,6 +219,12 @@ function looksLikePath(captured) {
   if (/\s/.test(captured) || captured.includes("*")) {
     return false;
   }
+  if (captured.includes("<") || captured.includes(">")) {
+    return false;
+  }
+  if (/^\/[a-z][a-z0-9-]*$/i.test(captured)) {
+    return false;
+  }
   if (captured.startsWith(".") && !captured.startsWith("./")) {
     return false;
   }
