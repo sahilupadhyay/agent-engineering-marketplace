@@ -1,0 +1,15 @@
+{
+  "id": "config-change-workflow",
+  "plugin": "engineering-core",
+  "claim": "The config-change-review skill documents the full verification workflow.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/config-change-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Validate syntax.*Validate references.*deployment impact",
+    "flags": "is"
+  }
+}
