@@ -26,3 +26,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Deterministic eval harness (`evals/run.mjs`), `schemas/eval-case.schema.json`,
   and eval suites for `engineering-core` and `security-core`.
 - `security-core` plugin (five always-on security rules) and marketplace entry.
+- Security-core POSIX hooks (`protect-shell`, `protect-read`, `secret-scan`) with
+  fixture tests in `tests/hooks.test.mjs`.

@@ -22,7 +22,8 @@ Combined always-applied rule bodies must stay within **4096** UTF-8 bytes. See [
 
 ## Hooks
 
-Mechanical enforcement hooks arrive in PR 9. Rules state policy; hooks enforce when installed.
+Mechanical enforcement hooks ship in this plugin (POSIX `sh`). Rules state
+policy; hooks enforce when installed. See `hooks/hooks.json` for event wiring.
 
 ## Eval suite
 
