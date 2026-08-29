@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Integration plugins `jira-workflow`, `diagram-workflow`, and `api-docs` (default-off
+  tier, skills-only, no bundled `mcp.json`, eval suites) (Milestone 3, §11).
 - Stack plugins `backend-node`, `backend-python`, and `frontend-react` (default-off
   tier, glob-scoped rules, eval suites) (Milestone 3, §18).
 - Stack detection script (`scripts/detect-stack.mjs`) recommending optional plugins

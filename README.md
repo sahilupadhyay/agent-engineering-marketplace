@@ -20,7 +20,7 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 `validate`, `node --test`, `node evals/run.mjs`, shellcheck, and repo secret scan
 on every pull request and on pushes to `main`.
 
-Eight plugins ship in `.cursor-plugin/marketplace.json`:
+Twelve plugins ship in `.cursor-plugin/marketplace.json`:
 
 | Plugin | Recommended tier | Status |
 | --- | --- | --- |
@@ -33,6 +33,9 @@ Eight plugins ship in `.cursor-plugin/marketplace.json`:
 | `backend-node` | Default Off | Shipped |
 | `backend-python` | Default Off | Shipped |
 | `frontend-react` | Default Off | Shipped |
+| `jira-workflow` | Default Off | Shipped (skills-only) |
+| `diagram-workflow` | Default Off | Shipped (skills-only) |
+| `api-docs` | Default Off | Shipped (skills-only) |
 | Cloud / infra plugins | Default Off | Milestone 3+ |
 
 **Recommended installation today:** Engineering Core, Security Core, Git Workflow,
@@ -40,8 +43,14 @@ Code Quality, Testing.
 
 **Optional stack plugins:** Enable `backend-node`, `backend-python`, or
 `frontend-react` when your repository matches that stack (see
-`scripts/detect-stack.mjs`). **Coming:** AWS, Docker, Kubernetes, Terraform, and
-other cloud/infra plugins.
+`scripts/detect-stack.mjs`).
+
+**Optional integration plugins (skills-only, no bundled MCP):** Enable
+`jira-workflow`, `diagram-workflow`, or `api-docs` when you use Jira, diagram
+MCP tools, or OpenAPI/API documentation workflows. Connect MCP servers in Cursor
+settings; see [docs/mcp-governance.md](docs/mcp-governance.md).
+
+**Coming:** AWS, Docker, Kubernetes, Terraform, and other cloud/infra plugins.
 
 The repository remains **private** until a maintainer runs the pre-public
 checklist in [docs/installation.md](docs/installation.md) and flips visibility in
