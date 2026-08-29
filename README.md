@@ -9,16 +9,16 @@ deterministic evals)—not a large pile of rules.
 
 **Milestone 1 is in progress.** GitHub Actions runs `validate`, `node --test`,
 shellcheck (when hook scripts exist), and repo secret scan on every pull request
-and on pushes to `main`. The validator enforces structural checks, context
-budgets, and duplicate detection locally. This repository still has no production
-plugins or marketplace manifest and is **not installable** as a Cursor marketplace.
-After clone (Node 20+):
+and on pushes to `main`. The first plugin **`engineering-core`** ships with five
+always-on rules and a root marketplace manifest. The repository is still
+**private** and **not** published to the Cursor Marketplace. Deterministic eval
+suite arrives in PR 7. After clone (Node 20+):
 
 ```bash
 node scripts/validate.mjs && node --test && node scripts/secret-scan-repo.mjs
 ```
 
-Deterministic eval harness CI arrives in PR 7.
+Coming in later pull requests: `security-core` (PR 8), `git-workflow` (PR 10).
 
 ## Why plugins, not a flat skill tree
 
@@ -30,12 +30,18 @@ settings. This repository cannot ship those fields. See the
 Recommended tiers are documented in [docs/tiers.md](docs/tiers.md) as
 `plugin-meta.json` metadata, not as enforced Cursor settings.
 
-## Milestone 1 destination (not in this tree)
+## Milestone 1 destination (partial)
 
-Coming in later pull requests, not present today:
+Present today:
 
-- Plugins: `engineering-core`, `security-core`, `git-workflow`
+- Plugin: `engineering-core` (five always-on rules)
+- Root `.cursor-plugin/marketplace.json`
 - Runtime: Node 20+, zero third-party runtime dependencies
+
+Still coming:
+
+- Plugins: `security-core`, `git-workflow`
+- Deterministic eval harness (PR 7)
 
 Authoring rules and planned layout are in [docs/authoring.md](docs/authoring.md)
 and [CONTRIBUTING.md](CONTRIBUTING.md). Do not treat those as a checked-in

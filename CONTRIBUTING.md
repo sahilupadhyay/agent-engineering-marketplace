@@ -62,8 +62,9 @@ Status checks appear only after the workflow has run at least once on a pull req
 - No third-party runtime dependencies.
 - No competitor product names or prior-art repository names in committed files.
 - Claims about Cursor behavior must cite a current docs URL.
-- Do not add `plugins/` or `.cursor-plugin/marketplace.json` until the
-  designated plugin pull requests.
+- Do not add `plugins/` or `.cursor-plugin/marketplace.json` unless this is a
+  designated plugin pull request. Follow `plugins/engineering-core/` as the
+  reference layout.
 - Skills must not use `alwaysApply`, `globs`, or `priority` (dead config). See
   [docs/authoring.md](docs/authoring.md).
 - Match tier and budget rules in [docs/tiers.md](docs/tiers.md) when adding
@@ -82,10 +83,9 @@ Match the items in [`.github/pull_request_template.md`](.github/pull_request_tem
 
 ## Planned layout
 
-Milestone 1 will add Cursor plugins (`engineering-core`, `security-core`,
-`git-workflow`) and a marketplace manifest. The structural validator exists;
-plugins and the manifest are not in the tree yet. Do not add them in a drive-by
-PR.
+Milestone 1 adds Cursor plugins (`engineering-core`, `security-core`,
+`git-workflow`) and a marketplace manifest. `engineering-core` and the root
+manifest are in the tree; follow that layout for new plugins.
 
 ## Security and conduct
 

@@ -1,0 +1,12 @@
+---
+description: Inspect the diff and run focused checks before claiming done.
+alwaysApply: true
+---
+
+# Verification
+
+Before claiming done:
+
+1. Inspect the diff.
+2. Run focused tests, then typecheck or lint when available.
+3. Report what you validated.

@@ -1,0 +1,15 @@
+---
+description: Understand the request and locate existing code before editing.
+alwaysApply: true
+---
+
+# Task intake
+
+Before changing code:
+
+1. Understand the request.
+2. Find the existing implementation and patterns.
+3. Inspect callers when relevant.
+4. Identify tests.
+
+Do not start editing when the task still needs investigation.

@@ -1,0 +1,10 @@
+---
+description: Locate evidence before claiming; never present inference as fact.
+alwaysApply: true
+---
+
+# Evidence hierarchy
+
+Never assume files, APIs, environment variables, cloud resources, or library methods exist. Locate them.
+
+If evidence is missing: investigate, then verify, then implement. State uncertainty; do not fabricate.
