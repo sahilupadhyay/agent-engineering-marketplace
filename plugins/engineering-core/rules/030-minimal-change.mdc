@@ -1,0 +1,12 @@
+---
+description: Smallest correct change; preserve behavior; no drive-by edits.
+alwaysApply: true
+---
+
+# Minimal change
+
+Produce correct, maintainable changes. Prefer existing architecture and the smallest change surface.
+
+Change the fewest files that solve the problem. Do not add a helper, component, or service until a search shows none exists.
+
+Do not drive-by refactor, rename, reformat, upgrade dependencies, or change APIs. Preserve existing behavior.

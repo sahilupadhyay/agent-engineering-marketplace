@@ -2,17 +2,15 @@
 
 This document defines how to author plugins, rules, skills, commands, and
 hooks for this marketplace. JSON Schemas under [schemas/](../schemas/) encode
-the same contract. A machine validator and CI arrive in pull requests 3–5; until
-then, [CONTRIBUTING.md](../CONTRIBUTING.md) and the pull request checklist are
-the enforcement layer.
+the same contract. Structural validation, budgets, duplicate detection, and CI are
+enforced; see [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 Every claim about Cursor behavior below cites current documentation. If Cursor
 changes, update the doc URL—not guesswork.
 
-## Plugin layout (planned)
+## Plugin layout
 
-No plugin directories exist in the tree yet. When they land (starting in pull
-request 6), each plugin follows this layout:
+Reference plugin: `plugins/engineering-core/`. Each plugin follows this layout:
 
 ```text
 plugins/<plugin-name>/
@@ -30,8 +28,8 @@ plugins/<plugin-name>/
 Multi-plugin repos also ship `.cursor-plugin/marketplace.json` at the repository
 root ([plugins reference](https://cursor.com/docs/reference/plugins)).
 
-Do not add `plugins/` or a marketplace manifest until the designated plugin
-pull requests.
+Add new plugins only in designated plugin pull requests; follow
+`plugins/engineering-core/` as the reference layout.
 
 ## Manifests
 
