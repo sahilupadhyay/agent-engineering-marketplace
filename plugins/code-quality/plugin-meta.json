@@ -1,0 +1,5 @@
+{
+  "tier": "default-on",
+  "contextBudget": 2048,
+  "stackTags": ["engineering", "quality"]
+}
