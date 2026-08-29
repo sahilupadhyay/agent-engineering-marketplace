@@ -83,6 +83,7 @@ Cursor smoke testing. Team-marketplace import by URL works after the public flip
 - [Installation](docs/installation.md)
 - [Eval harness](docs/evals.md)
 - [Authoring contract](docs/authoring.md)
+- [MCP governance](docs/mcp-governance.md)
 - [Recommended tiers](docs/tiers.md)
 - [Contributing](CONTRIBUTING.md)
 - [Security](SECURITY.md)
