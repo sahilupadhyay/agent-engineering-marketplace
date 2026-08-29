@@ -180,3 +180,23 @@ test("dangerous-aws-command asks on eks delete-cluster", () => {
   );
   assert.equal(r.payload.permission, "ask");
 });
+
+test("dangerous-aws-command asks on redshift delete-cluster", () => {
+  const r = runHook(
+    "dangerous-aws-command.sh",
+    '{"command":"aws redshift delete-cluster --cluster-identifier prod"}',
+    {},
+    CLOUD_AWS_HOOKS_ROOT,
+  );
+  assert.equal(r.payload.permission, "ask");
+});
+
+test("dangerous-aws-command asks on rds delete-db-cluster", () => {
+  const r = runHook(
+    "dangerous-aws-command.sh",
+    '{"command":"aws rds delete-db-cluster --db-cluster-identifier prod"}',
+    {},
+    CLOUD_AWS_HOOKS_ROOT,
+  );
+  assert.equal(r.payload.permission, "ask");
+});

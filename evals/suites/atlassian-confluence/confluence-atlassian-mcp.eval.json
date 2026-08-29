@@ -1,0 +1,15 @@
+{
+  "id": "confluence-atlassian-mcp",
+  "plugin": "atlassian-confluence",
+  "claim": "The Confluence skill requires user-connected Atlassian MCP and forbids pasting secrets.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/confluence-page/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Atlassian MCP|paste secrets",
+    "flags": "i"
+  }
+}

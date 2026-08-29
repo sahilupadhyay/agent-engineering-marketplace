@@ -1,0 +1,6 @@
+{
+  "name": "frontend-javascript",
+  "description": "Glob-scoped JavaScript and TypeScript client guidance for typed boundaries and existing bundlers.",
+  "version": "0.1.0",
+  "license": "MIT"
+}

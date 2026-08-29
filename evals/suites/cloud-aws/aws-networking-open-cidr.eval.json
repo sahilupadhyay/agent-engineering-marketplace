@@ -1,0 +1,15 @@
+{
+  "id": "aws-networking-open-cidr",
+  "plugin": "cloud-aws",
+  "claim": "The AWS networking rule forbids 0.0.0.0/0 on SSH/RDP without justification.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/040-aws-networking.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "0\\.0\\.0\\.0/0|SSH \\(22\\)|RDP \\(3389\\)",
+    "flags": "i"
+  }
+}

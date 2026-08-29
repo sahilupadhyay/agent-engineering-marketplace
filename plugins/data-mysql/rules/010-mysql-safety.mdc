@@ -1,0 +1,18 @@
+---
+description: MySQL SQL safety for charset, collation, and table locks.
+globs: ["**/mysql/**", "**/*mysql*.sql"]
+---
+
+# MySQL safety
+
+Set charset and collation explicitly on new tables to match the database
+default already used in the repo (typically utf8mb4). Do not mix collations
+in one join without a documented reason.
+
+Do not use `LOCK TABLES` unless the surrounding migrations already require
+it. Prefer InnoDB transactions for multi-statement changes.
+
+Avoid `SELECT *` in new hot-path queries. Match existing index and engine
+conventions.
+
+Do not store secrets in SQL comments or seed data.

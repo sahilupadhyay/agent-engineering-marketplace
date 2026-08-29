@@ -1,0 +1,6 @@
+{
+  "name": "frontend-vue",
+  "description": "Glob-scoped Vue SFC guidance for Composition vs Options API and existing stores.",
+  "version": "0.1.0",
+  "license": "MIT"
+}

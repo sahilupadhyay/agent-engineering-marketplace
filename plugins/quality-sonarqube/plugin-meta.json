@@ -1,0 +1,13 @@
+{
+  "tier": "default-off",
+  "stackTags": [
+    "sonarqube",
+    "quality"
+  ],
+  "pairings": [
+    {
+      "rule": "rules/010-sonar-quality-gate.mdc",
+      "skill": "skills/sonar-issue-triage/SKILL.md"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "tier": "default-off",
+  "stackTags": [
+    "html",
+    "css",
+    "frontend"
+  ],
+  "pairings": [
+    {
+      "rule": "rules/010-markup-accessibility.mdc",
+      "skill": "skills/markup-review/SKILL.md"
+    }
+  ]
+}

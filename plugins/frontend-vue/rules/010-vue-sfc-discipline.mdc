@@ -1,0 +1,15 @@
+---
+description: Vue single-file component discipline for API style and existing stores.
+globs: ["**/*.vue"]
+---
+
+# Vue SFC discipline
+
+Match the repository's Composition API vs Options API convention in new and
+edited components. Do not mix styles in one file unless the file already does.
+
+Reuse the existing store (Pinia, Vuex, or local state). Do not add Pinia when
+Vuex already owns application state, and do not add Vuex when Pinia is in use.
+
+Prefer existing UI kit components over one-off markup. Follow the project's
+script setup and style-scoped patterns.

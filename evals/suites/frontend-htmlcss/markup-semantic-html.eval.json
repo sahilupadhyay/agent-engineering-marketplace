@@ -1,0 +1,15 @@
+{
+  "id": "markup-semantic-html",
+  "plugin": "frontend-htmlcss",
+  "claim": "The markup rule requires semantic HTML and forbids inventing CSS architecture.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-markup-accessibility.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "semantic HTML|invent a CSS architecture",
+    "flags": "i"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "sonar-no-greenwash",
+  "plugin": "quality-sonarqube",
+  "claim": "The Sonar rule forbids weakening gates to greenwash and committing tokens.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-sonar-quality-gate.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "greenwash|sonar.login|changed lines",
+    "flags": "i"
+  }
+}

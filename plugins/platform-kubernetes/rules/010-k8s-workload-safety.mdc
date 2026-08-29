@@ -1,0 +1,18 @@
+---
+description: Kubernetes workload safety for privilege, resources, and production applies.
+globs: ["**/helm/**", "**/k8s/**", "**/kubernetes/**", "**/*kustomization.yaml"]
+---
+
+# Kubernetes workload safety
+
+Do not set `privileged: true` unless an existing workload in the same chart
+already requires it and the user confirmed.
+
+Add CPU/memory requests when the target cluster or chart already requires them.
+Do not invent a full resource policy the project does not use.
+
+Do not `kubectl apply` or Helm upgrade against a production context without
+explicit confirmation.
+
+Match existing namespaces, labels, and ingress patterns. Do not add a second
+service mesh in-task.

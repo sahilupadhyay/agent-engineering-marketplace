@@ -1,0 +1,17 @@
+---
+description: PostgreSQL SQL and migration safety for transactions, drops, and roles.
+globs: ["**/*.{sql,pgsql}", "**/migrations/**"]
+---
+
+# Postgres safety
+
+Wrap multi-statement schema changes in transactions when the migration tool
+supports them.
+
+Use `IF EXISTS` / `IF NOT EXISTS` on drops and creates when the surrounding
+migrations already do. Do not drop tables or columns without a rollback note.
+
+Do not grant superuser or `CREATEDB` to application roles. Match existing
+role and search_path conventions.
+
+Prefer explicit column lists over `SELECT *` in new application queries.

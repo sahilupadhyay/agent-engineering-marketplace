@@ -8,6 +8,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Catalog expansion: default-off stack plugins `frontend-htmlcss`,
+  `frontend-javascript`, `frontend-angular`, `frontend-vue`, `backend-java`,
+  `backend-go`, `data-postgres`, `data-mysql`, `data-dynamodb`, `data-redis`,
+  `data-databricks`, `obs-coralogix`, `obs-heap`, `atlassian-confluence`,
+  `quality-sonarqube`, `platform-docker`, and `platform-kubernetes`, each with
+  README and eval suite (tier, dead paths, content regex).
+- `cloud-aws` networking rule (`040-aws-networking.mdc`), `aws-cost-review`
+  skill, and additional destructive AWS command families in
+  `dangerous-aws-command.sh`.
+- `scripts/detect-stack.mjs` recommendations for Vue, Angular, Go, Java,
+  Dockerfile, Helm/k8s, and `databricks.yml` (recommend only, never auto-install).
 - `session-closeout` plugin (default-on): Agent-mode closeout table for skills,
   confidence, quality, security, and performance (self-assessed, not measured).
 - Catalog expansion roadmap under [docs/roadmap/](docs/roadmap/README.md)

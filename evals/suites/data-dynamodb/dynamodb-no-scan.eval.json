@@ -1,0 +1,15 @@
+{
+  "id": "dynamodb-no-scan",
+  "plugin": "data-dynamodb",
+  "claim": "The DynamoDB rule forbids Scan on hot paths and requires capacity honesty.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-dynamodb-access.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Scan|capacity",
+    "flags": "i"
+  }
+}

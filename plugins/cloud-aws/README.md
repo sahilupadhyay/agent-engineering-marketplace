@@ -15,9 +15,11 @@ for infrastructure, deployments, or operations.
 | `010-aws-safety.mdc` | Account, region, and resource safety for AWS changes. |
 | `020-iam-safety.mdc` | Least-privilege IAM and access-control review. |
 | `030-deployment-validation.mdc` | Plan-before-apply and post-deploy verification. |
+| `040-aws-networking.mdc` | VPC and security-group CIDRs; no `0.0.0.0/0` on SSH/RDP without justification. |
 
 All rules are glob-scoped (no `alwaysApply`). Globs target Terraform,
-CloudFormation, CDK, and AWS CLI paths.
+CloudFormation, CDK, and AWS CLI paths. Networking also matches `*vpc*` and
+`*sg*` files.
 
 ## Skills
 
@@ -26,6 +28,7 @@ CloudFormation, CDK, and AWS CLI paths.
 | `aws-review` | Reviewing AWS resources, CLI, or service configuration. |
 | `infrastructure-review` | Reviewing IaC before apply. |
 | `deployment-check` | Validating rollouts and post-deploy health. |
+| `aws-cost-review` | Instance classes, NAT, or idle resources — not model selection. |
 
 ## Hooks
 

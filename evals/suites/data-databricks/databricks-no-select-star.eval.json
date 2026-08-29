@@ -1,0 +1,15 @@
+{
+  "id": "databricks-no-select-star",
+  "plugin": "data-databricks",
+  "claim": "The Databricks rule forbids unbounded SELECT * in production jobs and committing tokens.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-databricks-safety.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "SELECT \\*|DATABRICKS_TOKEN|Unity Catalog",
+    "flags": "i"
+  }
+}

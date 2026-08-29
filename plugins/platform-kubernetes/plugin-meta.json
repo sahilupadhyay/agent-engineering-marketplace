@@ -1,0 +1,14 @@
+{
+  "tier": "default-off",
+  "stackTags": [
+    "kubernetes",
+    "helm",
+    "containers"
+  ],
+  "pairings": [
+    {
+      "rule": "rules/010-k8s-workload-safety.mdc",
+      "skill": "skills/k8s-manifest-review/SKILL.md"
+    }
+  ]
+}

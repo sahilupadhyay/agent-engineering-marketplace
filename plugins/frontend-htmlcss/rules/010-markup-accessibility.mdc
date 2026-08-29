@@ -1,0 +1,20 @@
+---
+description: Semantic HTML, accessibility, and stylesheet discipline for markup and CSS files.
+globs: ["**/*.{html,css,scss,sass,less}"]
+---
+
+# Markup and accessibility
+
+Use semantic HTML elements that match the document structure already in the repo.
+Do not invent a new heading order or landmark pattern in a single file.
+
+Never put secrets, tokens, or credentials in HTML comments, data attributes, or
+inline scripts.
+
+Prefer existing design tokens, CSS variables, and shared classes over one-off
+colors or spacing. Do not invent a CSS architecture the project does not already
+use.
+
+Fix layout in the same stylesheet layer the file already belongs to (global,
+module, or utility). Do not introduce a new preprocessor or CSS-in-JS library
+when the repo already has one.

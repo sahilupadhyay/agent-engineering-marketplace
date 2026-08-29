@@ -27,7 +27,7 @@ if printf '%s' "$command" | grep -Eiq '\bhelm[[:space:]]+(uninstall|delete)\b'; 
 fi
 
 # Additional AWS destructive patterns not covered by security-core protect-shell.
-if printf '%s' "$command" | grep -Eiq 'aws[[:space:]]+(eks[[:space:]]+delete-cluster|ecs[[:space:]]+delete-(service|cluster)|elasticache[[:space:]]+delete-(cache-cluster|replication-group)|elbv2[[:space:]]+delete-load-balancer|route53[[:space:]]+delete-hosted-zone|secretsmanager[[:space:]]+delete-secret|kms[[:space:]]+schedule-key-deletion|autoscaling[[:space:]]+delete-auto-scaling-group|cloudfront[[:space:]]+delete-distribution|apigateway[[:space:]]+delete-rest-api|sns[[:space:]]+delete-topic|sqs[[:space:]]+delete-queue|logs[[:space:]]+delete-log-group|ssm[[:space:]]+delete-parameter|ecr[[:space:]]+delete-repository|organizations[[:space:]]+delete-)'; then
+if printf '%s' "$command" | grep -Eiq 'aws[[:space:]]+(eks[[:space:]]+delete-cluster|ecs[[:space:]]+delete-(service|cluster)|elasticache[[:space:]]+delete-(cache-cluster|replication-group)|elbv2[[:space:]]+delete-load-balancer|route53[[:space:]]+delete-hosted-zone|secretsmanager[[:space:]]+delete-secret|kms[[:space:]]+schedule-key-deletion|autoscaling[[:space:]]+delete-auto-scaling-group|cloudfront[[:space:]]+delete-distribution|apigateway[[:space:]]+delete-rest-api|sns[[:space:]]+delete-topic|sqs[[:space:]]+delete-queue|logs[[:space:]]+delete-log-group|ssm[[:space:]]+delete-parameter|ecr[[:space:]]+delete-repository|organizations[[:space:]]+delete-|rds[[:space:]]+delete-db-cluster|redshift[[:space:]]+delete-cluster|opensearch[[:space:]]+delete-domain)'; then
   hook_emit_permission ask "Confirm destructive AWS command." "dangerous-aws-command: destructive AWS command requires confirmation"
   exit 0
 fi

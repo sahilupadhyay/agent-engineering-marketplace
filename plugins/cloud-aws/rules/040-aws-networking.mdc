@@ -1,0 +1,16 @@
+---
+description: AWS networking safety for VPC, security groups, and overly open CIDRs.
+globs: ["**/*.tf", "**/*vpc*", "**/*sg*"]
+---
+
+# AWS networking
+
+Do not open SSH (22) or RDP (3389) to 0.0.0.0/0 without a written justification
+in the change and user confirmation. Prefer existing bastion, VPN, or prefix
+lists the repository already uses.
+
+Match existing VPC, subnet, and security-group modules. Do not create a
+parallel network layout for a one-off resource.
+
+Review new ingress rules for ports and CIDRs against the environment
+(dev/stage/prod) already named in the stack.

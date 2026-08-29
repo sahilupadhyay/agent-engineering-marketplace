@@ -1,0 +1,15 @@
+{
+  "id": "heap-no-pii-properties",
+  "plugin": "obs-heap",
+  "claim": "The Heap skill forbids secrets or raw PII as event properties.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/heap-analytics/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "secrets or raw PII|event properties",
+    "flags": "i"
+  }
+}

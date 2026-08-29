@@ -1,0 +1,15 @@
+{
+  "id": "go-wrap-errors",
+  "plugin": "backend-go",
+  "claim": "The Go rule requires wrapping errors with %w and context on I/O.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-go-service-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "%w|context.Context",
+    "flags": "i"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "data-databricks",
+  "description": "Glob-scoped Databricks workspace guidance plus a job and notebook review skill.",
+  "version": "0.1.0",
+  "license": "MIT"
+}
