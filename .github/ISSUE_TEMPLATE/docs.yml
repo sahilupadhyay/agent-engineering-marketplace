@@ -1,0 +1,31 @@
+name: Documentation
+description: Docs or clarity issues only (README, contributing, templates).
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for documentation and clarity only. Bugs in behavior
+        belong on the Bug form. Security issues belong in
+        [SECURITY.md](../../SECURITY.md).
+  - type: textarea
+    id: location
+    attributes:
+      label: Where
+      description: File path or section that is unclear or wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear or incorrect
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested change
+      description: Optional. A proposed wording or structure.
+    validations:
+      required: false
