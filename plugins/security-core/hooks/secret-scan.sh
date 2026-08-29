@@ -1,4 +1,5 @@
 #!/bin/sh
+# shellcheck source=_hook-lib.sh
 . "$(dirname "$0")/_hook-lib.sh"
 
 scan_text() {

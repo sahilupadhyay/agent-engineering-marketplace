@@ -35,7 +35,11 @@ jobs:
             find plugins tests/fixtures -type f -name '*.sh' 2>/dev/null | sort
           )
           if [ "${#HOOK_SCRIPTS[@]}" -gt 0 ]; then
-            shellcheck -x "${HOOK_SCRIPTS[@]}"
+            for script in "${HOOK_SCRIPTS[@]}"; do
+              dir=$(dirname "$script")
+              base=$(basename "$script")
+              (cd "$dir" && shellcheck -x "$base")
+            done
           else
             echo "No hook scripts to shellcheck."
           fi
