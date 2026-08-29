@@ -1,0 +1,18 @@
+---
+description: Deployment validation before and after AWS infrastructure changes.
+globs: ["**/*.tf", "**/*.tfvars", "**/cloudformation/**", "**/*cloudformation*", "**/template.{yaml,yml,json}", "**/.aws/**", "**/aws/**", "**/cdk/**", "**/infrastructure/**", "**/infra/**"]
+---
+
+# Deployment validation
+
+Run plan or equivalent dry-run (`terraform plan`, `cdk diff`, CloudFormation
+change sets) before apply. Do not skip plan output when the toolchain supports it.
+
+Validate references resolve: VPCs, subnets, security groups, KMS keys, certificates,
+and remote state backends must exist in the target environment.
+
+After deploy, run focused health checks the project already uses (smoke tests,
+`kubectl` readiness, service endpoints, or synthetic checks). Report what was
+verified and what was not.
+
+Document rollback steps when a change is irreversible or lacks automatic rollback.
