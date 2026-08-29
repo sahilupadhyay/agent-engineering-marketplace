@@ -96,3 +96,20 @@ manifest are in the tree; follow that layout for new plugins.
 
 - Security reports: [SECURITY.md](SECURITY.md)
 - Conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
+## Issue labels
+
+Use labels from [`.github/labels.json`](.github/labels.json) on issues and pull
+requests: `plugin`, `rule`, `skill`, `hook`, `mcp`, `security`, `performance`,
+`cost`, `documentation`, `breaking-change`.
+
+Repository admins sync labels after changes:
+
+```bash
+node scripts/sync-github-labels.mjs
+```
+
+## Releases
+
+Versioning, CHANGELOG policy, and tag workflow are documented in
+[docs/release.md](docs/release.md). Stable releases only until `v1.0.0`.
