@@ -25,6 +25,25 @@ This links the repo into `~/.cursor/plugins/local/agent-engineering-marketplace`
 Restart Cursor or reload plugins, then add the local marketplace in Settings →
 Plugins.
 
+## Stack detection (recommend only)
+
+From a project directory (or pass `--root`), detect manifest files and suggest
+optional stack plugins. The script **never** installs plugins — it prints JSON for
+you to act on in Cursor Settings → Plugins.
+
+```bash
+node /path/to/agent-engineering-marketplace/scripts/detect-stack.mjs --root .
+node scripts/detect-stack.mjs --root . --pretty
+```
+
+Example output fields:
+
+| Field | Meaning |
+| --- | --- |
+| `signals` | Manifest files found (`package.json`, `pyproject.toml`, …) |
+| `recommended` | Marketplace plugin names that may fit (for example `frontend-react`) |
+| `policy` | Reminder to prompt the user; no auto-install |
+
 ## Publish to Cursor Marketplace
 
 Official publish flow: [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish)

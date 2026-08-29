@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Stack detection script (`scripts/detect-stack.mjs`) recommending optional plugins
+  from manifest files; documented in [docs/installation.md](docs/installation.md)
+  (Milestone 3, §17).
 - GitHub issue label set (`.github/labels.json`) and `scripts/sync-github-labels.mjs`
   (Milestone 2, §29).
 - Release policy ([docs/release.md](docs/release.md)), `scripts/release-notes.mjs`, and
