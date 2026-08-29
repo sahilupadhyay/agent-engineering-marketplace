@@ -1,0 +1,6 @@
+{
+  "name": "backend-python",
+  "description": "Glob-scoped Python backend guidance for services, APIs, and application code.",
+  "version": "0.1.0",
+  "license": "MIT"
+}

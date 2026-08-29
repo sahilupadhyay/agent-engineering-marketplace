@@ -1,0 +1,14 @@
+{
+  "id": "rules-no-dead-paths",
+  "plugin": "backend-node",
+  "claim": "No rule body references a plugin path that does not exist.",
+  "activation": "unknown",
+  "target": {
+    "allRules": true,
+    "section": "body"
+  },
+  "assert": {
+    "type": "pathsExist",
+    "root": "plugin"
+  }
+}

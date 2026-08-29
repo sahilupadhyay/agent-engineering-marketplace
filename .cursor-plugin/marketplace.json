@@ -49,6 +49,27 @@
       "description": "Model selection and task triage for minimal capable model without sacrificing correctness.",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "backend-node",
+      "source": "./plugins/backend-node",
+      "description": "Glob-scoped Node/TypeScript server guidance for routes, APIs, and backend services.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "backend-python",
+      "source": "./plugins/backend-python",
+      "description": "Glob-scoped Python backend guidance for services, APIs, and application code.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "frontend-react",
+      "source": "./plugins/frontend-react",
+      "description": "Glob-scoped React and TSX guidance for components, hooks, and UI state.",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }

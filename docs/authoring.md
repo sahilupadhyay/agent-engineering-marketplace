@@ -169,3 +169,19 @@ Structural validation, context budgets, duplicate detection, and CI run today.
 Deterministic eval cases arrive in PR 7. Reviewers also use
 [CONTRIBUTING.md](../CONTRIBUTING.md) and
 [.github/pull_request_template.md](../.github/pull_request_template.md).
+
+## Appendix: Stack plugins
+
+Stack plugins (`backend-node`, `backend-python`, `frontend-react`, and future
+cloud/infra plugins) follow the **default-off** tier contract:
+
+- `plugin-meta.json` sets `"tier": "default-off"` and `stackTags` for
+  documentation and `scripts/detect-stack.mjs` recommendations.
+- Rules use **glob-scoped** frontmatter only — no `alwaysApply: true`.
+- Put `globs` as a **single-line JSON array** in rule frontmatter (same pattern as
+  `plugins/engineering-core/rules/070-config-change-trigger.mdc`).
+- Ship `tier-default-off.eval.json`, `rules-no-dead-paths.eval.json`, and at least
+  one content `regex` eval per plugin under `evals/suites/<plugin>/`.
+- Reference `plugins/cost-efficiency/` and `plugins/backend-node/` for layout;
+  stack rules differ from cost-efficiency only in glob targets and stack-specific
+  body content.

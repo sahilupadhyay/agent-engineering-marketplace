@@ -20,7 +20,7 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 `validate`, `node --test`, `node evals/run.mjs`, shellcheck, and repo secret scan
 on every pull request and on pushes to `main`.
 
-Five plugins ship in `.cursor-plugin/marketplace.json`:
+Eight plugins ship in `.cursor-plugin/marketplace.json`:
 
 | Plugin | Recommended tier | Status |
 | --- | --- | --- |
@@ -30,13 +30,18 @@ Five plugins ship in `.cursor-plugin/marketplace.json`:
 | `code-quality` | Default On | Shipped |
 | `testing` | Default On | Shipped |
 | `cost-efficiency` | Default Off | Shipped |
-| Stack / cloud plugins | Default Off | Milestone 3+ |
+| `backend-node` | Default Off | Shipped |
+| `backend-python` | Default Off | Shipped |
+| `frontend-react` | Default Off | Shipped |
+| Cloud / infra plugins | Default Off | Milestone 3+ |
 
 **Recommended installation today:** Engineering Core, Security Core, Git Workflow,
 Code Quality, Testing.
 
-**Optional (coming):** AWS, Docker,
-Kubernetes, Python, React, Terraform, and other stack plugins.
+**Optional stack plugins:** Enable `backend-node`, `backend-python`, or
+`frontend-react` when your repository matches that stack (see
+`scripts/detect-stack.mjs`). **Coming:** AWS, Docker, Kubernetes, Terraform, and
+other cloud/infra plugins.
 
 The repository remains **private** until a maintainer runs the pre-public
 checklist in [docs/installation.md](docs/installation.md) and flips visibility in

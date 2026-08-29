@@ -1,0 +1,25 @@
+---
+description: React and TSX discipline for components, hooks, and UI state.
+globs: ["**/*.{tsx,jsx}"]
+---
+
+# React component discipline
+
+Match existing component patterns — functional vs class, file naming, colocation,
+and styling — before adding or editing UI code.
+
+Keep components focused. Extract subcomponents or hooks when logic grows, using
+the same folder and naming conventions the project already follows.
+
+Follow the Rules of Hooks: only call hooks at the top level of React functions
+or custom hooks, never inside loops, conditions, or nested functions.
+
+Prefer existing design-system components and tokens over one-off styles. Do not
+duplicate primitives the codebase already exports.
+
+Avoid unnecessary re-renders: reuse established state-management patterns
+(Context, Redux, React Query, or local state) instead of introducing a parallel
+approach.
+
+Do not fetch data inside render. Use the project's existing data-loading hooks,
+loaders, or server-component patterns.
