@@ -1,0 +1,44 @@
+name: Plugin proposal
+description: Propose a new Cursor plugin before adding files. Drive-by plugin dumps will be closed.
+title: "[Plugin]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Plugins and a marketplace manifest are **not** in the tree yet. Use this
+        form to propose a plugin. Do not open a PR that adds `plugins/` until
+        the designated plugin pull requests.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What gap does this plugin close that existing (or planned) plugins do not?
+    validations:
+      required: true
+  - type: input
+    id: plugin-name
+    attributes:
+      label: Proposed plugin name
+      description: kebab-case, for example `engineering-core`.
+      placeholder: my-plugin-name
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Recommended tier
+      description: Recommendation only. Cursor Required / Default On / Default Off are team-dashboard settings, not fields this repo can ship.
+      options:
+        - required
+        - default-on
+        - default-off
+    validations:
+      required: true
+  - type: textarea
+    id: not-a-rule
+    attributes:
+      label: Why this is not an extra rule in an existing plugin
+      description: Explain why a new plugin is warranted instead of a skill or rule in engineering-core, security-core, or git-workflow.
+    validations:
+      required: true
