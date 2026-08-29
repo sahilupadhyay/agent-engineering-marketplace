@@ -25,6 +25,11 @@ test("validateRoot pass-plugin returns no errors", () => {
   assert.equal(errors.length, 0);
 });
 
+test("validateRoot pass-paired-rule-skill returns no errors", () => {
+  const errors = validateRoot(path.join(FIXTURES, "pass-paired-rule-skill"));
+  assert.equal(errors.length, 0);
+});
+
 test("CLI exits 0 on repo root with no plugins", () => {
   const result = runValidate(REPO_ROOT);
   assert.equal(result.status, 0);
@@ -33,6 +38,12 @@ test("CLI exits 0 on repo root with no plugins", () => {
 
 test("CLI pass-plugin fixture exits 0", () => {
   const result = runValidate(path.join(FIXTURES, "pass-plugin"));
+  assert.equal(result.status, 0);
+  assert.match(result.stdout, /Validation passed/);
+});
+
+test("CLI pass-paired-rule-skill fixture exits 0", () => {
+  const result = runValidate(path.join(FIXTURES, "pass-paired-rule-skill"));
   assert.equal(result.status, 0);
   assert.match(result.stdout, /Validation passed/);
 });
@@ -65,6 +76,18 @@ const failCases = [
   {
     name: "fail-marketplace-missing-source",
     needle: "missing plugin source directory",
+  },
+  {
+    name: "fail-budget-exceeded",
+    needle: "exceed budget",
+  },
+  {
+    name: "fail-default-off-always-apply",
+    needle: "alwaysApply: true forbidden for default-off",
+  },
+  {
+    name: "fail-duplicate-rules",
+    needle: "content similarity",
   },
 ];
 

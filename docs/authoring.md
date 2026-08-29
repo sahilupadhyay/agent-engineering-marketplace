@@ -163,9 +163,11 @@ request 7 with the eval harness.
 | Check | Pull request |
 | --- | --- |
 | Schema validation, frontmatter lint, orphan paths | 3 (`feat/03-validator-core`) |
-| Context budgets, duplicate detection, pairing waivers | 4 (`feat/04-validator-budget-dupes`) |
+| Context budgets, duplicate detection, pairing waivers | Enforced locally by `node scripts/validate.mjs` |
 | CI merge gate | 5 (`feat/05-ci`) |
 | Deterministic eval cases | 7 (`feat/07-eval-harness`) |
 
-Until those land, reviewers use [CONTRIBUTING.md](../CONTRIBUTING.md) and
+Structural validation, context budgets, and duplicate detection run locally
+today. CI and deterministic eval cases arrive in later pull requests. Until CI
+lands, reviewers also use [CONTRIBUTING.md](../CONTRIBUTING.md) and
 [.github/pull_request_template.md](../.github/pull_request_template.md).

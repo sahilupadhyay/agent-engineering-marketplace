@@ -1,0 +1,8 @@
+---
+description: Invalid always-on rule for default-off tier.
+alwaysApply: true
+---
+
+# Always on
+
+This rule should not use alwaysApply on default-off tier.

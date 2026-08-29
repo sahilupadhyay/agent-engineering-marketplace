@@ -1,0 +1,9 @@
+{
+  "tier": "required",
+  "pairings": [
+    {
+      "rule": "rules/010-task-intake.mdc",
+      "skill": "skills/task-intake/SKILL.md"
+    }
+  ]
+}
