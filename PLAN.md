@@ -48,8 +48,8 @@ describe **capabilities only**—not milestone tracking.
 - [x] 40 plugins, 245 eval cases, CI merge gate green
 - [x] CHANGELOG `[1.0.0]` section and manifest versions at `1.0.0`
 - [x] Repository **public**
-- [x] Branch protection on `main` (PR required, `validate` check, maintainer push restriction)
-- [x] GitHub secret scanning + private vulnerability reporting enabled
+- [x] Branch protection on `main` (PR required, 1 approval, `validate` check, admins included)
+- [x] GitHub secret scanning, push protection, and private vulnerability reporting enabled
 - [x] `v1.0.0` tag aligned to current `main`
 - [ ] Submit at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish)
 - [ ] Record marketplace listing URL in README (no invented install counts)
