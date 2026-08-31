@@ -20,7 +20,7 @@ harness, and skills-only integration posture.
   expanded eval suite.
 - Plugin deepen program (waves 1–6): expanded or new skills across core workflow,
   backend/language, frontend, data, cloud/platform, and integration plugins; 69 new
-  eval cases (235 total); `/verify` command in **testing**; **security-core**
+  eval cases (245 total); `/verify` command in **testing**; **security-core**
   destructive-op and secret-exposure skills; **code-quality** `scope-and-style-review`;
   **platform-docker** `docker-review`; backend `*-service-review` skills; frontend
   framework review skills; deepened data/cloud/platform/integration skill bodies;
@@ -108,6 +108,11 @@ harness, and skills-only integration posture.
 - First plugin: `engineering-core` with five always-on rules decomposed from core
   engineering discipline.
 - Root `.cursor-plugin/marketplace.json` listing `engineering-core`.
+
+### Changed
+
+- Consumer docs trimmed for publication; maintainer-only branch-protection tooling
+  removed from the repository (PR #36).
 - Deterministic eval harness (`evals/run.mjs`), `schemas/eval-case.schema.json`,
   and eval suites for `engineering-core` and `security-core`.
 - `security-core` plugin (five always-on security rules) and marketplace entry.

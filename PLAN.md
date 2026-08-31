@@ -18,7 +18,7 @@ describe **capabilities only**—not milestone tracking.
 - Secret scan, shellcheck on hooks, duplicate detection, context budgets
 - Release policy, marketplace submission checklist
 
-### Milestone 3 — Catalog expansion (31 plugins)
+### Milestone 3 — Catalog expansion (40 plugins)
 
 - Default-off stack plugins: frontend (HTML/CSS, JS/TS, React, Angular, Vue),
   backend (Node, Python, Java, Go), data (Postgres, MySQL, DynamoDB, Redis,
@@ -29,7 +29,7 @@ describe **capabilities only**—not milestone tracking.
 - `scripts/detect-stack.mjs` (recommend only)
 - Behavioral benchmark harness (metadata validation in CI)
 
-## In progress — Production readiness (sequenced PRs)
+## Production readiness (sequenced PRs)
 
 | PR | Scope | Status |
 | --- | --- | --- |
@@ -41,14 +41,16 @@ describe **capabilities only**—not milestone tracking.
 | Confluence deepen | `atlassian-confluence` skill + evals | Complete (PR #33) |
 | Plugin deepen | Waves 1–6 skills, evals, `/verify` | Complete (PR #34) |
 | Optional deepen | `task-intake-playbook`, `jira-comment-pr` | Complete (PR #35) |
+| Release cleanup | Doc trim, remove maintainer-only tooling | Complete (PR #36) |
 
 ### Milestone 4 — v1.0.0 release and publication
 
 - [x] 40 plugins, 245 eval cases, CI merge gate green
 - [x] CHANGELOG `[1.0.0]` section and manifest versions at `1.0.0`
-- [x] `v1.0.0` tag and GitHub Release
-- [ ] Repository **public** (Settings → General → Danger Zone)
-- [ ] GitHub secret scanning + private vulnerability reporting enabled
+- [x] Repository **public**
+- [x] Branch protection on `main` (PR required, `validate` check, maintainer push restriction)
+- [x] GitHub secret scanning + private vulnerability reporting enabled
+- [x] `v1.0.0` tag aligned to current `main`
 - [ ] Submit at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish)
 - [ ] Record marketplace listing URL in README (no invented install counts)
 
