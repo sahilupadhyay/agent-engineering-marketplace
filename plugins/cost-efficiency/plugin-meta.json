@@ -1,5 +1,6 @@
 {
-  "tier": "default-off",
+  "tier": "default-on",
+  "contextBudget": 2048,
   "stackTags": ["engineering", "cost"],
   "pairings": [
     {

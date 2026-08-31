@@ -1,7 +1,7 @@
 {
   "name": "lang-bash",
   "description": "Glob-scoped shell script safety for quoting, errexit, and reviewable diffs.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "displayName": "Lang Bash",
   "logo": "assets/logo.svg",

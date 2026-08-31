@@ -1,23 +1,33 @@
 ---
-description: Prefer the simplest model that can complete the task reliably; never sacrifice correctness for cost.
+description: Route each query by intent and complexity; hold until the user confirms model or mode.
+alwaysApply: true
 ---
 
-# Minimum capable model
+# Model and mode router
 
 Re-evaluate on every user message, including follow-ups. You cannot change the
-picker; the user must.
+model picker or Cursor mode; the user must.
 
-Default to the lightest capable tier. Prefer the simplest model that can
-complete the task reliably.
+| Axis | Light | Mid | Heavy |
+| --- | --- | --- | --- |
+| Model | Single-file fixes, config/docs, simple CRUD, rename, Q&A | Multi-file work, non-trivial debug, unfamiliar code, API/integration | Architecture, high-risk production, deep unclear bugs, security-critical |
+| Mode | Read-only Q&A → Ask | Implementation or multi-step edits → Agent | Open design trade-offs → Plan |
 
-| Tier | Use when |
-| --- | --- |
-| Light | Single-file or obvious fixes, config/docs, simple CRUD, rename/move, cleanup, Q&A |
-| Mid | Multi-file work, non-trivial debug, unfamiliar code, cross-module refactors, API/integration |
-| Heavy | Architecture, high-risk production, deep unclear bugs, security-critical correctness |
+Default to the lightest capable model. Never pick Heavy because it is available.
+Never stay Light when correctness is at risk.
 
-Never pick the heaviest tier because it is available. Never stay on a weaker
-model when correctness is at risk.
+If the current model is heavier or lighter than recommended, or the current
+mode cannot complete the task:
 
-When the selected model is heavier than recommended, stop and ask the user
-whether to switch before implementing or exploring.
+1. Do not call tools, edit files, or start implementation.
+2. State current vs recommended model tier and mode, and one-line why.
+3. Ask the user to switch, stay, or change mode.
+4. Wait for an explicit preference.
+
+If current model and mode already match, execute immediately.
+
+After confirmation, execute with the user's choice. If they stay on a mismatch,
+note the risk in one sentence, then proceed. If they will switch, stop until
+the next message on the new model or mode.
+
+Never sacrifice correctness for cost.

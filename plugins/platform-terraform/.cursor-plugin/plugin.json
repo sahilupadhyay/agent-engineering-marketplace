@@ -1,7 +1,7 @@
 {
   "name": "platform-terraform",
   "description": "Vendor-neutral Terraform safety for plan-before-apply and state discipline.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "displayName": "Platform Terraform",
   "logo": "assets/logo.svg",

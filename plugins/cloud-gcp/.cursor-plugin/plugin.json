@@ -1,7 +1,7 @@
 {
   "name": "cloud-gcp",
   "description": "Glob-scoped GCP guidance for projects, IAM, and Terraform google provider files.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "displayName": "Cloud GCP",
   "logo": "assets/logo.svg",
