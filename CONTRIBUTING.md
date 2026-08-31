@@ -29,6 +29,9 @@ There is no commitlint, husky, or other hook that enforces this.
 Format: `feat|fix|docs|test|ci|chore: <subject>` (scope optional). Keep the
 subject at or under 72 characters.
 
+Do **not** add `Co-authored-by`, `Signed-off-by`, or similar trailers for AI
+tools (including Cursor) to commit messages or pull request descriptions.
+
 Examples:
 
 - `docs: rewrite README for honest milestone status`
@@ -44,40 +47,10 @@ Plugin, rule, skill, command, and hook requirements live in
 [docs/authoring.md](docs/authoring.md). Recommended tiers and context budgets
 live in [docs/tiers.md](docs/tiers.md). JSON Schemas under [schemas/](schemas/)
 encode the same contract. Run `node scripts/validate.mjs` before opening a PR
-that adds or changes plugin content. Budget, similarity, and CI are enforced once
-PR 5 merges.
+that adds or changes plugin content.
 
-## Branch protection and merge policy
-
-`main` is protected. Contributors work on feature branches and open pull requests;
-direct pushes to `main` are limited to the maintainer.
-
-| Rule | Setting |
-| --- | --- |
-| Pull request required | Yes — no direct commits to `main` without a PR |
-| Required approval | 1 review; **CODEOWNERS** (`.github/CODEOWNERS`) must approve |
-| Required status check | `validate` (Validate workflow) |
-| Up-to-date branch | Required before merge |
-| Force push / delete | Disabled on `main` |
-| Admin bypass | Disabled (`enforce_admins`) |
-
-Maintainers apply or refresh rules after the repository is public:
-
-```bash
-node scripts/setup-branch-protection.mjs
-```
-
-On GitHub Free, branch protection on `main` requires the repository to be **public**
-(or GitHub Pro for private repos). Run the script immediately after flipping visibility.
-
-## Required status checks
-
-1. Open **Settings → Branches** and confirm the rule for `main`, or run
-   `node scripts/setup-branch-protection.mjs` after going public.
-2. Required check name: **`validate`** (from `.github/workflows/validate.yml`).
-3. **Require branches to be up to date before merging** is enabled by the setup script.
-
-Status checks appear only after the workflow has run at least once on a pull request.
+Pull requests must pass CI (`validate` workflow). Run the full local gate before
+pushing (see command at the top of this file).
 
 Plugin pull requests must include or update eval cases under
 `evals/suites/<plugin-name>/`. See [docs/evals.md](docs/evals.md).
