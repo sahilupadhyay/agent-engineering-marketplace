@@ -1,0 +1,15 @@
+{
+  "id": "destructive-redis-flush",
+  "plugin": "security-core",
+  "claim": "The destructive-ops rule mentions Redis FLUSHALL/FLUSHDB.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/040-destructive-ops.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "FLUSHALL|FLUSHDB",
+    "flags": "i"
+  }
+}

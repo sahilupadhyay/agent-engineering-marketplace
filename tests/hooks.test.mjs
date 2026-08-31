@@ -211,3 +211,28 @@ test("dangerous-aws-command asks on rds delete-db-cluster", () => {
   );
   assert.equal(r.payload.permission, "ask");
 });
+
+test("protect-shell asks on DELETE FROM without WHERE", () => {
+  const r = runHook("protect-shell.sh", '{"command":"mysql -e DELETE FROM users"}');
+  assert.equal(r.payload.permission, "ask");
+});
+
+test("protect-shell allows DELETE FROM with WHERE", () => {
+  const r = runHook("protect-shell.sh", '{"command":"mysql -e DELETE FROM users WHERE id=1"}');
+  assert.equal(r.payload.permission, "allow");
+});
+
+test("protect-shell asks on FLUSHALL", () => {
+  const r = runHook("protect-shell.sh", '{"command":"redis-cli FLUSHALL"}');
+  assert.equal(r.payload.permission, "ask");
+});
+
+test("protect-shell asks on aws s3 rm", () => {
+  const r = runHook("protect-shell.sh", '{"command":"aws s3 rm s3://my-bucket/path --recursive"}');
+  assert.equal(r.payload.permission, "ask");
+});
+
+test("protect-shell asks on find -delete", () => {
+  const r = runHook("protect-shell.sh", '{"command":"find . -name *.tmp -delete"}');
+  assert.equal(r.payload.permission, "ask");
+});
