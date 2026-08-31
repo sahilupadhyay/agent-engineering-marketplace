@@ -36,8 +36,21 @@ describe **capabilities only**—not milestone tracking.
 | A | Capability-only README/docs, `PLAN.md`, `docs/plugin-roles.md` | Complete (PR #28) |
 | B | Dedupe verification/SQL/k8s hooks; non-goals in plugin-roles | Complete (PR #29) |
 | C | Extend `security-core` protect-shell (DB/cache/S3 deletes); tests | Complete (PR #30) |
-| D | Handbook-gap plugins (8 plugins) | Complete (branch `feat/pr-d-handbook-gaps`) |
-| E | `engineering-playbooks` default-off (11 generic skills) | Complete (branch `feat/pr-e-playbooks`) |
+| D | Handbook-gap plugins (8 plugins) | Complete (PR #32) |
+| E | `engineering-playbooks` default-off (11 generic skills) | Complete (PR #31) |
+| Confluence deepen | `atlassian-confluence` skill + evals | Complete (PR #33) |
+| Plugin deepen | Waves 1–6 skills, evals, `/verify` | Complete (PR #34) |
+| Optional deepen | `task-intake-playbook`, `jira-comment-pr` | Complete (PR #35) |
+
+### Milestone 4 — v1.0.0 release prep
+
+- [x] 40 plugins, 245 eval cases, CI merge gate green
+- [x] `v1.0.0` tag, CHANGELOG section, manifest versions aligned
+- [x] CODEOWNERS + `scripts/setup-branch-protection.mjs` (apply after public flip)
+- [ ] Repository **public**
+- [ ] Branch protection applied on `main` (run setup script after public)
+- [ ] GitHub secret scanning + private vulnerability reporting enabled
+- [ ] Cursor marketplace submission ([docs/marketplace-submit.md](docs/marketplace-submit.md))
 
 ## Quality flags (known)
 

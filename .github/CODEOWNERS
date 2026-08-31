@@ -1,0 +1,3 @@
+# Default owner review for all changes. Branch protection requires code owner
+# approval before merge (see scripts/setup-branch-protection.mjs).
+* @sahilupadhyay

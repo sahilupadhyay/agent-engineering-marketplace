@@ -4,6 +4,10 @@
   "stackTags": ["engineering"],
   "pairings": [
     {
+      "rule": "rules/010-task-intake.mdc",
+      "skill": "skills/task-intake-playbook/SKILL.md"
+    },
+    {
       "rule": "rules/070-config-change-trigger.mdc",
       "skill": "skills/config-change-review/SKILL.md"
     }

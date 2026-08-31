@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-08-31
+
+First stable marketplace release: 40 plugins, 245 eval cases, full validation
+harness, and skills-only integration posture.
+
 ### Added
 
 - **engineering-core** `task-intake-playbook` skill and **jira-workflow**

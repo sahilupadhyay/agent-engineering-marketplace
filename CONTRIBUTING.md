@@ -47,14 +47,35 @@ encode the same contract. Run `node scripts/validate.mjs` before opening a PR
 that adds or changes plugin content. Budget, similarity, and CI are enforced once
 PR 5 merges.
 
+## Branch protection and merge policy
+
+`main` is protected. Contributors work on feature branches and open pull requests;
+direct pushes to `main` are limited to the maintainer.
+
+| Rule | Setting |
+| --- | --- |
+| Pull request required | Yes — no direct commits to `main` without a PR |
+| Required approval | 1 review; **CODEOWNERS** (`.github/CODEOWNERS`) must approve |
+| Required status check | `validate` (Validate workflow) |
+| Up-to-date branch | Required before merge |
+| Force push / delete | Disabled on `main` |
+| Admin bypass | Disabled (`enforce_admins`) |
+
+Maintainers apply or refresh rules after the repository is public:
+
+```bash
+node scripts/setup-branch-protection.mjs
+```
+
+On GitHub Free, branch protection on `main` requires the repository to be **public**
+(or GitHub Pro for private repos). Run the script immediately after flipping visibility.
+
 ## Required status checks
 
-For repository admins after PR 5 merges:
-
-1. Open **Settings → Branches** → branch protection rule for `main`
-2. Enable **Require status checks to pass before merging**
-3. Require check: **`Validate / validate`**
-4. Enable **Require branches to be up to date before merging** (recommended)
+1. Open **Settings → Branches** and confirm the rule for `main`, or run
+   `node scripts/setup-branch-protection.mjs` after going public.
+2. Required check name: **`validate`** (from `.github/workflows/validate.yml`).
+3. **Require branches to be up to date before merging** is enabled by the setup script.
 
 Status checks appear only after the workflow has run at least once on a pull request.
 

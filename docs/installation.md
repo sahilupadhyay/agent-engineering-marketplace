@@ -62,9 +62,19 @@ Before flipping repository visibility to public:
 3. Review `git grep` for accidental secrets; hook and test fixtures must use
    obviously fake tokens only.
 4. Read rules, skills, and commands for personal emails or internal credentials.
+5. Confirm `v1.0.0` tag exists and manifest versions match ([release.md](release.md)).
 
 ## After going public
 
 In GitHub **Settings → General → Danger Zone**, change visibility to **Public**.
-Enable secret scanning and private vulnerability reporting under **Settings →
-Security**.
+Then, in order:
+
+1. Apply branch protection:
+
+   ```bash
+   node scripts/setup-branch-protection.mjs
+   ```
+
+2. Enable secret scanning and private vulnerability reporting under **Settings →
+   Security**.
+3. Submit to the Cursor marketplace ([marketplace-submit.md](marketplace-submit.md)).
