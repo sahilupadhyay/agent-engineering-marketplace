@@ -105,7 +105,7 @@ skills-only patterns.
 | Layer | Owner | Covers |
 | --- | --- | --- |
 | Rule | `security-core` `040-destructive-ops` | Agent must confirm before destructive ops |
-| Hook | `security-core` `protect-shell.sh` | rm, git destructive, SQL DROP/TRUNCATE, common AWS deletes, terraform destroy |
+| Hook | `security-core` `protect-shell.sh` | rm, git destructive, SQL DROP/TRUNCATE/DELETE-without-WHERE, Redis FLUSHALL/FLUSHDB, `aws s3 rm`, `find -delete`, common AWS deletes, terraform destroy |
 | Hook | `cloud-aws` `dangerous-aws-command.sh` | Extended AWS API deletes (EKS cluster, ElastiCache, Route53, …) |
 | Hook | `platform-kubernetes` `dangerous-k8s-command.sh` | `kubectl delete`, `helm uninstall`/`delete` |
 

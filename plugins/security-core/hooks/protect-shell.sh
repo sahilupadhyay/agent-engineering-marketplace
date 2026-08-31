@@ -66,6 +66,28 @@ if printf '%s' "$command" | grep -Eiq 'TRUNCATE[[:space:]]+TABLE'; then
   exit 0
 fi
 
+if printf '%s' "$command" | grep -Eiq 'DELETE[[:space:]]+FROM'; then
+  if ! printf '%s' "$command" | grep -Eiq '\bWHERE\b'; then
+    hook_emit_permission ask "Confirm DELETE FROM without WHERE (may remove all rows)." "protect-shell: DELETE without WHERE requires confirmation"
+    exit 0
+  fi
+fi
+
+if printf '%s' "$command" | grep -Eiq '\b(FLUSHALL|FLUSHDB)\b'; then
+  hook_emit_permission ask "Confirm Redis FLUSHALL/FLUSHDB (wipes cache data)." "protect-shell: Redis flush requires confirmation"
+  exit 0
+fi
+
+if printf '%s' "$command" | grep -Eiq 'aws[[:space:]]+s3[[:space:]]+rm\b'; then
+  hook_emit_permission ask "Confirm aws s3 rm (deletes S3 objects)." "protect-shell: aws s3 rm requires confirmation"
+  exit 0
+fi
+
+if printf '%s' "$command" | grep -Eiq 'find[[:space:]].*-delete\b'; then
+  hook_emit_permission ask "Confirm find -delete (removes matched files)." "protect-shell: find -delete requires confirmation"
+  exit 0
+fi
+
 if printf '%s' "$command" | grep -Eiq 'aws[[:space:]]+(s3[[:space:]]+rb|dynamodb[[:space:]]+delete-table|cloudformation[[:space:]]+delete-stack|rds[[:space:]]+delete-db-instance|lambda[[:space:]]+delete-function|iam[[:space:]]+delete-|ec2[[:space:]]+terminate-instances)'; then
   hook_emit_permission ask "Confirm destructive AWS command." "protect-shell: destructive AWS command requires confirmation"
   exit 0

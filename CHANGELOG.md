@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Extended `security-core` `protect-shell.sh`: `DELETE FROM` without `WHERE`,
+  Redis `FLUSHALL`/`FLUSHDB`, `aws s3 rm`, and `find -delete` confirmations.
 - Overlap cleanup: `engineering-core` verification points to **testing** ladder;
   Postgres SQL globs narrowed; `kubectl`/`helm` destructive hooks moved from
   `cloud-aws` to `platform-kubernetes` `dangerous-k8s-command.sh`.
