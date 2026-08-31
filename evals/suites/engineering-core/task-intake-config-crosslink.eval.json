@@ -1,0 +1,15 @@
+{
+  "id": "task-intake-config-crosslink",
+  "plugin": "engineering-core",
+  "claim": "task-intake-playbook routes config paths to config-change-review.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/task-intake-playbook/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "config-change-review",
+    "flags": "i"
+  }
+}

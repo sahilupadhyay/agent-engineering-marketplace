@@ -1,0 +1,15 @@
+{
+  "id": "jira-comment-pr-use-when",
+  "plugin": "jira-workflow",
+  "claim": "jira-comment-pr declares Use when in frontmatter.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/jira-comment-pr/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

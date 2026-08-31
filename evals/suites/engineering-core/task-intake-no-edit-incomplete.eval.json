@@ -1,0 +1,15 @@
+{
+  "id": "task-intake-no-edit-incomplete",
+  "plugin": "engineering-core",
+  "claim": "task-intake-playbook forbids editing before investigation is complete.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/task-intake-playbook/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "do not start editing|investigation is incomplete",
+    "flags": "i"
+  }
+}

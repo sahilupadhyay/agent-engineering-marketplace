@@ -1,0 +1,15 @@
+{
+  "id": "jira-comment-pr-not-triage",
+  "plugin": "jira-workflow",
+  "claim": "jira-comment-pr defers triage and transitions to jira-triage.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/jira-comment-pr/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "jira-triage|Do not transition",
+    "flags": "i"
+  }
+}

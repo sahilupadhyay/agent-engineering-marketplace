@@ -9,8 +9,11 @@ Set **Required** in Dashboard → Plugins.
 
 ## Skill
 
+`task-intake-playbook` — Use when starting investigation or implementation before
+editing files (pairs with task-intake rules).
+
 `config-change-review` — Use when changing CI/CD, Docker, Terraform, Kubernetes,
-Helm, env files, or dependency manifests. Includes intake step before editing.
+Helm, env files, or dependency manifests.
 
 ## Rules
 

@@ -11,7 +11,7 @@ skills-only patterns.
 
 | Plugin | Tier | Responsibility | Rules | Skills | Hooks |
 | --- | --- | --- | ---: | ---: | ---: |
-| `engineering-core` | Required | Task intake, evidence before change, minimal diff, context efficiency | 7 | 1 (`config-change-review`, intake workflow) | — |
+| `engineering-core` | Required | Task intake, evidence before change, minimal diff, context efficiency | 7 | 2 (`task-intake-playbook`, `config-change-review`) | — |
 | `security-core` | Required | Secrets, auth, input trust, destructive ops, supply chain | 5 | 2 (`confirm-destructive-op`, `secret-exposure-response`) | 3 (`protect-shell`, `protect-read`, `secret-scan`) |
 
 **Non-goals:** Stack-specific guidance (use stack plugins). Deep verification ladder (use `testing`).
@@ -90,7 +90,7 @@ skills-only patterns.
 
 | Plugin | Tier | Skill | Requires |
 | --- | --- | --- | --- |
-| `jira-workflow` | Default Off | `jira-triage` | User-connected Atlassian MCP |
+| `jira-workflow` | Default Off | `jira-triage`, `jira-comment-pr` | User-connected Atlassian MCP |
 | `atlassian-confluence` | Default Off | `confluence-page` | User-connected Atlassian MCP; search-before-create, update-over-duplicate, HTML default |
 | `diagram-workflow` | Default Off | `architecture-diagram` | User-connected diagram MCP (e.g. Lucid) |
 | `api-docs` | Default Off | `openapi-review` | OpenAPI/spec files in repo |

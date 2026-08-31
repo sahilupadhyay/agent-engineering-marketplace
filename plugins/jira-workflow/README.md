@@ -17,6 +17,9 @@ has connected an Atlassian or Jira MCP in Cursor settings.
 `jira-triage` — Use when triaging Jira issues, searching tickets, updating fields,
 adding comments, or running workflow transitions.
 
+`jira-comment-pr` — Use when linking a GitHub PR to a Jira issue key or posting a
+PR URL as a comment (not full triage).
+
 ## Skills-only posture
 
 This plugin ships **skills only** (no rules, commands, hooks, or `mcp.json`).
