@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Overlap cleanup: `engineering-core` verification points to **testing** ladder;
+  Postgres SQL globs narrowed; `kubectl`/`helm` destructive hooks moved from
+  `cloud-aws` to `platform-kubernetes` `dangerous-k8s-command.sh`.
 - Capability-only consumer docs: rewritten [README.md](README.md),
   [docs/plugin-roles.md](docs/plugin-roles.md), and maintainer [PLAN.md](PLAN.md);
   status language removed from [docs/architecture.md](docs/architecture.md) and

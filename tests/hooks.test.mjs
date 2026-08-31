@@ -9,6 +9,7 @@ import test from "node:test";
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const HOOKS_ROOT = path.join(REPO_ROOT, "plugins", "security-core", "hooks");
 const CLOUD_AWS_HOOKS_ROOT = path.join(REPO_ROOT, "plugins", "cloud-aws", "hooks");
+const K8S_HOOKS_ROOT = path.join(REPO_ROOT, "plugins", "platform-kubernetes", "hooks");
 
 function runHook(scriptName, stdin, env = {}, hooksRoot = HOOKS_ROOT) {
   const script = path.join(hooksRoot, scriptName);
@@ -151,24 +152,34 @@ test("dangerous-aws-command allows describe", () => {
   assert.equal(r.payload.permission, "allow");
 });
 
-test("dangerous-aws-command asks on kubectl delete", () => {
+test("dangerous-k8s-command asks on kubectl delete", () => {
   const r = runHook(
-    "dangerous-aws-command.sh",
+    "dangerous-k8s-command.sh",
     '{"command":"kubectl delete namespace prod"}',
     {},
-    CLOUD_AWS_HOOKS_ROOT,
+    K8S_HOOKS_ROOT,
   );
   assert.equal(r.payload.permission, "ask");
 });
 
-test("dangerous-aws-command asks on helm uninstall", () => {
+test("dangerous-k8s-command asks on helm uninstall", () => {
   const r = runHook(
-    "dangerous-aws-command.sh",
+    "dangerous-k8s-command.sh",
     '{"command":"helm uninstall my-release -n prod"}',
     {},
-    CLOUD_AWS_HOOKS_ROOT,
+    K8S_HOOKS_ROOT,
   );
   assert.equal(r.payload.permission, "ask");
+});
+
+test("dangerous-k8s-command allows kubectl get", () => {
+  const r = runHook(
+    "dangerous-k8s-command.sh",
+    '{"command":"kubectl get pods -n prod"}',
+    {},
+    K8S_HOOKS_ROOT,
+  );
+  assert.equal(r.payload.permission, "allow");
 });
 
 test("dangerous-aws-command asks on eks delete-cluster", () => {

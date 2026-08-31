@@ -32,10 +32,11 @@ CloudFormation, CDK, and AWS CLI paths. Networking also matches `*vpc*` and
 
 ## Hooks
 
-`dangerous-aws-command.sh` asks before destructive `kubectl delete`, `helm
-uninstall`/`delete`, and AWS delete patterns beyond `security-core`
-`protect-shell` coverage. Install alongside **security-core** for baseline
-shell protection.
+`dangerous-aws-command.sh` asks before extended AWS delete patterns beyond
+`security-core` `protect-shell` coverage. Destructive `kubectl delete` and
+`helm uninstall`/`delete` are owned by **platform-kubernetes**
+`dangerous-k8s-command.sh`. Install **security-core** for baseline shell
+protection.
 
 ## Context budget
 

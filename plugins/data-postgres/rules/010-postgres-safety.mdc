@@ -1,6 +1,6 @@
 ---
 description: PostgreSQL SQL and migration safety for transactions, drops, and roles.
-globs: ["**/*.{sql,pgsql}", "**/migrations/**"]
+globs: ["**/*.pgsql", "**/postgres/**", "**/*postgres*.sql"]
 ---
 
 # Postgres safety

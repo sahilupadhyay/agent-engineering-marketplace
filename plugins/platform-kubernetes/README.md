@@ -12,12 +12,13 @@ Set **Default Off** in Dashboard → Plugins. Enable when the repository has Hel
 ## Skill
 
 `k8s-manifest-review` — Use when changing Deployments, NetworkPolicies, or Helm values.
-## Destructive kubectl
 
-`kubectl delete` and `helm uninstall` may already be gated by `cloud-aws`
-(`dangerous-aws-command.sh`) or `security-core`. This plugin does **not**
-duplicate those hooks. Enable `platform-kubernetes` for glob rules; keep
-cloud/security plugins for CLI confirmation when those are installed.
+## Hooks
+
+`dangerous-k8s-command.sh` asks before `kubectl delete` and `helm
+uninstall`/`delete`. This plugin owns Kubernetes CLI confirmations; **cloud-aws**
+covers extended AWS API deletes only. Install **security-core** for baseline
+shell protection (`rm`, git destructive, SQL DROP, common AWS deletes).
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no
