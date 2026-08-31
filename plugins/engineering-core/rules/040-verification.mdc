@@ -8,5 +8,8 @@ alwaysApply: true
 Before claiming done:
 
 1. Inspect the diff.
-2. Run focused tests, then typecheck or lint when available.
+2. Run focused checks (see the **testing** plugin verification ladder when enabled).
 3. Report what you validated.
+
+When the **testing** plugin is enabled, follow its ordered ladder (syntax →
+typecheck → lint → tests → build) instead of inventing a different sequence.

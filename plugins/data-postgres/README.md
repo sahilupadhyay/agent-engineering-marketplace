@@ -8,7 +8,7 @@ Set **Default Off** in Dashboard → Plugins. Enable when the repository uses Po
 
 ## Rule
 
-`010-postgres-safety.mdc` — glob-scoped rule (no `alwaysApply`). Applies to `.sql`/`.pgsql` and `migrations/`.
+`010-postgres-safety.mdc` — glob-scoped rule (no `alwaysApply`). Applies to `.pgsql`, `postgres/` trees, and `*postgres*.sql` (not generic `.sql`).
 ## Skill
 
 `postgres-review` — Use when changing Postgres schema, queries, or migrations.

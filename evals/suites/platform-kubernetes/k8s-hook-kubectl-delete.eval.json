@@ -1,0 +1,15 @@
+{
+  "id": "k8s-hook-kubectl-delete",
+  "plugin": "platform-kubernetes",
+  "claim": "The dangerous-k8s-command hook asks before kubectl delete.",
+  "activation": "unknown",
+  "target": {
+    "file": "hooks/dangerous-k8s-command.sh",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "kubectl.*delete",
+    "flags": "i"
+  }
+}

@@ -62,7 +62,7 @@ skills-only patterns.
 
 | Plugin | Tier | Globs (summary) | Responsibility |
 | --- | --- | --- | --- |
-| `data-postgres` | Default Off | Postgres-flavored SQL/migrations | Postgres safety; skill `postgres-review` |
+| `data-postgres` | Default Off | Postgres-flavored paths (`.pgsql`, `postgres/`, `*postgres*.sql`) | Postgres safety; skill `postgres-review` |
 | `data-mysql` | Default Off | MySQL-flavored SQL/migrations | MySQL safety; skill `mysql-review` |
 | `data-dynamodb` | Default Off | DynamoDB/IaC patterns | Access patterns; skill `dynamodb-review` |
 | `data-redis` | Default Off | Redis config/scripts | Cache/TTL discipline; skill `redis-review` |
@@ -76,11 +76,13 @@ skills-only patterns.
 | --- | --- | --- | ---: | ---: | ---: |
 | `cloud-aws` | Default Off | AWS, Terraform, CloudFormation safety and reviews | 4 | 4 | 2 |
 | `platform-docker` | Default Off | Dockerfile and Compose safety | 1 | — | — |
-| `platform-kubernetes` | Default Off | K8s/Helm workload safety | 1 | 1 (`k8s-manifest-review`) | — |
+| `platform-kubernetes` | Default Off | K8s/Helm workload safety | 1 | 1 (`k8s-manifest-review`) | 1 |
 
 **`cloud-aws` skills:** `aws-review`, `infrastructure-review`, `deployment-check`, `aws-cost-review`.
 
-**`cloud-aws` hooks:** `dangerous-aws-command.sh` (extended AWS deletes, kubectl/helm—consolidation tracked in PR B).
+**`cloud-aws` hooks:** `dangerous-aws-command.sh` (extended AWS API deletes only).
+
+**`platform-kubernetes` hooks:** `dangerous-k8s-command.sh` (`kubectl delete`, `helm uninstall`/`delete`).
 
 **Non-goals:** Azure/GCP/Terraform-as-platform (future plugins). Bundled MCP or AWS credentials.
 
@@ -103,8 +105,9 @@ skills-only patterns.
 | Layer | Owner | Covers |
 | --- | --- | --- |
 | Rule | `security-core` `040-destructive-ops` | Agent must confirm before destructive ops |
-| Hook | `security-core` `protect-shell.sh` | rm, git destructive, SQL DROP/TRUNCATE, AWS deletes, terraform destroy |
-| Hook | `cloud-aws` `dangerous-aws-command.sh` | Extended AWS API deletes, kubectl delete, helm uninstall |
+| Hook | `security-core` `protect-shell.sh` | rm, git destructive, SQL DROP/TRUNCATE, common AWS deletes, terraform destroy |
+| Hook | `cloud-aws` `dangerous-aws-command.sh` | Extended AWS API deletes (EKS cluster, ElastiCache, Route53, …) |
+| Hook | `platform-kubernetes` `dangerous-k8s-command.sh` | `kubectl delete`, `helm uninstall`/`delete` |
 
 Do **not** add a separate destructive-ops plugin; extend `security-core` hooks instead.
 
