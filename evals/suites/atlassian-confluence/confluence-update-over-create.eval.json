@@ -1,0 +1,15 @@
+{
+  "id": "confluence-update-over-create",
+  "plugin": "atlassian-confluence",
+  "claim": "The Confluence skill prefers updateConfluencePage over creating duplicates.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/confluence-page/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "updateConfluencePage|update existing",
+    "flags": "i"
+  }
+}

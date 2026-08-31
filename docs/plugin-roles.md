@@ -91,7 +91,7 @@ skills-only patterns.
 | Plugin | Tier | Skill | Requires |
 | --- | --- | --- | --- |
 | `jira-workflow` | Default Off | `jira-triage` | User-connected Atlassian MCP |
-| `atlassian-confluence` | Default Off | `confluence-page` | User-connected Atlassian MCP |
+| `atlassian-confluence` | Default Off | `confluence-page` | User-connected Atlassian MCP; search-before-create, update-over-duplicate, HTML default |
 | `diagram-workflow` | Default Off | `architecture-diagram` | User-connected diagram MCP (e.g. Lucid) |
 | `api-docs` | Default Off | `openapi-review` | OpenAPI/spec files in repo |
 | `obs-coralogix` | Default Off | `coralogix-telemetry` | User-connected Coralogix MCP |
@@ -99,6 +99,10 @@ skills-only patterns.
 | `quality-sonarqube` | Default Off | `sonar-issue-triage` | SonarQube gate config in repo |
 
 **Non-goals:** Bundled MCP servers ([mcp-governance.md](mcp-governance.md)). Vendor credentials in plugin files.
+
+**`atlassian-confluence` skill behavior:** discover existing pages before create;
+prefer `updateConfluencePage` over duplicates; default `contentFormat: html` for
+writes. Jira triage stays in **jira-workflow**.
 
 ## Language and platform gaps (default off)
 

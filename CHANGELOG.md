@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Deepened `atlassian-confluence` `confluence-page` skill: Atlassian MCP tool
+  flow, search-before-create, update-over-duplicate, HTML content format, and
+  expanded eval suite.
 - Plugin deepen program (waves 1–6): expanded or new skills across core workflow,
   backend/language, frontend, data, cloud/platform, and integration plugins; 69 new
   eval cases (235 total); `/verify` command in **testing**; **security-core**
