@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- `engineering-playbooks` default-off skills-only plugin with 11 generic playbooks
+  (debug, review, performance, data access, API design, threat model, architecture,
+  resilience, incident triage, GitHub CI, elicitation). Commit/PR workflow stays in
+  **git-workflow**.
 - Handbook-gap default-off plugins: `lang-rust`, `lang-bash`, `cloud-azure`,
   `cloud-gcp`, `platform-terraform`, `platform-github-actions`, `obs-telemetry`,
   and `api-http` (original rules, skills, eval suites, detect-stack signals).

@@ -280,6 +280,13 @@
       "description": "REST and JSON HTTP API discipline complementing OpenAPI documentation review.",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "engineering-playbooks",
+      "source": "./plugins/engineering-playbooks",
+      "description": "Default-off skills-only playbooks for debug, review, architecture, incidents, and elicitation.",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }

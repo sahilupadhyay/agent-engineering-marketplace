@@ -33,18 +33,18 @@ describe **capabilities only**—not milestone tracking.
 
 | PR | Scope | Status |
 | --- | --- | --- |
-| A | Capability-only README/docs, `PLAN.md`, `docs/plugin-roles.md` | In progress |
-| B | Dedupe verification/SQL/k8s hooks; non-goals in plugin-roles | Pending |
-| C | Extend `security-core` protect-shell (DB/cache/S3 deletes); tests | Pending |
-| D | Handbook-gap plugins: rust, bash, azure, gcp, terraform, gha, obs-telemetry, api-http | Pending |
-| E | `engineering-playbooks` default-off (12 generic skills) | Pending |
+| A | Capability-only README/docs, `PLAN.md`, `docs/plugin-roles.md` | Complete (PR #28) |
+| B | Dedupe verification/SQL/k8s hooks; non-goals in plugin-roles | Complete (PR #29) |
+| C | Extend `security-core` protect-shell (DB/cache/S3 deletes); tests | Complete (PR #30) |
+| D | Handbook-gap plugins (8 plugins) | Complete (branch `feat/pr-d-handbook-gaps`) |
+| E | `engineering-playbooks` default-off (11 generic skills) | Complete (branch `feat/pr-e-playbooks`) |
 
 ## Quality flags (known)
 
 - **Thin stack rules** (~18 lines): intake discipline by design; deepen via skills, not fat always-on rules.
 - **Overlap (PR B):** `engineering-core` verification vs `testing` ladder; postgres/mysql SQL globs; k8s hooks in `cloud-aws` vs `platform-kubernetes`.
 - **Local rules not shipped:** advisor persona, Frodo skill-discovery (too opinionated / org-specific).
-- **Local skills gaps:** debugging, code-review, performance, generic database (addressed in PR E / PR D).
+- **Local skills gaps:** debugging, code-review, performance, generic database (addressed in **engineering-playbooks** PR E).
 
 ## Future (post v1)
 

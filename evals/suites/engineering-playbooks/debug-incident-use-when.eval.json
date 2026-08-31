@@ -1,0 +1,15 @@
+{
+  "id": "debug-incident-use-when",
+  "plugin": "engineering-playbooks",
+  "claim": "debug-incident skill description includes Use when trigger.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/debug-incident/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}
