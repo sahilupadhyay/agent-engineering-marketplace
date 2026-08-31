@@ -1,7 +1,9 @@
 {
   "name": "data-mysql",
   "description": "Glob-scoped MySQL SQL guidance with a schema-review skill.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Data MySQL"
+  "displayName": "Data MySQL",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }

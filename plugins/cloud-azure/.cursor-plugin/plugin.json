@@ -1,7 +1,9 @@
 {
   "name": "cloud-azure",
   "description": "Glob-scoped Azure and Bicep guidance with an infrastructure review skill.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Cloud Azure"
+  "displayName": "Cloud Azure",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }

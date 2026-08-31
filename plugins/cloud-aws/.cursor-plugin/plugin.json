@@ -1,7 +1,9 @@
 {
   "name": "cloud-aws",
   "description": "Glob-scoped AWS, Terraform, and CloudFormation guidance with deployment validation skills and destructive-command hooks.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Cloud AWS"
+  "displayName": "Cloud AWS",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }

@@ -1,7 +1,9 @@
 {
   "name": "atlassian-confluence",
   "description": "Skills-only Confluence page guidance using user-connected Atlassian MCP tools.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Atlassian Confluence"
+  "displayName": "Atlassian Confluence",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }

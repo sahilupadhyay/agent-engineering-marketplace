@@ -36,6 +36,10 @@
       "items": { "type": "string" }
     },
     "logo": { "type": "string" },
+    "logoDark": {
+      "type": "string",
+      "description": "Relative path to logo asset for dark UI theme."
+    },
     "rules": {
       "oneOf": [
         { "type": "string" },

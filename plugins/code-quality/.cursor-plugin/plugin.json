@@ -1,7 +1,9 @@
 {
   "name": "code-quality",
   "description": "Always-on code quality discipline: scope, readability, and refactor only when needed.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Code Quality"
+  "displayName": "Code Quality",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }
