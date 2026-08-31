@@ -19,10 +19,10 @@ plugin installs independently so developers load only what their stack needs.
           │           │            │
           ▼           ▼            ▼
     Engineering    Python       AWS
-    Security       Node         GitHub
-    Quality        Go           Docker
-    Testing        React        K8s
-    Git workflow   Java         Terraform
+    Security       Node         Docker
+    Quality        Go           K8s
+    Testing        React        Terraform
+    Git workflow   Java
                       │
                       ▼
               Minimal Context
@@ -59,22 +59,15 @@ plugin installs independently so developers load only what their stack needs.
 user choice for a language or framework. **Platform** plugins cover cloud,
 CI/CD, and deployment tooling.
 
-## Shipped today
+## Plugin catalog
 
-| Plugin | Recommended tier | Role |
-| --- | --- | --- |
-| `engineering-core` | Required | Task intake, evidence, minimal change, verification, context efficiency |
-| `security-core` | Required | Security rules + POSIX hooks |
-| `git-workflow` | Default On | Commit identity, branch/PR rules, review commands |
-| `code-quality` / `testing` / `session-closeout` | Default On | Quality, verification ladder, Agent-mode closeout |
-| Stack / cloud / integration plugins | Default Off | See [roadmap](roadmap/README.md) |
+Thirty-one plugins are listed in
+[`.cursor-plugin/marketplace.json`](../.cursor-plugin/marketplace.json).
+Responsibilities and non-goals: [plugin-roles.md](plugin-roles.md). Recommended
+tiers live in each plugin's `plugin-meta.json` ([tiers.md](tiers.md)).
 
-Manifest: [`.cursor-plugin/marketplace.json`](../.cursor-plugin/marketplace.json).
-Tier metadata lives in each plugin's `plugin-meta.json` (see [tiers.md](tiers.md)).
-
-Catalog expansion (HTML/CSS, Angular, Vue, Java, Go, databases, Docker, K8s, …)
-is tracked in [roadmap/README.md](roadmap/README.md). Do not fold those stacks
-into Required plugins.
+Do not fold stack-specific guidance into Required plugins—keep cores small and
+enable matching default-off plugins per repository.
 
 ## Quality harness
 
