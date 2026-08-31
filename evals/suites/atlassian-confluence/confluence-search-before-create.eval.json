@@ -1,0 +1,15 @@
+{
+  "id": "confluence-search-before-create",
+  "plugin": "atlassian-confluence",
+  "claim": "The Confluence skill searches for existing pages before create.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/confluence-page/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "searchConfluenceUsingCql|search.*Rovo",
+    "flags": "i"
+  }
+}
