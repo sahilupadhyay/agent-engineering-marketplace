@@ -1,0 +1,15 @@
+{
+  "id": "confluence-content-format-html",
+  "plugin": "atlassian-confluence",
+  "claim": "The Confluence skill defaults writes to contentFormat html.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/confluence-page/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "contentFormat: html|contentFormat.*html",
+    "flags": "i"
+  }
+}
