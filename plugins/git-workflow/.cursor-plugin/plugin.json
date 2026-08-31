@@ -1,7 +1,9 @@
 {
   "name": "git-workflow",
   "description": "Git identity safety, branch/PR conventions, and review workflows.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Git Workflow"
+  "displayName": "Git Workflow",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }

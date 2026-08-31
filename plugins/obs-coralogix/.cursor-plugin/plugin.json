@@ -1,7 +1,9 @@
 {
   "name": "obs-coralogix",
   "description": "Skills-only Coralogix telemetry guidance using user-connected MCP tools.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Obs Coralogix"
+  "displayName": "Obs Coralogix",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }

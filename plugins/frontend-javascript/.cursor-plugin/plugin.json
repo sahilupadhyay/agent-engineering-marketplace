@@ -1,7 +1,9 @@
 {
   "name": "frontend-javascript",
   "description": "Glob-scoped JavaScript and TypeScript client guidance for typed boundaries and existing bundlers.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Frontend JavaScript"
+  "displayName": "Frontend JavaScript",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }

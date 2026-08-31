@@ -1,7 +1,9 @@
 {
   "name": "testing",
   "description": "Always-on testing discipline: when to test, proportionality, and the verification ladder.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
-  "displayName": "Testing"
+  "displayName": "Testing",
+  "logo": "../../assets/brand/logo.svg",
+  "logoDark": "../../assets/brand/logo-dark.svg"
 }
