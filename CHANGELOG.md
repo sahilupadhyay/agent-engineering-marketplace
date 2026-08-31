@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Handbook-gap default-off plugins: `lang-rust`, `lang-bash`, `cloud-azure`,
+  `cloud-gcp`, `platform-terraform`, `platform-github-actions`, `obs-telemetry`,
+  and `api-http` (original rules, skills, eval suites, detect-stack signals).
 - Extended `security-core` `protect-shell.sh`: `DELETE FROM` without `WHERE`,
   Redis `FLUSHALL`/`FLUSHDB`, `aws s3 rm`, and `find -delete` confirmations.
 - Overlap cleanup: `engineering-core` verification points to **testing** ladder;

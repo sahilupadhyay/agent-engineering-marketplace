@@ -1,0 +1,12 @@
+---
+description: Azure resource safety for subscriptions, regions, and destructive changes.
+globs: ["**/*.bicep","**/azure/**","**/*azurerm*"]
+---
+
+# Azure safety
+
+Confirm subscription and resource group before apply or delete.
+Do not open management ports to 0.0.0.0/0 without documented exception.
+
+Use managed identities over long-lived secrets in templates when the repo
+already does. Match existing naming and tagging conventions.

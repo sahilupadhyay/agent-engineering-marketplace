@@ -1,0 +1,13 @@
+---
+description: Shell script safety for quoting, errexit, and idempotent scripts.
+globs: ["**/*.sh","**/scripts/**"]
+---
+
+# Shell script safety
+
+Quote variables and command substitutions. Do not parse ls output.
+
+Match existing errexit/nounset/pipefail usage when the file or shebang
+already enables them. Do not silently disable shellcheck directives.
+
+Prefer POSIX sh for hooks; use bash only when the repo already does.

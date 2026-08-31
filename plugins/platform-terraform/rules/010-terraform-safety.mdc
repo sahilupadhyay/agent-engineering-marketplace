@@ -1,0 +1,14 @@
+---
+description: Terraform safety for plan review, state backends, and secret-free tfvars.
+globs: ["**/*.tf","**/*.tfvars","**/terraform/**"]
+---
+
+# Terraform safety
+
+Run plan before apply. Do not commit state files or secrets in tfvars.
+
+Pin provider versions to match existing blocks. Do not rename resources
+that would force destructive recreation without approval.
+
+For AWS-specific networking and IAM depth, enable cloud-aws alongside
+this plugin when both apply.

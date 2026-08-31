@@ -100,6 +100,21 @@ skills-only patterns.
 
 **Non-goals:** Bundled MCP servers ([mcp-governance.md](mcp-governance.md)). Vendor credentials in plugin files.
 
+## Language and platform gaps (default off)
+
+| Plugin | Tier | Responsibility |
+| --- | --- | --- |
+| `lang-rust` | Default Off | Rust errors, unsafe, Cargo layout; skill `rust-review` |
+| `lang-bash` | Default Off | Shell quoting and errexit; skill `shell-script-review` |
+| `cloud-azure` | Default Off | Azure/Bicep safety; skill `azure-review` |
+| `cloud-gcp` | Default Off | GCP project/IAM safety; skill `gcp-review` |
+| `platform-terraform` | Default Off | Vendor-neutral Terraform plan/state; skill `terraform-review` |
+| `platform-github-actions` | Default Off | Workflow pins and permissions; skill `gha-workflow-review` |
+| `obs-telemetry` | Default Off | Generic logs/metrics/traces; skill `telemetry-review` |
+| `api-http` | Default Off | REST/JSON handler discipline; skill `http-api-review` (complements `api-docs`) |
+
+**Non-goals:** Duplicating `cloud-aws` AWS-specific depth in Azure/GCP plugins. OpenAPI spec review stays in `api-docs`.
+
 ## Destructive-operation ownership
 
 | Layer | Owner | Covers |

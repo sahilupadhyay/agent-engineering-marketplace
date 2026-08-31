@@ -1,0 +1,15 @@
+{
+  "id": "skill-use-when",
+  "plugin": "cloud-gcp",
+  "claim": "gcp-review skill description includes Use when trigger.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/gcp-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

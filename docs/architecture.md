@@ -61,7 +61,7 @@ CI/CD, and deployment tooling.
 
 ## Plugin catalog
 
-Thirty-one plugins are listed in
+Thirty-nine plugins are listed in
 [`.cursor-plugin/marketplace.json`](../.cursor-plugin/marketplace.json).
 Responsibilities and non-goals: [plugin-roles.md](plugin-roles.md). Recommended
 tiers live in each plugin's `plugin-meta.json` ([tiers.md](tiers.md)).

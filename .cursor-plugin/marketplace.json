@@ -224,6 +224,62 @@
       "description": "Always-on Agent-mode closeout: skills used, confidence, quality, security, and performance.",
       "version": "0.1.0",
       "license": "MIT"
+    },
+    {
+      "name": "lang-rust",
+      "source": "./plugins/lang-rust",
+      "description": "Glob-scoped Rust guidance for errors, unsafe, and Cargo layout.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "lang-bash",
+      "source": "./plugins/lang-bash",
+      "description": "Glob-scoped shell script safety for quoting, errexit, and reviewable diffs.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "cloud-azure",
+      "source": "./plugins/cloud-azure",
+      "description": "Glob-scoped Azure and Bicep guidance with an infrastructure review skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "cloud-gcp",
+      "source": "./plugins/cloud-gcp",
+      "description": "Glob-scoped GCP guidance for projects, IAM, and google provider files.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "platform-terraform",
+      "source": "./plugins/platform-terraform",
+      "description": "Vendor-neutral Terraform safety for plan-before-apply and state discipline.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "platform-github-actions",
+      "source": "./plugins/platform-github-actions",
+      "description": "Glob-scoped GitHub Actions workflow safety and review skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "obs-telemetry",
+      "source": "./plugins/obs-telemetry",
+      "description": "Generic logs, metrics, and traces discipline plus a telemetry review skill.",
+      "version": "0.1.0",
+      "license": "MIT"
+    },
+    {
+      "name": "api-http",
+      "source": "./plugins/api-http",
+      "description": "REST and JSON HTTP API discipline complementing OpenAPI documentation review.",
+      "version": "0.1.0",
+      "license": "MIT"
     }
   ]
 }

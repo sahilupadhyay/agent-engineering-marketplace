@@ -1,0 +1,15 @@
+{
+  "id": "azure-no-open-management",
+  "plugin": "cloud-azure",
+  "claim": "Rule body matches expected cloud-azure guidance.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-azure-safety.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "0\\.0\\.0\\.0/0",
+    "flags": "i"
+  }
+}

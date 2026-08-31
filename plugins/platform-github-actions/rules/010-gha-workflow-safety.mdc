@@ -1,0 +1,12 @@
+---
+description: GitHub Actions safety for pinned actions, secrets, and fork PR workflows.
+globs: ["**/.github/workflows/**"]
+---
+
+# GitHub Actions safety
+
+Pin third-party actions to full commit SHAs or existing repo pins.
+Do not echo secrets or pass untrusted fork PR inputs to privileged steps.
+
+Use least-privilege `permissions:` blocks. Match existing workflow
+patterns for caches, matrices, and environments.

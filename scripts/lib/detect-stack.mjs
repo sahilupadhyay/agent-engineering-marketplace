@@ -173,6 +173,30 @@ export function recommendPlugins(signals) {
   if (kinds.has("databricks")) {
     recommended.add("data-databricks");
   }
+  if (kinds.has("rust")) {
+    recommended.add("lang-rust");
+  }
+  if (kinds.has("shell")) {
+    recommended.add("lang-bash");
+  }
+  if (kinds.has("azure")) {
+    recommended.add("cloud-azure");
+  }
+  if (kinds.has("gcp")) {
+    recommended.add("cloud-gcp");
+  }
+  if (kinds.has("terraform")) {
+    recommended.add("platform-terraform");
+  }
+  if (kinds.has("github-actions")) {
+    recommended.add("platform-github-actions");
+  }
+  if (kinds.has("telemetry")) {
+    recommended.add("obs-telemetry");
+  }
+  if (kinds.has("http-api")) {
+    recommended.add("api-http");
+  }
 
   return [...recommended].sort();
 }
@@ -198,6 +222,15 @@ export function detectStack(root) {
     ...readMarkerFile(resolved, "Cargo.toml", "rust"),
     ...readMarkerFile(resolved, "Dockerfile", "docker"),
     ...readMarkerFile(resolved, "databricks.yml", "databricks"),
+    ...readMarkerDir(resolved, ".github/workflows", "github-actions"),
+    ...readMarkerDir(resolved, "terraform", "terraform"),
+    ...readMarkerDir(resolved, "otel", "telemetry"),
+    ...readMarkerDir(resolved, "opentelemetry", "telemetry"),
+    ...readMarkerFile(resolved, "main.bicep", "azure"),
+    ...readMarkerDir(resolved, "azure", "azure"),
+    ...readMarkerDir(resolved, "gcp", "gcp"),
+    ...readMarkerDir(resolved, "scripts", "shell"),
+    ...readMarkerFile(resolved, "main.tf", "terraform"),
     ...readMarkerDir(resolved, "helm", "kubernetes"),
     ...readMarkerDir(resolved, "k8s", "kubernetes"),
     ...readMarkerDir(resolved, "kubernetes", "kubernetes"),

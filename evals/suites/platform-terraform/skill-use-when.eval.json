@@ -1,0 +1,15 @@
+{
+  "id": "skill-use-when",
+  "plugin": "platform-terraform",
+  "claim": "terraform-review skill description includes Use when trigger.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/terraform-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

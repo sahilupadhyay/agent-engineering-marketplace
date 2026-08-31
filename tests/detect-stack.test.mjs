@@ -86,6 +86,20 @@ test("detectStack recommends data-databricks for databricks.yml fixture", () => 
   assert.deepEqual(report.recommended, ["data-databricks"]);
 });
 
+test("recommendPlugins maps handbook-gap stack signals", () => {
+  assert.deepEqual(recommendPlugins([{ file: "Cargo.toml", kind: "rust" }]), ["lang-rust"]);
+  assert.deepEqual(recommendPlugins([{ file: "scripts/", kind: "shell" }]), ["lang-bash"]);
+  assert.deepEqual(recommendPlugins([{ file: "azure/", kind: "azure" }]), ["cloud-azure"]);
+  assert.deepEqual(recommendPlugins([{ file: "gcp/", kind: "gcp" }]), ["cloud-gcp"]);
+  assert.deepEqual(recommendPlugins([{ file: "main.tf", kind: "terraform" }]), ["platform-terraform"]);
+  assert.deepEqual(
+    recommendPlugins([{ file: ".github/workflows/", kind: "github-actions" }]),
+    ["platform-github-actions"],
+  );
+  assert.deepEqual(recommendPlugins([{ file: "otel/", kind: "telemetry" }]), ["obs-telemetry"]);
+  assert.deepEqual(recommendPlugins([{ file: "routes/", kind: "http-api" }]), ["api-http"]);
+});
+
 test("detectStack returns empty recommendations for empty fixture", () => {
   const report = detectStack(path.join(FIXTURES, "empty"));
   assert.deepEqual(report.recommended, []);

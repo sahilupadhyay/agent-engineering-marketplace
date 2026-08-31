@@ -1,0 +1,12 @@
+---
+description: GCP project safety for IAM, regions, and destructive gcloud operations.
+globs: ["**/gcp/**", "**/*gcp*.tf", "**/google/**"]
+---
+
+# GCP safety
+
+Confirm project ID and region before apply. Do not disable org policies
+or widen IAM without explicit approval.
+
+Prefer workload identity and service accounts over downloaded keys.
+Match existing label and naming conventions.
