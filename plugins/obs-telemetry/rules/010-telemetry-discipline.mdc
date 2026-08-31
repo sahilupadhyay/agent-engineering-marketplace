@@ -1,0 +1,12 @@
+---
+description: Telemetry discipline for structured logs, metric cardinality, and trace propagation.
+globs: ["**/otel/**","**/opentelemetry/**","**/*telemetry*"]
+---
+
+# Telemetry discipline
+
+Use structured logs with stable field names. Do not log secrets or full
+PII unless the repo already redacts.
+
+Keep metric label cardinality bounded. Propagate trace context on outbound
+calls when the stack already uses OpenTelemetry or similar.

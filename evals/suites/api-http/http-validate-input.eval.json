@@ -1,0 +1,15 @@
+{
+  "id": "http-validate-input",
+  "plugin": "api-http",
+  "claim": "Rule body matches expected api-http guidance.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-http-api-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Validate",
+    "flags": "i"
+  }
+}

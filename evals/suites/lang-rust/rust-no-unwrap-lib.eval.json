@@ -1,0 +1,15 @@
+{
+  "id": "rust-no-unwrap-lib",
+  "plugin": "lang-rust",
+  "claim": "Rule body matches expected lang-rust guidance.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-rust-service-discipline.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "unwrap",
+    "flags": "i"
+  }
+}

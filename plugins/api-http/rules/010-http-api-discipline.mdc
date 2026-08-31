@@ -1,0 +1,12 @@
+---
+description: HTTP API discipline for status codes, validation, pagination, and versioning.
+globs: ["**/routes/**","**/handlers/**","**/controllers/**","**/api/**"]
+---
+
+# HTTP API discipline
+
+Validate and sanitize external input at boundaries. Return appropriate
+HTTP status codes; do not leak stack traces in JSON errors.
+
+Use consistent pagination and error envelope shapes already in the repo.
+Version breaking changes explicitly; prefer additive fields in JSON.

@@ -1,0 +1,14 @@
+---
+description: Rust service discipline for Result errors, unsafe blocks, and crate layout.
+globs: ["**/*.rs","**/Cargo.toml"]
+---
+
+# Rust service discipline
+
+Return Result and propagate with ? instead of unwrap in library paths.
+Document every unsafe block with a safety comment.
+
+Match existing crate layout (src/bin, workspace members). Do not add a
+second async runtime when one is already chosen.
+
+Prefer existing error types and logging crates over new dependencies.
