@@ -6,18 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-## [1.1.0] - 2026-08-31
-
-### Added
-
-- `cost-efficiency` `/model-router` command (optional explicit re-check).
-
-### Changed
-
-- `cost-efficiency` model/mode router is always-on (`alwaysApply: true`) and
-  Default On. Classifies each query, recommends stay / upgrade / downgrade /
-  Ask/Agent/Plan, and holds tools until the user confirms.
-
 ## [1.0.3] - 2026-08-31
 
 ### Fixed

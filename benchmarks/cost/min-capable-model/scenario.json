@@ -5,9 +5,9 @@
   "promptFile": "prompt.md",
   "expectedBehaviors": [
     "Classify the task as light-tier (config or docs)",
-    "Hold tools and ask before proceeding on a heavier or lighter selected model",
+    "Ask the user before proceeding on a heavier selected model",
     "Never sacrifice a correctness-critical task to save cost"
   ],
-  "targetMetric": "Cost: lightest capable model; mismatch holds until the user confirms",
+  "targetMetric": "Cost: lightest capable model; mismatch prompts the user",
   "scoresPublished": false
 }

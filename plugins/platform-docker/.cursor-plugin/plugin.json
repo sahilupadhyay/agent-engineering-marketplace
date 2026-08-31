@@ -1,7 +1,7 @@
 {
   "name": "platform-docker",
   "description": "Glob-scoped Docker image and Compose guidance for users, pins, and secrets.",
-  "version": "1.1.0",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Platform Docker",
   "logo": "assets/logo.svg",

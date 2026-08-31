@@ -24,9 +24,16 @@ skills-only patterns.
 | `code-quality` | Default On | Scope discipline, readability, refactor only when needed | 3 | 1 (`scope-and-style-review`) | — |
 | `testing` | Default On | When to test, proportionality, verification ladder | 3 | 1 (`write-focused-test`); command `/verify` | — |
 | `session-closeout` | Default On | Agent-mode closeout table (skills, confidence, quality, security, performance) | 1 | — (rule sufficient; README documents non-goals) | — |
-| `cost-efficiency` | Default On | Always-on model/mode router: hold until user confirms stay, upgrade, downgrade, or Ask/Agent/Plan | 1 | 1 (`task-triage`); command `/model-router` (optional) | — |
 
-**Non-goals:** Stack test patterns (use stack + `testing` together). Git hooks for destructive shell (use `security-core`). Correctness trade-offs for cost (use the simplest model that can complete the task reliably).
+**Non-goals:** Stack test patterns (use stack + `testing` together). Git hooks for destructive shell (use `security-core`).
+
+## Efficiency
+
+| Plugin | Tier | Responsibility | Rules | Skills | Hooks |
+| --- | --- | --- | ---: | ---: | ---: |
+| `cost-efficiency` | Default Off | Model selection and task triage for minimal capable model | 1 | 1 (`task-triage`) | — |
+
+**Non-goals:** Correctness trade-offs; always use the simplest model that can complete the task reliably.
 
 ## Backend
 

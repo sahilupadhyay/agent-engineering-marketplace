@@ -1,7 +1,7 @@
 {
   "name": "session-closeout",
   "description": "Always-on Agent-mode closeout: skills used, confidence, quality, security, and performance.",
-  "version": "1.1.0",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Session Closeout",
   "logo": "assets/logo.svg",
