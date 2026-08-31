@@ -2,5 +2,6 @@
   "name": "frontend-javascript",
   "description": "Glob-scoped JavaScript and TypeScript client guidance for typed boundaries and existing bundlers.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Frontend JavaScript"
 }

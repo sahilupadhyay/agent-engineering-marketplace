@@ -2,5 +2,6 @@
   "name": "quality-sonarqube",
   "description": "Glob-scoped SonarQube quality-gate guidance plus an issue-triage skill.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Quality SonarQube"
 }

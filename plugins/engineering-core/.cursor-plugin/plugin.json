@@ -2,5 +2,6 @@
   "name": "engineering-core",
   "description": "Always-on engineering discipline: task intake, evidence hierarchy, minimal change, verification, and context efficiency.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Engineering Core"
 }

@@ -2,5 +2,6 @@
   "name": "testing",
   "description": "Always-on testing discipline: when to test, proportionality, and the verification ladder.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Testing"
 }

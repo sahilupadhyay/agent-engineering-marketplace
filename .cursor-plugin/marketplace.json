@@ -13,280 +13,320 @@
       "source": "./plugins/engineering-core",
       "description": "Stack-agnostic always-on rules for task intake, evidence, minimal change, verification, and context efficiency.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Engineering Core"
     },
     {
       "name": "security-core",
       "source": "./plugins/security-core",
       "description": "Required security principles for every session.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Security Core"
     },
     {
       "name": "git-workflow",
       "source": "./plugins/git-workflow",
       "description": "Git identity safety, branch/PR conventions, review commands, and review-feedback skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Git Workflow"
     },
     {
       "name": "code-quality",
       "source": "./plugins/code-quality",
       "description": "Always-on scope discipline, readability, and refactor-only-when-needed guidance.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Code Quality"
     },
     {
       "name": "testing",
       "source": "./plugins/testing",
       "description": "When to test, test proportionality, and the verification ladder before claiming done.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Testing"
     },
     {
       "name": "cost-efficiency",
       "source": "./plugins/cost-efficiency",
       "description": "Model selection and task triage for minimal capable model without sacrificing correctness.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Cost Efficiency"
     },
     {
       "name": "backend-node",
       "source": "./plugins/backend-node",
       "description": "Glob-scoped Node/TypeScript server guidance for routes, APIs, and backend services.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Backend Node"
     },
     {
       "name": "backend-python",
       "source": "./plugins/backend-python",
       "description": "Glob-scoped Python backend guidance for services, APIs, and application code.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Backend Python"
     },
     {
       "name": "backend-java",
       "source": "./plugins/backend-java",
       "description": "Glob-scoped Java service guidance for package layout, queries, and error handling.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Backend Java"
     },
     {
       "name": "backend-go",
       "source": "./plugins/backend-go",
       "description": "Glob-scoped Go service guidance for wrapped errors, context, and modules.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Backend Go"
     },
     {
       "name": "frontend-react",
       "source": "./plugins/frontend-react",
       "description": "Glob-scoped React and TSX guidance for components, hooks, and UI state.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Frontend React"
     },
     {
       "name": "frontend-htmlcss",
       "source": "./plugins/frontend-htmlcss",
       "description": "Glob-scoped HTML and CSS guidance for markup, accessibility, and existing design tokens.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Frontend HTML & CSS"
     },
     {
       "name": "frontend-javascript",
       "source": "./plugins/frontend-javascript",
       "description": "Glob-scoped JavaScript and TypeScript client guidance for typed boundaries and existing bundlers.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Frontend JavaScript"
     },
     {
       "name": "frontend-angular",
       "source": "./plugins/frontend-angular",
       "description": "Glob-scoped Angular guidance for components, modules, and RxJS teardown.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Frontend Angular"
     },
     {
       "name": "frontend-vue",
       "source": "./plugins/frontend-vue",
       "description": "Glob-scoped Vue SFC guidance for Composition vs Options API and existing stores.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Frontend Vue"
     },
     {
       "name": "data-postgres",
       "source": "./plugins/data-postgres",
       "description": "Glob-scoped Postgres SQL and migration guidance with a schema-review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Data Postgres"
     },
     {
       "name": "data-mysql",
       "source": "./plugins/data-mysql",
       "description": "Glob-scoped MySQL SQL guidance with a schema-review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Data MySQL"
     },
     {
       "name": "data-dynamodb",
       "source": "./plugins/data-dynamodb",
       "description": "Glob-scoped DynamoDB table guidance plus a key-and-access review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Data DynamoDB"
     },
     {
       "name": "data-redis",
       "source": "./plugins/data-redis",
       "description": "Glob-scoped Redis cache guidance plus a TTL and key-review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Data Redis"
     },
     {
       "name": "data-databricks",
       "source": "./plugins/data-databricks",
       "description": "Glob-scoped Databricks workspace guidance plus a job and notebook review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Data Databricks"
     },
     {
       "name": "jira-workflow",
       "source": "./plugins/jira-workflow",
       "description": "Skills-only Jira issue triage and workflow guidance via user-connected MCP tools.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Jira Workflow"
     },
     {
       "name": "atlassian-confluence",
       "source": "./plugins/atlassian-confluence",
       "description": "Skills-only Confluence page guidance using user-connected Atlassian MCP tools.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Atlassian Confluence"
     },
     {
       "name": "diagram-workflow",
       "source": "./plugins/diagram-workflow",
       "description": "Skills-only architecture and diagram workflows via user-connected MCP tools.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Diagram Workflow"
     },
     {
       "name": "api-docs",
       "source": "./plugins/api-docs",
       "description": "Skills-only OpenAPI and API documentation review guidance.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "API Docs"
     },
     {
       "name": "obs-coralogix",
       "source": "./plugins/obs-coralogix",
       "description": "Skills-only Coralogix telemetry guidance using user-connected MCP tools.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Obs Coralogix"
     },
     {
       "name": "obs-heap",
       "source": "./plugins/obs-heap",
       "description": "Skills-only Heap analytics guidance for events, properties, and identity.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Obs Heap"
     },
     {
       "name": "quality-sonarqube",
       "source": "./plugins/quality-sonarqube",
       "description": "Glob-scoped SonarQube quality-gate guidance plus an issue-triage skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Quality SonarQube"
     },
     {
       "name": "cloud-aws",
       "source": "./plugins/cloud-aws",
       "description": "Glob-scoped AWS, Terraform, and CloudFormation guidance with deployment validation skills and destructive-command hooks.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Cloud AWS"
     },
     {
       "name": "platform-docker",
       "source": "./plugins/platform-docker",
       "description": "Glob-scoped Docker image and Compose guidance for users, pins, and secrets.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Platform Docker"
     },
     {
       "name": "platform-kubernetes",
       "source": "./plugins/platform-kubernetes",
       "description": "Glob-scoped Kubernetes and Helm guidance plus a manifest-review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Platform Kubernetes"
     },
     {
       "name": "session-closeout",
       "source": "./plugins/session-closeout",
       "description": "Always-on Agent-mode closeout: skills used, confidence, quality, security, and performance.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Session Closeout"
     },
     {
       "name": "lang-rust",
       "source": "./plugins/lang-rust",
       "description": "Glob-scoped Rust guidance for errors, unsafe, and Cargo layout.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Lang Rust"
     },
     {
       "name": "lang-bash",
       "source": "./plugins/lang-bash",
       "description": "Glob-scoped shell script safety for quoting, errexit, and reviewable diffs.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Lang Bash"
     },
     {
       "name": "cloud-azure",
       "source": "./plugins/cloud-azure",
       "description": "Glob-scoped Azure and Bicep guidance with an infrastructure review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Cloud Azure"
     },
     {
       "name": "cloud-gcp",
       "source": "./plugins/cloud-gcp",
       "description": "Glob-scoped GCP guidance for projects, IAM, and google provider files.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Cloud GCP"
     },
     {
       "name": "platform-terraform",
       "source": "./plugins/platform-terraform",
       "description": "Vendor-neutral Terraform safety for plan-before-apply and state discipline.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Platform Terraform"
     },
     {
       "name": "platform-github-actions",
       "source": "./plugins/platform-github-actions",
       "description": "Glob-scoped GitHub Actions workflow safety and review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Platform GitHub Actions"
     },
     {
       "name": "obs-telemetry",
       "source": "./plugins/obs-telemetry",
       "description": "Generic logs, metrics, and traces discipline plus a telemetry review skill.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Obs Telemetry"
     },
     {
       "name": "api-http",
       "source": "./plugins/api-http",
       "description": "REST and JSON HTTP API discipline complementing OpenAPI documentation review.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "API HTTP"
     },
     {
       "name": "engineering-playbooks",
       "source": "./plugins/engineering-playbooks",
       "description": "Default-off skills-only playbooks for debug, review, architecture, incidents, and elicitation.",
       "version": "1.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "displayName": "Engineering Playbooks"
     }
   ]
 }

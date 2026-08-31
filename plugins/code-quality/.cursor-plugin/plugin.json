@@ -2,5 +2,6 @@
   "name": "code-quality",
   "description": "Always-on code quality discipline: scope, readability, and refactor only when needed.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Code Quality"
 }

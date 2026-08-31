@@ -2,5 +2,6 @@
   "name": "backend-python",
   "description": "Glob-scoped Python backend guidance for services, APIs, and application code.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Backend Python"
 }

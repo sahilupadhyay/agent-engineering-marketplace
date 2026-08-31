@@ -2,5 +2,6 @@
   "name": "platform-github-actions",
   "description": "Glob-scoped GitHub Actions workflow safety and review skill.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Platform GitHub Actions"
 }

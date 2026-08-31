@@ -2,5 +2,6 @@
   "name": "backend-node",
   "description": "Glob-scoped Node/TypeScript server guidance for routes, APIs, and backend services.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Backend Node"
 }

@@ -2,5 +2,6 @@
   "name": "platform-kubernetes",
   "description": "Glob-scoped Kubernetes and Helm guidance plus a manifest-review skill.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Platform Kubernetes"
 }

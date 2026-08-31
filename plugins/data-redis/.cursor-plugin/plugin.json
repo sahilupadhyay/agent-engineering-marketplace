@@ -2,5 +2,6 @@
   "name": "data-redis",
   "description": "Glob-scoped Redis cache guidance plus a TTL and key-review skill.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Data Redis"
 }

@@ -2,5 +2,6 @@
   "name": "data-mysql",
   "description": "Glob-scoped MySQL SQL guidance with a schema-review skill.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Data MySQL"
 }

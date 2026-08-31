@@ -2,5 +2,6 @@
   "name": "diagram-workflow",
   "description": "Skills-only architecture and diagram guidance using user-connected MCP tools.",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "displayName": "Diagram Workflow"
 }
