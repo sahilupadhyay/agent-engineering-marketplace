@@ -42,15 +42,15 @@ describe **capabilities only**—not milestone tracking.
 | Plugin deepen | Waves 1–6 skills, evals, `/verify` | Complete (PR #34) |
 | Optional deepen | `task-intake-playbook`, `jira-comment-pr` | Complete (PR #35) |
 
-### Milestone 4 — v1.0.0 release prep
+### Milestone 4 — v1.0.0 release and publication
 
 - [x] 40 plugins, 245 eval cases, CI merge gate green
-- [x] `v1.0.0` tag, CHANGELOG section, manifest versions aligned
-- [x] CODEOWNERS + `scripts/setup-branch-protection.mjs` (apply after public flip)
-- [ ] Repository **public**
-- [ ] Branch protection applied on `main` (run setup script after public)
+- [x] CHANGELOG `[1.0.0]` section and manifest versions at `1.0.0`
+- [x] `v1.0.0` tag and GitHub Release
+- [ ] Repository **public** (Settings → General → Danger Zone)
 - [ ] GitHub secret scanning + private vulnerability reporting enabled
-- [ ] Cursor marketplace submission ([docs/marketplace-submit.md](docs/marketplace-submit.md))
+- [ ] Submit at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish)
+- [ ] Record marketplace listing URL in README (no invented install counts)
 
 ## Quality flags (known)
 
@@ -74,12 +74,3 @@ From [agent-engineering-handbook](https://github.com/d-padmanabhan/agent-enginee
 Historical workstream specs (frontend, backend, databases, observability, AWS,
 containers) live under [docs/roadmap/](docs/roadmap/). Treat them as authoring
 references for maintainers, not consumer-facing product docs.
-
-## Pre-public checklist
-
-Before flipping repository visibility:
-
-1. CI green on `main`
-2. Local validation: `node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs`
-3. Review for accidental secrets and internal credentials
-4. [docs/marketplace-submit.md](docs/marketplace-submit.md)

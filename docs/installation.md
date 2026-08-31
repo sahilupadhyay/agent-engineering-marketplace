@@ -44,37 +44,9 @@ Example output fields:
 | `recommended` | Marketplace plugin names that may fit (for example `frontend-react`) |
 | `policy` | Reminder to prompt the user; no auto-install |
 
-## Publish to Cursor Marketplace
+Integration plugins are **skills-only**; connect MCP servers in Cursor settings
+([mcp-governance.md](mcp-governance.md)).
 
-Official publish flow: [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish)
+## Marketplace submission
 
-## Pre-public checklist
-
-Before flipping repository visibility to public:
-
-1. CI green on `main` (`Validate / validate` workflow).
-2. Run locally:
-
-   ```bash
-   node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs
-   ```
-
-3. Review `git grep` for accidental secrets; hook and test fixtures must use
-   obviously fake tokens only.
-4. Read rules, skills, and commands for personal emails or internal credentials.
-5. Confirm `v1.0.0` tag exists and manifest versions match ([release.md](release.md)).
-
-## After going public
-
-In GitHub **Settings → General → Danger Zone**, change visibility to **Public**.
-Then, in order:
-
-1. Apply branch protection:
-
-   ```bash
-   node scripts/setup-branch-protection.mjs
-   ```
-
-2. Enable secret scanning and private vulnerability reporting under **Settings →
-   Security**.
-3. Submit to the Cursor marketplace ([marketplace-submit.md](marketplace-submit.md)).
+See [marketplace-submit.md](marketplace-submit.md). Maintainer steps: [PLAN.md](../PLAN.md).
