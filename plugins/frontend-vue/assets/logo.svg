@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Outer Light Card Background -->
+  <rect width="500" height="500" fill="#f8fafc" rx="90" stroke="#e2e8f0" stroke-width="4"/>
+
+  <!-- Terminal Window Frame Hint -->
+  <rect x="80" y="80" width="340" height="340" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="6"/>
+  <circle cx="120" cy="120" r="6" fill="#ef4444"/>
+  <circle cx="145" cy="120" r="6" fill="#f59e0b"/>
+  <circle cx="170" cy="120" r="6" fill="#10b981"/>
+
+  <!-- Cursor/Prompt Graphic (Deep Indigo for legibility) -->
+  <text x="120" y="260" font-family="monospace" font-weight="bold" font-size="90" fill="#6366f1">&gt;_</text>
+
+  <!-- AI Sparkle Overlay (Vibrant Sky Blue) -->
+  <path d="M330 280 L340 310 L370 320 L340 330 L330 360 L320 330 L290 320 L320 310 Z" fill="#0284c7"/>
+</svg>

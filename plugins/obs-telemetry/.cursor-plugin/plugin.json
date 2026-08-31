@@ -1,9 +1,9 @@
 {
   "name": "obs-telemetry",
   "description": "Generic logs, metrics, and traces discipline plus a telemetry review skill.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Obs Telemetry",
-  "logo": "../../assets/brand/logo.svg",
-  "logoDark": "../../assets/brand/logo-dark.svg"
+  "logo": "assets/logo.svg",
+  "logoDark": "assets/logo-dark.svg"
 }

@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-08-31
+
+### Fixed
+
+- Copy brand logos into each plugin's `assets/` directory. Cursor sparse-checkout
+  only fetches installed plugin folders, so repo-root `../../assets/brand/` paths
+  never resolved and icons showed as placeholders.
+
 ## [1.0.2] - 2026-08-31
 
 ### Added

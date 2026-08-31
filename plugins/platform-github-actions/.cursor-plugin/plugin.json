@@ -1,9 +1,9 @@
 {
   "name": "platform-github-actions",
   "description": "Glob-scoped GitHub Actions workflow safety and review skill.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Platform GitHub Actions",
-  "logo": "../../assets/brand/logo.svg",
-  "logoDark": "../../assets/brand/logo-dark.svg"
+  "logo": "assets/logo.svg",
+  "logoDark": "assets/logo-dark.svg"
 }

@@ -16,7 +16,7 @@ import {
   sourcePathFromEntry,
 } from "./lib/manifest.mjs";
 import { checkPluginBudget } from "./lib/budget.mjs";
-import { checkPluginReadme } from "./lib/doccheck.mjs";
+import { checkPluginReadme, checkPluginLogoAssets } from "./lib/doccheck.mjs";
 import { lintPlugin } from "./lib/lint.mjs";
 import { checkPluginSimilarity } from "./lib/similarity.mjs";
 import { validateAgainstSchemaFile } from "./lib/schema.mjs";
@@ -86,8 +86,10 @@ export function validateRoot(root) {
       continue;
     }
     const pluginJsonPath = path.join(pluginDir, ".cursor-plugin", "plugin.json");
+    /** @type {Record<string, unknown> | null} */
+    let pluginJson = null;
     if (fileExists(pluginJsonPath)) {
-      const pluginJson = readJsonFile(pluginJsonPath);
+      pluginJson = readJsonFile(pluginJsonPath);
       errors.push(
         ...validateAgainstSchemaFile(
           path.join(SCHEMA_DIR, "plugin.schema.json"),
@@ -116,6 +118,9 @@ export function validateRoot(root) {
 
     if (marketplacePluginDirs.has(path.resolve(pluginDir))) {
       errors.push(...checkPluginReadme(pluginDir));
+      if (pluginJson) {
+        errors.push(...checkPluginLogoAssets(pluginDir, pluginJson));
+      }
     }
 
     if (pluginMeta) {

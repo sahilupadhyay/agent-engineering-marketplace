@@ -1,9 +1,9 @@
 {
   "name": "engineering-playbooks",
   "description": "Default-off engineering playbooks as lazy-loaded skills for debug, review, architecture, and incidents.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Engineering Playbooks",
-  "logo": "../../assets/brand/logo.svg",
-  "logoDark": "../../assets/brand/logo-dark.svg"
+  "logo": "assets/logo.svg",
+  "logoDark": "assets/logo-dark.svg"
 }
