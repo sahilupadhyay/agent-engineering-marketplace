@@ -45,9 +45,11 @@ Required: `name` (kebab-case). Optional: `displayName` (human-readable title in
 the plugin picker, for example `Engineering Core` for `engineering-core`).
 Other optional fields are limited to those documented by Cursor (description,
 version, author, component path overrides, variables, and similar). Shared brand
-logos live in [assets/brand/](../assets/brand/); set `logo` (light UI) and
-`logoDark` (dark UI) as paths relative to the plugin directory (for example
-`../../assets/brand/logo.svg`). Schema:
+logos live in [assets/brand/](../assets/brand/) as the source of truth. Run
+`node scripts/apply-plugin-logos.mjs` to copy them into each plugin's `assets/`
+directory and set `logo` / `logoDark` (for example `assets/logo.svg`). Paths
+must stay inside the plugin folder — Cursor sparse-checkout only downloads
+installed plugin directories. Schema:
 [schemas/plugin.schema.json](../schemas/plugin.schema.json).
 
 Do **not** add `tier`, `installMode`, or other undocumented keys. Cursor

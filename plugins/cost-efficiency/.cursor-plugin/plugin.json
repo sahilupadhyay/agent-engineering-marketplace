@@ -1,9 +1,9 @@
 {
   "name": "cost-efficiency",
   "description": "Model selection and task triage for minimal capable model without sacrificing correctness.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Cost Efficiency",
-  "logo": "../../assets/brand/logo.svg",
-  "logoDark": "../../assets/brand/logo-dark.svg"
+  "logo": "assets/logo.svg",
+  "logoDark": "assets/logo-dark.svg"
 }

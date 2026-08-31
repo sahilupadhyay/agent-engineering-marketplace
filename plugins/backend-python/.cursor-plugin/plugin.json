@@ -1,9 +1,9 @@
 {
   "name": "backend-python",
   "description": "Glob-scoped Python backend guidance for services, APIs, and application code.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Backend Python",
-  "logo": "../../assets/brand/logo.svg",
-  "logoDark": "../../assets/brand/logo-dark.svg"
+  "logo": "assets/logo.svg",
+  "logoDark": "assets/logo-dark.svg"
 }

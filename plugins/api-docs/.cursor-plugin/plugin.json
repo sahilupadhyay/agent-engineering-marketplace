@@ -1,9 +1,9 @@
 {
   "name": "api-docs",
   "description": "Skills-only OpenAPI and API documentation review using user-connected MCP tools.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "API Docs",
-  "logo": "../../assets/brand/logo.svg",
-  "logoDark": "../../assets/brand/logo-dark.svg"
+  "logo": "assets/logo.svg",
+  "logoDark": "assets/logo-dark.svg"
 }

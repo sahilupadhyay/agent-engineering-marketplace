@@ -1,9 +1,9 @@
 {
   "name": "api-http",
   "description": "REST and JSON HTTP API discipline complementing OpenAPI documentation review.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "API HTTP",
-  "logo": "../../assets/brand/logo.svg",
-  "logoDark": "../../assets/brand/logo-dark.svg"
+  "logo": "assets/logo.svg",
+  "logoDark": "assets/logo-dark.svg"
 }
