@@ -1,0 +1,15 @@
+{
+  "id": "jira-comment-pr-gh-verify",
+  "plugin": "jira-workflow",
+  "claim": "jira-comment-pr verifies the PR with gh before commenting.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/jira-comment-pr/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "gh pr view",
+    "flags": "i"
+  }
+}

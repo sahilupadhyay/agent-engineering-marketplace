@@ -49,3 +49,5 @@ When the user asks to update:
 
 Return a short triage summary: current state, recommended next step, and any
 questions for the user or reporter.
+
+PR linkage only (comment with PR URL, remote dev links) → **jira-comment-pr** skill.

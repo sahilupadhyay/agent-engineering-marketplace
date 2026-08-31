@@ -1,0 +1,15 @@
+{
+  "id": "task-intake-playbook-use-when",
+  "plugin": "engineering-core",
+  "claim": "task-intake-playbook declares Use when in frontmatter.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/task-intake-playbook/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **engineering-core** `task-intake-playbook` skill and **jira-workflow**
+  `jira-comment-pr` skill (optional deepen follow-ups) with eval coverage.
 - Deepened `atlassian-confluence` `confluence-page` skill: Atlassian MCP tool
   flow, search-before-create, update-over-duplicate, HTML content format, and
   expanded eval suite.

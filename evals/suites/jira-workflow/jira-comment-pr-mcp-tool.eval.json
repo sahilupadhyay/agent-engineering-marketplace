@@ -1,0 +1,15 @@
+{
+  "id": "jira-comment-pr-mcp-tool",
+  "plugin": "jira-workflow",
+  "claim": "jira-comment-pr uses addCommentToJiraIssue for posting PR comments.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/jira-comment-pr/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "addCommentToJiraIssue",
+    "flags": "i"
+  }
+}
