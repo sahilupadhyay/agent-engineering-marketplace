@@ -1,0 +1,15 @@
+{
+  "id": "resilience-review-use-when",
+  "plugin": "engineering-playbooks",
+  "claim": "resilience-review skill description includes Use when trigger.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/resilience-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

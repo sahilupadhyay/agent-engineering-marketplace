@@ -115,6 +115,14 @@ skills-only patterns.
 
 **Non-goals:** Duplicating `cloud-aws` AWS-specific depth in Azure/GCP plugins. OpenAPI spec review stays in `api-docs`.
 
+## Engineering playbooks (skills only)
+
+| Plugin | Tier | Skills |
+| --- | --- | --- |
+| `engineering-playbooks` | Default Off | `debug-incident`, `code-review`, `performance-review`, `data-access-review`, `api-design`, `threat-model`, `architecture-intake`, `resilience-review`, `incident-triage`, `github-ci`, `elicitation` |
+
+**Non-goals:** Commit/PR workflow (use **git-workflow**). Org-specific or proprietary playbooks.
+
 ## Destructive-operation ownership
 
 | Layer | Owner | Covers |

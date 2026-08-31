@@ -16,7 +16,7 @@ Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.m
 
 ## What you get
 
-Thirty-nine plugins install independently from
+Forty plugins install independently from
 [`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json). Each plugin
 has one concern: rules (always-on or glob-scoped), optional skills (lazy-loaded),
 optional hooks (pre-execution confirmations), and optional commands.

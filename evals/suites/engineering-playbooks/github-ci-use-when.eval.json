@@ -1,0 +1,15 @@
+{
+  "id": "github-ci-use-when",
+  "plugin": "engineering-playbooks",
+  "claim": "github-ci skill description includes Use when trigger.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/github-ci/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

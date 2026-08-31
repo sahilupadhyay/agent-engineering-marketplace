@@ -1,0 +1,15 @@
+{
+  "id": "code-review-use-when",
+  "plugin": "engineering-playbooks",
+  "claim": "code-review skill description includes Use when trigger.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/code-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

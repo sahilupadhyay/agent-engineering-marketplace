@@ -1,0 +1,15 @@
+{
+  "id": "incident-triage-use-when",
+  "plugin": "engineering-playbooks",
+  "claim": "incident-triage skill description includes Use when trigger.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/incident-triage/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}
