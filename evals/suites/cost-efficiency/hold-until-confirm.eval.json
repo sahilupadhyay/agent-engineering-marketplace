@@ -1,0 +1,15 @@
+{
+  "id": "hold-until-confirm",
+  "plugin": "cost-efficiency",
+  "claim": "min-capable-model rule holds tools until the user confirms a mismatch.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-min-capable-model.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Do not call tools",
+    "flags": "i"
+  }
+}

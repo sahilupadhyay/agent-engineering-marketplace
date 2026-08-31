@@ -1,7 +1,7 @@
 {
-  "id": "tier-default-off",
+  "id": "tier-default-on",
   "plugin": "cost-efficiency",
-  "claim": "plugin-meta.json recommends default-off tier.",
+  "claim": "plugin-meta.json recommends default-on tier.",
   "activation": "unknown",
   "target": {
     "file": "plugin-meta.json",
@@ -9,6 +9,6 @@
   },
   "assert": {
     "type": "regex",
-    "pattern": "\"tier\"\\s*:\\s*\"default-off\""
+    "pattern": "\"tier\"\\s*:\\s*\"default-on\""
   }
 }

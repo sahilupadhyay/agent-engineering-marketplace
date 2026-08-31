@@ -1,27 +1,34 @@
 # cost-efficiency
 
-Default-off model selection and task-triage guidance. Load only when teams want
-explicit cost-efficiency discipline without adding always-on context.
+Default-on model and mode router. Every user message is classified; on mismatch
+the agent holds tools until you confirm stay, upgrade, downgrade, or Ask/Agent/Plan.
 
 ## Recommended tier
 
-Set **Default Off** in Dashboard → Plugins. Enable for teams that want model
-tier checks without affecting every session.
+Set **Default On** in Dashboard → Plugins. See [docs/tiers.md](../../docs/tiers.md).
+
+This plugin cannot switch Cursor's model picker or pause a request at the
+platform layer. The always-on rule classifies the query and holds tools until
+you confirm. You do not need `/model-router` on each message.
 
 ## Rule
 
-`010-min-capable-model.mdc` — glob/on-demand rule (no `alwaysApply`). Principles
-for minimum capable model; paired with the task-triage skill.
+`010-min-capable-model.mdc` — always-on hold-until-confirm router for model tier
+and Cursor mode; paired with the task-triage skill.
 
 ## Skill
 
-`task-triage` — Use when the selected model and task complexity appear
-mismatched.
+`task-triage` — Use when the selected model or Cursor mode and task complexity
+appear mismatched.
+
+## Command
+
+`/model-router` — optional explicit re-run of the same check. The always-on rule
+already runs on every message.
 
 ## Context budget
 
-Default-off tier allows **zero** always-applied rule bytes. This plugin ships no
-`alwaysApply: true` rules.
+Combined always-applied rule bodies must stay within **2048** UTF-8 bytes.
 
 ## Eval suite
 

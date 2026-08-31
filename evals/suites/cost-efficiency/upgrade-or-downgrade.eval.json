@@ -1,0 +1,15 @@
+{
+  "id": "upgrade-or-downgrade",
+  "plugin": "cost-efficiency",
+  "claim": "min-capable-model rule recommends both heavier and lighter model changes.",
+  "activation": "unknown",
+  "target": {
+    "file": "rules/010-min-capable-model.mdc",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "heavier or lighter",
+    "flags": "i"
+  }
+}

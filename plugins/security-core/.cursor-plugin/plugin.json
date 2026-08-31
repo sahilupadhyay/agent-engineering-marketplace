@@ -1,7 +1,7 @@
 {
   "name": "security-core",
   "description": "Always-on security principles: secrets, auth and transport, input trust, destructive operations, and supply-chain hygiene.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "displayName": "Security Core",
   "logo": "assets/logo.svg",

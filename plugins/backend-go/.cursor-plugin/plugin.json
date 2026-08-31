@@ -1,7 +1,7 @@
 {
   "name": "backend-go",
   "description": "Glob-scoped Go service guidance for wrapped errors, context, and modules.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "displayName": "Backend Go",
   "logo": "assets/logo.svg",

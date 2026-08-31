@@ -188,6 +188,6 @@ cloud/infra plugins) follow the **default-off** tier contract:
   `plugins/engineering-core/rules/070-config-change-trigger.mdc`).
 - Ship `tier-default-off.eval.json`, `rules-no-dead-paths.eval.json`, and at least
   one content `regex` eval per plugin under `evals/suites/<plugin>/`.
-- Reference `plugins/cost-efficiency/` and `plugins/backend-node/` for layout;
-  stack rules differ from cost-efficiency only in glob targets and stack-specific
+- Reference `plugins/backend-node/` for layout;
+  stack rules differ from that plugin only in glob targets and stack-specific
   body content.

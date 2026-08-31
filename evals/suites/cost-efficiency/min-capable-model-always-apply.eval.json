@@ -1,14 +1,14 @@
 {
-  "id": "min-capable-model-no-always-apply",
+  "id": "min-capable-model-always-apply",
   "plugin": "cost-efficiency",
-  "claim": "min-capable-model rule must not set alwaysApply true on default-off tier.",
+  "claim": "min-capable-model rule is always applied so the router runs without /model-router.",
   "activation": "unknown",
   "target": {
     "file": "rules/010-min-capable-model.mdc",
     "section": "frontmatter"
   },
   "assert": {
-    "type": "notRegex",
+    "type": "regex",
     "pattern": "alwaysApply:\\s*true"
   }
 }
