@@ -1,7 +1,7 @@
 {
   "name": "jira-workflow",
   "description": "Skills-only Jira issue triage and workflow guidance using user-connected MCP tools.",
-  "version": "1.1.0",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Jira Workflow",
   "logo": "assets/logo.svg",

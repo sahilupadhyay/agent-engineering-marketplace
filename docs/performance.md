@@ -22,16 +22,17 @@ Broader guidance:
 
 ## Model and cost efficiency
 
-The **`cost-efficiency`** plugin (Default On tier, always-applied rule) instructs
-the agent to:
+Milestone 2 adds a **`cost-efficiency`** plugin (Default Off tier) with:
 
-- Classify each query (Light / Mid / Heavy, and Ask / Agent / Plan).
-- Hold tools until the user confirms stay, upgrade, downgrade, or a mode change.
+- Minimum capable model for the task.
 - Never sacrifice correctness for cost.
+- Never use an expensive model when a cheaper one suffices.
 
-This marketplace does **not** ship a hook that reads or changes Cursor's
-selected model — there is no verified stable API for that today. The running
-model infers mismatch from the task and must wait for the user to switch.
+Until that plugin ships, apply principle 4 from [philosophy.md](philosophy.md)
+manually: pick the simplest model that can complete the task reliably.
+
+This marketplace does **not** ship a hook that reads Cursor's selected model —
+there is no verified stable API for that today.
 
 ## Verification vs speed
 
@@ -48,4 +49,4 @@ do not measure live agent latency or token usage.
 | Context efficiency | `plugins/engineering-core/rules/050-context-efficiency.mdc` |
 | Evidence hierarchy | `plugins/engineering-core/rules/020-evidence-hierarchy.mdc` |
 | Verification | `plugins/engineering-core/rules/040-verification.mdc` |
-| Cost efficiency | `plugins/cost-efficiency/rules/010-min-capable-model.mdc` |
+| Cost efficiency (planned) | `cost-efficiency` plugin — Milestone 2 |

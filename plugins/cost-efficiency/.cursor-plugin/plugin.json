@@ -1,7 +1,7 @@
 {
   "name": "cost-efficiency",
-  "description": "Hold-until-confirm model and mode router: recommend stay, upgrade, downgrade, or Ask/Agent/Plan without sacrificing correctness.",
-  "version": "1.1.0",
+  "description": "Model selection and task triage for minimal capable model without sacrificing correctness.",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Cost Efficiency",
   "logo": "assets/logo.svg",

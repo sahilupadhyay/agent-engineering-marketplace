@@ -1,7 +1,7 @@
 {
   "name": "data-postgres",
   "description": "Glob-scoped Postgres SQL and migration guidance with a schema-review skill.",
-  "version": "1.1.0",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Data Postgres",
   "logo": "assets/logo.svg",

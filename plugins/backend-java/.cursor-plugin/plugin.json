@@ -1,7 +1,7 @@
 {
   "name": "backend-java",
   "description": "Glob-scoped Java service guidance for package layout, queries, and error handling.",
-  "version": "1.1.0",
+  "version": "1.0.3",
   "license": "MIT",
   "displayName": "Backend Java",
   "logo": "assets/logo.svg",

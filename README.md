@@ -24,7 +24,7 @@ optional hooks (pre-execution confirmations), and optional commands.
 | Tier | Plugins | Behavior |
 | --- | --- | --- |
 | **Required** | `engineering-core`, `security-core` | Always-on rules for every session; security hooks on shell/git reads |
-| **Default On** | `git-workflow`, `code-quality`, `testing`, `session-closeout`, `cost-efficiency` | Small always-on rules; verification ladder, Agent-mode closeout, and model/mode router |
+| **Default On** | `git-workflow`, `code-quality`, `testing`, `session-closeout` | Small always-on rules; verification ladder and Agent-mode closeout |
 | **Default Off** | Stack, data, cloud, integration plugins | Glob-scoped rules and/or skills; enable only what matches your repo |
 
 Recommended dashboard mapping: [docs/tiers.md](docs/tiers.md). Cursor team settings

@@ -23,7 +23,7 @@ giving it more capabilities.
 | --- | --- |
 | Correctness, evidence, verification | `engineering-core` rules |
 | Minimal context | `engineering-core` context-efficiency rule |
-| Minimal capable model | `cost-efficiency` plugin (Default On, always-applied router) |
+| Minimal capable model | `cost-efficiency` plugin (Milestone 2, Default Off) |
 | Deterministic automation | Validator, eval harness, CI |
 | Human approval | `engineering-core` escalation rule (`060-human-escalation.mdc`) |
 | Security and supply chain | `security-core` rules and hooks |
