@@ -1,0 +1,15 @@
+{
+  "id": "shell-quote-vars",
+  "plugin": "lang-bash",
+  "claim": "shell-quote-vars content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/shell-script-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Quoting",
+    "flags": "i"
+  }
+}

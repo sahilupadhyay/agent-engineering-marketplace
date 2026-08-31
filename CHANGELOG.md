@@ -11,6 +11,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Deepened `atlassian-confluence` `confluence-page` skill: Atlassian MCP tool
   flow, search-before-create, update-over-duplicate, HTML content format, and
   expanded eval suite.
+- Plugin deepen program (waves 1–6): expanded or new skills across core workflow,
+  backend/language, frontend, data, cloud/platform, and integration plugins; 69 new
+  eval cases (235 total); `/verify` command in **testing**; **security-core**
+  destructive-op and secret-exposure skills; **code-quality** `scope-and-style-review`;
+  **platform-docker** `docker-review`; backend `*-service-review` skills; frontend
+  framework review skills; deepened data/cloud/platform/integration skill bodies;
+  **jira-triage** MCP tool names; **engineering-playbooks** related-plugin cross-links.
 - `engineering-playbooks` default-off skills-only plugin with 11 generic playbooks
   (debug, review, performance, data access, API design, threat model, architecture,
   resilience, incident triage, GitHub CI, elicitation). Commit/PR workflow stays in

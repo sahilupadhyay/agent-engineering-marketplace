@@ -6,17 +6,12 @@ description: Use when changing PostgreSQL schema, reviewing queries, or adding m
 # Postgres review
 
 ## Scope
-
-SQL files, `migrations/`, and Postgres-specific DDL. Cross-check backend
-code for parameterized queries; do not contradict `backend-python` or
-`backend-java`.
+Postgres-flavored paths only. Enable **one** of postgres/mysql plugins.
 
 ## Workflow
-
-1. **Name the change** — table, index, or query the user asked to modify.
-2. **Check locking** — long `ALTER` on large tables; prefer concurrent indexes if the repo uses them.
-3. **Check data loss** — drops, type changes, and NOT NULL without backfill.
-4. **Check roles** — grants stay least-privilege; no superuser for the app.
-5. **Summarize** — migration order, rollback, and queries to re-run.
-
-Enable this plugin instead of `data-mysql` when the dialect is Postgres.
+1. **Name the change** — table, index, or query.
+2. **Locking** — concurrent indexes where repo uses them; long ALTER risk.
+3. **Data loss** — drops, type changes, NOT NULL backfill.
+4. **RLS** — row-level security if the repo uses it.
+5. **Roles** — least privilege; no superuser for app.
+6. **Summarize** — migration order, rollback, verify queries.

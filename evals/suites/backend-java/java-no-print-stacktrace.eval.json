@@ -1,0 +1,15 @@
+{
+  "id": "java-no-print-stacktrace",
+  "plugin": "backend-java",
+  "claim": "java-no-print-stacktrace content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/java-service-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "printStackTrace",
+    "flags": "i"
+  }
+}

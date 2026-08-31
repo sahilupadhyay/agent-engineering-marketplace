@@ -1,0 +1,15 @@
+{
+  "id": "verify-command-present",
+  "plugin": "testing",
+  "claim": "verify-command-present content check for testing.",
+  "activation": "unknown",
+  "target": {
+    "file": "commands/verify.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "verification ladder",
+    "flags": "i"
+  }
+}

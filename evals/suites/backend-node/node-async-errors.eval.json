@@ -1,0 +1,15 @@
+{
+  "id": "node-async-errors",
+  "plugin": "backend-node",
+  "claim": "node-async-errors content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/node-service-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Async",
+    "flags": "i"
+  }
+}

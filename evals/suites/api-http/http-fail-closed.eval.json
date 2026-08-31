@@ -1,0 +1,15 @@
+{
+  "id": "http-fail-closed",
+  "plugin": "api-http",
+  "claim": "http-fail-closed content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/http-api-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "fail closed",
+    "flags": "i"
+  }
+}

@@ -1,15 +1,15 @@
 {
   "id": "aws-cost-review-use-when",
   "plugin": "cloud-aws",
-  "claim": "The aws-cost-review skill description includes a Use when trigger for infrastructure spend.",
+  "claim": "aws-cost-review-use-when content check.",
   "activation": "unknown",
   "target": {
     "file": "skills/aws-cost-review/SKILL.md",
     "section": "frontmatter"
   },
   "assert": {
-    "type": "regex",
-    "pattern": "Use when",
-    "flags": "i"
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
   }
 }

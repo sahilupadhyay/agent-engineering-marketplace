@@ -1,0 +1,15 @@
+{
+  "id": "mysql-online-ddl",
+  "plugin": "data-mysql",
+  "claim": "mysql-online-ddl content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/mysql-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Online DDL",
+    "flags": "i"
+  }
+}

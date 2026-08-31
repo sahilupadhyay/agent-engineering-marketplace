@@ -1,0 +1,15 @@
+{
+  "id": "sonar-changed-lines-first",
+  "plugin": "quality-sonarqube",
+  "claim": "sonar-changed-lines-first content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/sonar-issue-triage/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Changed lines",
+    "flags": "i"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "markup-keyboard-traps",
+  "plugin": "frontend-htmlcss",
+  "claim": "markup-keyboard-traps content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/markup-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "keyboard",
+    "flags": "i"
+  }
+}

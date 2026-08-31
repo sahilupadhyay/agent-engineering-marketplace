@@ -1,0 +1,15 @@
+{
+  "id": "postgres-concurrent-index",
+  "plugin": "data-postgres",
+  "claim": "postgres-concurrent-index content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/postgres-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "concurrent",
+    "flags": "i"
+  }
+}

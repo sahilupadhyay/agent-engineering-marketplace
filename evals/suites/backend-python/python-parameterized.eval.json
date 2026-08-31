@@ -1,0 +1,15 @@
+{
+  "id": "python-parameterized",
+  "plugin": "backend-python",
+  "claim": "python-parameterized content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/python-service-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "parameterized",
+    "flags": "i"
+  }
+}

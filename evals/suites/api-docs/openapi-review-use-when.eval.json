@@ -1,0 +1,15 @@
+{
+  "id": "openapi-review-use-when",
+  "plugin": "api-docs",
+  "claim": "openapi-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/openapi-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

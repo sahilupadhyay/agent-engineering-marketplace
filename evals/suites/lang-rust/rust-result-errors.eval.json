@@ -1,0 +1,15 @@
+{
+  "id": "rust-result-errors",
+  "plugin": "lang-rust",
+  "claim": "rust-result-errors content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/rust-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Result",
+    "flags": "i"
+  }
+}

@@ -9,6 +9,10 @@ Set **Default Off** in Dashboard → Plugins. Enable when the repository has `.g
 ## Rule
 
 `010-go-service-discipline.mdc` — glob-scoped rule (no `alwaysApply`). Applies to `.go` files and `go.mod`.
+
+## Skill
+
+`go-service-review` — load when the task matches the skill description.
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no

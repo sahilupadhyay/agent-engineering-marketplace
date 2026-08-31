@@ -1,0 +1,15 @@
+{
+  "id": "vue-composition-api",
+  "plugin": "frontend-vue",
+  "claim": "vue-composition-api content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/vue-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Composition",
+    "flags": "i"
+  }
+}

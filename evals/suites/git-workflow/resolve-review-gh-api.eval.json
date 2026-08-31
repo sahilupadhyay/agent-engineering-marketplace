@@ -1,0 +1,15 @@
+{
+  "id": "resolve-review-gh-api",
+  "plugin": "git-workflow",
+  "claim": "resolve-review-gh-api content check for git-workflow.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/resolve-review-feedback/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "gh api",
+    "flags": "i"
+  }
+}

@@ -13,6 +13,10 @@ for APIs, services, or server-side logic.
 `010-node-server-discipline.mdc` — glob-scoped rule (no `alwaysApply`). Applies to
 server routes, controllers, and Node/TS backend files.
 
+
+## Skill
+
+`node-service-review` — load when the task matches the skill description.
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no

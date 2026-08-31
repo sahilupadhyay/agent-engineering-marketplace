@@ -1,0 +1,15 @@
+{
+  "id": "closeout-readme-non-goals",
+  "plugin": "session-closeout",
+  "claim": "closeout-readme-non-goals content check for session-closeout.",
+  "activation": "unknown",
+  "target": {
+    "file": "README.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "No skill",
+    "flags": "i"
+  }
+}

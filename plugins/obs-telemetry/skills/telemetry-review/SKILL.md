@@ -5,8 +5,9 @@ description: Use when designing logs, metrics, traces, or OpenTelemetry instrume
 
 # Telemetry review
 
-1. **Logs** — levels, correlation IDs, redaction.
+## Review
+1. **Logs** — structured fields; redact secrets/PII.
 2. **Metrics** — naming, units, cardinality limits.
-3. **Traces** — propagation and sampling strategy.
-4. **Dashboards** — tie signals to SLOs when defined.
-5. **Report** — blind spots and cost drivers.
+3. **Traces** — propagation on outbound calls.
+4. **SLOs** — tie signals to error budgets when defined.
+5. **Report** — blind spots and cost drivers; vendor tools → obs-coralogix/heap.

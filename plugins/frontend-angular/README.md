@@ -9,6 +9,10 @@ Set **Default Off** in Dashboard → Plugins. Enable when the repository uses An
 ## Rule
 
 `010-angular-component-discipline.mdc` — glob-scoped rule (no `alwaysApply`). Tight globs: component TS/HTML and `angular.json`.
+
+## Skill
+
+`angular-review` — load when the task matches the skill description.
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no

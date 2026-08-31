@@ -1,0 +1,15 @@
+{
+  "id": "deployment-check-use-when",
+  "plugin": "cloud-aws",
+  "claim": "deployment-check-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/deployment-check/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

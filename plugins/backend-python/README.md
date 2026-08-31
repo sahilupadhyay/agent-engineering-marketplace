@@ -13,6 +13,10 @@ Python application or API code.
 `010-python-server-discipline.mdc` — glob-scoped rule (no `alwaysApply`). Applies
 to Python modules under the project.
 
+
+## Skill
+
+`python-service-review` — load when the task matches the skill description.
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no

@@ -1,0 +1,15 @@
+{
+  "id": "scope-no-drive-by",
+  "plugin": "code-quality",
+  "claim": "scope-no-drive-by content check for code-quality.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/scope-and-style-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "drive-by",
+    "flags": "i"
+  }
+}

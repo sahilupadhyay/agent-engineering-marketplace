@@ -1,0 +1,15 @@
+{
+  "id": "infrastructure-review-use-when",
+  "plugin": "cloud-aws",
+  "claim": "infrastructure-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/infrastructure-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

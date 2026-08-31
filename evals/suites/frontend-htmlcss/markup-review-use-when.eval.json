@@ -1,0 +1,15 @@
+{
+  "id": "markup-review-use-when",
+  "plugin": "frontend-htmlcss",
+  "claim": "markup-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/markup-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

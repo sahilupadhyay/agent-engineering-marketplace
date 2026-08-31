@@ -1,0 +1,15 @@
+{
+  "id": "jira-mcp-tool-names",
+  "plugin": "jira-workflow",
+  "claim": "jira-mcp-tool-names content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/jira-triage/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "getJiraIssue|searchJiraIssuesUsingJql",
+    "flags": "i"
+  }
+}

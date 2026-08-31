@@ -1,0 +1,15 @@
+{
+  "id": "gha-least-privilege-perms",
+  "plugin": "platform-github-actions",
+  "claim": "gha-least-privilege-perms content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/gha-workflow-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "least-privilege",
+    "flags": "i"
+  }
+}

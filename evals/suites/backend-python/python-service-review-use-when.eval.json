@@ -1,0 +1,15 @@
+{
+  "id": "python-service-review-use-when",
+  "plugin": "backend-python",
+  "claim": "python-service-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/python-service-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

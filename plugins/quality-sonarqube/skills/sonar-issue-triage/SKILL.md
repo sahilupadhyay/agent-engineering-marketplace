@@ -1,20 +1,17 @@
 ---
 name: sonar-issue-triage
-description: Use when a SonarQube quality gate failed on a PR.
+description: Use when a SonarQube quality gate failed or new issues appear on changed lines.
 ---
 
 # Sonar issue triage
 
-## Scope
+## Triage
+1. **Changed lines first** — ignore legacy debt unless asked.
+2. **Severity** — blocker/critical before minor.
+3. **No greenwash** — do not weaken gates to pass.
 
-Failed quality gates on the current PR. Prefer issues on changed lines.
+## Fix
+Smallest change per issue; run local analysis if available.
 
-## Workflow
-
-1. List new issues (bug, vuln, smell) tied to the diff.
-2. Classify: fix now, false positive with evidence, or defer with owner.
-3. Do not recommend lowering the gate to pass.
-4. Fix the smallest code change; skip drive-by refactors.
-5. Summarize remaining debt that is out of scope.
-
-Do not commit scanner tokens while reproducing the analysis.
+## Report
+Issues fixed, deferred, or need human policy decision.

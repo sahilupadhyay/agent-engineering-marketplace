@@ -1,0 +1,15 @@
+{
+  "id": "heap-no-pii",
+  "plugin": "obs-heap",
+  "claim": "heap-no-pii content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/heap-analytics/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "PII",
+    "flags": "i"
+  }
+}

@@ -1,21 +1,13 @@
 ---
 name: markup-review
-description: Use when reviewing accessibility, layout bugs, or markup/CSS structure in HTML and stylesheets.
+description: Use when changing HTML, CSS, or accessibility of static or server-rendered markup.
 ---
 
 # Markup review
 
-## Scope
-
-Applies to HTML templates and CSS/SCSS/Sass/Less files. Skip SPA-framework
-component APIs; those belong to the matching frontend plugin.
-
-## Workflow
-
-1. **Identify the surface** — page, partial, or stylesheet the user named.
-2. **Check semantics** — headings, landmarks, labels, and form controls.
-3. **Check contrast and focus** — visible focus, skip links if the app already has them.
-4. **Check layout source** — which stylesheet owns the broken rule; edit there.
-5. **Report** — blockers (missing labels, keyboard traps) vs style nits.
-
-Do not rewrite the design system. Match existing tokens and class names.
+## Review
+1. **Semantic HTML** — headings, landmarks, buttons vs divs.
+2. **Forms** — labels, errors, keyboard traps.
+3. **Tokens** — existing design variables; no new CSS architecture.
+4. **Responsive** — breakpoints match project patterns.
+5. **Report** — a11y gaps; SPA work → **frontend-react**.

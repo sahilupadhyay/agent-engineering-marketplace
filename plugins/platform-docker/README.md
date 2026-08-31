@@ -13,6 +13,10 @@ Set **Default Off** in Dashboard → Plugins. Enable when the repository ships a
 
 Prefer confirming `docker system prune` / `docker rmi` with the user in-session.
 This plugin does not ship a hook; `security-core` already gates broad `rm -rf`.
+
+## Skill
+
+`docker-review` — load when the task matches the skill description.
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no

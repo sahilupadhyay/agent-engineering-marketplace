@@ -1,0 +1,15 @@
+{
+  "id": "node-service-review-use-when",
+  "plugin": "backend-node",
+  "claim": "node-service-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/node-service-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}
