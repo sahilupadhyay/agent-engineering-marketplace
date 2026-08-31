@@ -1,6 +1,7 @@
 {
   "name": "lang-rust",
   "description": "Glob-scoped Rust guidance for errors, unsafe, and Cargo layout.",
-  "version": "1.0.0",
-  "license": "MIT"
+  "version": "1.0.1",
+  "license": "MIT",
+  "displayName": "Lang Rust"
 }

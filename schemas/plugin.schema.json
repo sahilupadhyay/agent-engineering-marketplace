@@ -12,6 +12,11 @@
       "pattern": "^[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$",
       "description": "Plugin identifier (kebab-case)."
     },
+    "displayName": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable title shown in the Cursor plugin picker."
+    },
     "description": { "type": "string" },
     "version": { "type": "string" },
     "author": {

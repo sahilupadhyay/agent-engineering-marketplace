@@ -35,8 +35,12 @@ each plugin's `plugin-meta.json`.
 
 ## Installation
 
-**Team marketplace:** add the Git URL in Cursor **Settings → Plugins → Team
-Marketplaces**, then map tiers per [docs/installation.md](docs/installation.md).
+**Team marketplace:** add this Git URL in Cursor **Settings → Plugins → Team
+Marketplaces**:
+
+`https://github.com/sahilupadhyay/agent-engineering-marketplace`
+
+Then map tiers per [docs/installation.md](docs/installation.md).
 
 **Local development:**
 

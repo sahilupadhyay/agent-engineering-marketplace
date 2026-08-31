@@ -41,9 +41,10 @@ Required: `name`, `owner.name`, `plugins[]`. Each entry requires `name` and
 
 ### `plugin.json`
 
-Required: `name` (kebab-case). Optional fields are limited to those documented
-by Cursor (description, version, author, component path overrides, variables,
-and similar). Schema:
+Required: `name` (kebab-case). Optional: `displayName` (human-readable title in
+the plugin picker, for example `Engineering Core` for `engineering-core`).
+Other optional fields are limited to those documented by Cursor (description,
+version, author, component path overrides, variables, and similar). Schema:
 [schemas/plugin.schema.json](../schemas/plugin.schema.json).
 
 Do **not** add `tier`, `installMode`, or other undocumented keys. Cursor

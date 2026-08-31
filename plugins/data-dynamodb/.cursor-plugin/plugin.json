@@ -1,6 +1,7 @@
 {
   "name": "data-dynamodb",
   "description": "Glob-scoped DynamoDB table guidance plus a key-and-access review skill.",
-  "version": "1.0.0",
-  "license": "MIT"
+  "version": "1.0.1",
+  "license": "MIT",
+  "displayName": "Data DynamoDB"
 }
