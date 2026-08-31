@@ -14,114 +14,71 @@ risk; they cannot guarantee perfect agent behavior. See [docs/evals.md](docs/eva
 
 Seven principles drive every plugin. Read [docs/philosophy.md](docs/philosophy.md).
 
-## Status
+## What you get
 
-**Milestone 1 complete** (pending public visibility flip). GitHub Actions runs
-`validate`, `node --test`, `node evals/run.mjs`, `node benchmarks/run.mjs`,
-shellcheck, and repo secret scan on every pull request and on pushes to `main`.
+Thirty-one plugins install independently from
+[`.cursor-plugin/marketplace.json`](.cursor-plugin/marketplace.json). Each plugin
+has one concern: rules (always-on or glob-scoped), optional skills (lazy-loaded),
+optional hooks (pre-execution confirmations), and optional commands.
 
-Thirty-one plugins ship in `.cursor-plugin/marketplace.json`:
-
-| Plugin | Recommended tier | Status |
+| Tier | Plugins | Behavior |
 | --- | --- | --- |
-| `engineering-core` | Required | Shipped |
-| `security-core` | Required | Shipped |
-| `git-workflow` | Default On | Shipped |
-| `code-quality` | Default On | Shipped |
-| `testing` | Default On | Shipped |
-| `session-closeout` | Default On | Shipped |
-| `cost-efficiency` | Default Off | Shipped |
-| `backend-node` | Default Off | Shipped |
-| `backend-python` | Default Off | Shipped |
-| `backend-java` | Default Off | Shipped |
-| `backend-go` | Default Off | Shipped |
-| `frontend-react` | Default Off | Shipped |
-| `frontend-htmlcss` | Default Off | Shipped |
-| `frontend-javascript` | Default Off | Shipped |
-| `frontend-angular` | Default Off | Shipped |
-| `frontend-vue` | Default Off | Shipped |
-| `data-postgres` | Default Off | Shipped |
-| `data-mysql` | Default Off | Shipped |
-| `data-dynamodb` | Default Off | Shipped |
-| `data-redis` | Default Off | Shipped |
-| `data-databricks` | Default Off | Shipped |
-| `jira-workflow` | Default Off | Shipped (skills-only) |
-| `atlassian-confluence` | Default Off | Shipped (skills-only) |
-| `diagram-workflow` | Default Off | Shipped (skills-only) |
-| `api-docs` | Default Off | Shipped (skills-only) |
-| `obs-coralogix` | Default Off | Shipped (skills-only) |
-| `obs-heap` | Default Off | Shipped (skills-only) |
-| `quality-sonarqube` | Default Off | Shipped |
-| `cloud-aws` | Default Off | Shipped |
-| `platform-docker` | Default Off | Shipped |
-| `platform-kubernetes` | Default Off | Shipped |
+| **Required** | `engineering-core`, `security-core` | Always-on rules for every session; security hooks on shell/git reads |
+| **Default On** | `git-workflow`, `code-quality`, `testing`, `session-closeout` | Small always-on rules; verification ladder and Agent-mode closeout |
+| **Default Off** | Stack, data, cloud, integration plugins | Glob-scoped rules and/or skills; enable only what matches your repo |
 
-**Recommended installation today:** Engineering Core, Security Core, Git Workflow,
-Code Quality, Testing, Session Closeout.
+Recommended dashboard mapping: [docs/tiers.md](docs/tiers.md). Cursor team settings
+use Required / Default On / Default Off; this repo documents recommended tiers in
+each plugin's `plugin-meta.json`.
 
-**Optional stack plugins:** Enable backend, frontend, data, or platform plugins
-that match the repository (see `scripts/detect-stack.mjs`). Detection
-**recommends only** and never auto-installs. Enable one of `data-postgres` or
-`data-mysql` when SQL files could match either dialect.
+**Plugin catalog and responsibilities:** [docs/plugin-roles.md](docs/plugin-roles.md).
 
-**Optional integration plugins (skills-only, no bundled MCP):** Enable
-`jira-workflow`, `atlassian-confluence`, `diagram-workflow`, `api-docs`,
-`obs-coralogix`, or `obs-heap` when you use those products. Connect MCP servers
-in Cursor settings; see [docs/mcp-governance.md](docs/mcp-governance.md).
+## Installation
 
-**Optional cloud and containers:** Enable `cloud-aws` for AWS IaC, `platform-docker`
-for Dockerfiles, and `platform-kubernetes` for Helm/`k8s` trees.
+**Team marketplace:** add the Git URL in Cursor **Settings → Plugins → Team
+Marketplaces**, then map tiers per [docs/installation.md](docs/installation.md).
 
-The repository remains **private** until a maintainer runs the pre-public
-checklist in [docs/installation.md](docs/installation.md) and flips visibility in
-GitHub settings.
+**Local development:**
+
+```bash
+./scripts/link-local.sh   # symlinks into ~/.cursor/plugins/local/
+```
+
+**Stack detection (recommend only, never auto-install):**
+
+```bash
+node scripts/detect-stack.mjs --root . --pretty
+```
+
+Enable optional stack plugins that match your repository. For SQL, enable **one**
+of `data-postgres` or `data-mysql` when dialect-specific guidance is needed.
+Integration plugins (`jira-workflow`, `obs-coralogix`, …) are **skills-only**;
+connect MCP servers in Cursor settings ([docs/mcp-governance.md](docs/mcp-governance.md)).
+
+## Validation
 
 After clone (Node 20+):
 
 ```bash
 node scripts/validate.mjs && node evals/run.mjs && node --test && node scripts/secret-scan-repo.mjs && node benchmarks/run.mjs
-./scripts/link-local.sh   # optional local smoke test
 ```
 
-See [docs/evals.md](docs/evals.md), [docs/benchmarks.md](docs/benchmarks.md),
-and [docs/installation.md](docs/installation.md).
-
-## Benchmark targets (no scores)
-
-Qualitative targets live in [docs/benchmarks.md](docs/benchmarks.md). CI runs
-`node benchmarks/run.mjs` (metadata only). There are **no published pass rates**.
+CI runs the same checks on every pull request. See [docs/evals.md](docs/evals.md),
+[docs/benchmarks.md](docs/benchmarks.md), and [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Why plugins, not a flat skill tree
 
-Plugins install independently so a stack loads only what it needs.
-
-Cursor **Required**, **Default On**, and **Default Off** are team-dashboard
-settings. This repository cannot ship those fields. See the
-[Cursor plugins reference](https://cursor.com/docs/reference/plugins).
-Recommended tiers are documented in [docs/tiers.md](docs/tiers.md) as
-`plugin-meta.json` metadata, not as enforced Cursor settings.
-
-## Milestone 1 stack
-
-- Plugins: `engineering-core`, `security-core`, `git-workflow`, `code-quality`
-- Root `.cursor-plugin/marketplace.json`
-- Runtime: Node 20+, zero third-party runtime dependencies
-
-Authoring rules and layout are in [docs/authoring.md](docs/authoring.md) and
-[CONTRIBUTING.md](CONTRIBUTING.md).
-
-## How to use today
-
-Clone the repo, run validation locally, or use `./scripts/link-local.sh` for
-Cursor smoke testing. Team-marketplace import by URL works after the public flip.
+Plugins install independently so a stack loads only what it needs. Always-on rules
+stay within byte budgets ([docs/tiers.md](docs/tiers.md)); detailed playbooks live
+in skills that load on demand.
 
 ## Links
 
+- [Plugin roles](docs/plugin-roles.md)
 - [Architecture](docs/architecture.md)
 - [Philosophy](docs/philosophy.md)
 - [Performance and efficiency](docs/performance.md)
 - [Installation](docs/installation.md)
-- [Catalog expansion roadmap](docs/roadmap/README.md)
 - [Eval harness](docs/evals.md)
 - [Behavioral benchmarks](docs/benchmarks.md)
 - [Marketplace submission](docs/marketplace-submit.md)

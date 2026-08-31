@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Capability-only consumer docs: rewritten [README.md](README.md),
+  [docs/plugin-roles.md](docs/plugin-roles.md), and maintainer [PLAN.md](PLAN.md);
+  status language removed from [docs/architecture.md](docs/architecture.md) and
+  [docs/roadmap/README.md](docs/roadmap/README.md).
 - Catalog expansion: default-off stack plugins `frontend-htmlcss`,
   `frontend-javascript`, `frontend-angular`, `frontend-vue`, `backend-java`,
   `backend-go`, `data-postgres`, `data-mysql`, `data-dynamodb`, `data-redis`,

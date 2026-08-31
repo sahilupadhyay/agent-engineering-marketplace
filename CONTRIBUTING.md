@@ -126,3 +126,5 @@ node scripts/sync-github-labels.mjs
 
 Versioning, CHANGELOG policy, and tag workflow are documented in
 [docs/release.md](docs/release.md). Stable releases only until `v1.0.0`.
+
+Maintainer milestones and roadmap: [PLAN.md](PLAN.md).
