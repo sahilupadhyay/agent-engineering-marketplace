@@ -1,7 +1,7 @@
 {
   "name": "cost-efficiency",
   "description": "Model selection and task triage for minimal capable model without sacrificing correctness.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "displayName": "Cost Efficiency"
 }

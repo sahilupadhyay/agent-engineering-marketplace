@@ -1,7 +1,7 @@
 {
   "name": "frontend-react",
   "description": "Glob-scoped React and TSX guidance for components, hooks, and UI state.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "displayName": "Frontend React"
 }

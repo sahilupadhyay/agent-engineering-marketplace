@@ -1,7 +1,7 @@
 {
   "name": "api-docs",
   "description": "Skills-only OpenAPI and API documentation review using user-connected MCP tools.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "displayName": "API Docs"
 }

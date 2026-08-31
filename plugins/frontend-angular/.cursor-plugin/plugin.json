@@ -1,7 +1,7 @@
 {
   "name": "frontend-angular",
   "description": "Glob-scoped Angular guidance for components, modules, and RxJS teardown.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "displayName": "Frontend Angular"
 }

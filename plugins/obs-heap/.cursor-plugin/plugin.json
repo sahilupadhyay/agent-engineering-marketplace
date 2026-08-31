@@ -1,7 +1,7 @@
 {
   "name": "obs-heap",
   "description": "Skills-only Heap analytics guidance for events, properties, and identity.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "displayName": "Obs Heap"
 }

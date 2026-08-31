@@ -1,7 +1,7 @@
 {
   "name": "frontend-htmlcss",
   "description": "Glob-scoped HTML and CSS guidance for markup, accessibility, and existing design tokens.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "displayName": "Frontend HTML & CSS"
 }
