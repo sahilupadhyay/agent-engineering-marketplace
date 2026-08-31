@@ -11,6 +11,10 @@ Use Jira MCP tools the user already connected in Cursor (for example Atlassian).
 This plugin does not ship `mcp.json` or bundled servers. If no Jira MCP is
 available, ask the user to connect one before proceeding.
 
+## MCP tools (when connected)
+
+Use `getJiraIssue`, `searchJiraIssuesUsingJql`, `editJiraIssue`, `transitionJiraIssue`, and `addCommentToJiraIssue` as appropriate. Use `search` (Rovo) for broad discovery unless the user specifies JQL.
+
 ## Gather context
 
 1. Confirm the issue key or search criteria from the user request.

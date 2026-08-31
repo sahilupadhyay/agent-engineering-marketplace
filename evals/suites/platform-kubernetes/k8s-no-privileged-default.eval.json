@@ -1,0 +1,15 @@
+{
+  "id": "k8s-no-privileged-default",
+  "plugin": "platform-kubernetes",
+  "claim": "k8s-no-privileged-default content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/k8s-manifest-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "privileged",
+    "flags": "i"
+  }
+}

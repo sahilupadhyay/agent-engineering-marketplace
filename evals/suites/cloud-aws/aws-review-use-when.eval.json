@@ -1,15 +1,15 @@
 {
   "id": "aws-review-use-when",
   "plugin": "cloud-aws",
-  "claim": "The aws-review skill description includes a Use when trigger.",
+  "claim": "aws-review-use-when content check.",
   "activation": "unknown",
   "target": {
     "file": "skills/aws-review/SKILL.md",
     "section": "frontmatter"
   },
   "assert": {
-    "type": "regex",
-    "pattern": "Use when",
-    "flags": "i"
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
   }
 }

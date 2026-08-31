@@ -1,0 +1,15 @@
+{
+  "id": "dynamodb-no-scan-hot-path",
+  "plugin": "data-dynamodb",
+  "claim": "dynamodb-no-scan-hot-path content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/dynamodb-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Scan",
+    "flags": "i"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "rust-review-use-when",
+  "plugin": "lang-rust",
+  "claim": "rust-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/rust-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

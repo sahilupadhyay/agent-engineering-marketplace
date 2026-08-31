@@ -1,15 +1,15 @@
 {
   "id": "js-no-eval",
   "plugin": "frontend-javascript",
-  "claim": "The JavaScript client rule forbids eval and adding a new bundler.",
+  "claim": "js-no-eval content check.",
   "activation": "unknown",
   "target": {
-    "file": "rules/010-js-client-discipline.mdc",
+    "file": "skills/js-client-review/SKILL.md",
     "section": "body"
   },
   "assert": {
     "type": "regex",
-    "pattern": "eval|bundler",
+    "pattern": "eval",
     "flags": "i"
   }
 }

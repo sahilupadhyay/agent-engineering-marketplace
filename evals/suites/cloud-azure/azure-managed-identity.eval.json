@@ -1,0 +1,15 @@
+{
+  "id": "azure-managed-identity",
+  "plugin": "cloud-azure",
+  "claim": "azure-managed-identity content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/azure-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "managed ident",
+    "flags": "i"
+  }
+}

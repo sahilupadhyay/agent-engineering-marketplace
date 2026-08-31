@@ -1,42 +1,25 @@
 # engineering-core
 
-Stack-agnostic always-on engineering discipline for Cursor sessions.
+Required always-on engineering discipline: task intake, evidence, minimal change,
+verification pointer, context efficiency, and human escalation.
 
 ## Recommended tier
 
-Set **Required** in Dashboard → Plugins → Required. The `tier` field in
-`plugin-meta.json` is documentation only; install mode is a team-dashboard
-setting.
+Set **Required** in Dashboard → Plugins.
+
+## Skill
+
+`config-change-review` — Use when changing CI/CD, Docker, Terraform, Kubernetes,
+Helm, env files, or dependency manifests. Includes intake step before editing.
 
 ## Rules
 
-| File | Summary |
-| --- | --- |
-| `010-task-intake.mdc` | Understand the request and locate code before editing. |
-| `020-evidence-hierarchy.mdc` | Locate evidence; never present inference as fact. |
-| `030-minimal-change.mdc` | Smallest correct change; no drive-by edits. |
-| `040-verification.mdc` | Inspect diff and run focused checks before done. |
-| `050-context-efficiency.mdc` | Search and read narrowly; avoid context dumps. |
-| `060-human-escalation.mdc` | Standard banner for consequential human decisions. |
-| `070-config-change-trigger.mdc` | Glob-scoped trigger for config-change-review skill. |
-
-## Skills
-
-| Skill | Summary |
-| --- | --- |
-| `config-change-review` | Review CI, infra, env, and dependency manifest changes. |
+See `rules/` for always-on guidance. Verification ladder detail lives in **testing**.
 
 ## Context budget
 
-Combined always-applied rule bodies must stay within **4096** UTF-8 bytes
-(`contextBudget` in `plugin-meta.json`). See [docs/tiers.md](../../docs/tiers.md).
-
-## Install
-
-Import this marketplace from Cursor Team Marketplaces. The repository is still
-private until Milestone 1 completes.
+Combined always-applied rule bodies must stay within **4096** UTF-8 bytes.
 
 ## Eval suite
 
-No eval suite ships with this plugin; see `evals/suites/engineering-core/` in
-the marketplace repo for deterministic content checks.
+Deterministic cases live in `evals/suites/engineering-core/` in the marketplace repo.

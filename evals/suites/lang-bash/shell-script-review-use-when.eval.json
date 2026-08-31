@@ -1,0 +1,15 @@
+{
+  "id": "shell-script-review-use-when",
+  "plugin": "lang-bash",
+  "claim": "shell-script-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/shell-script-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

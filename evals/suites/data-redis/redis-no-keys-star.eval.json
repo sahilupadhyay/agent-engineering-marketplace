@@ -1,0 +1,15 @@
+{
+  "id": "redis-no-keys-star",
+  "plugin": "data-redis",
+  "claim": "redis-no-keys-star content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/redis-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "KEYS",
+    "flags": "i"
+  }
+}

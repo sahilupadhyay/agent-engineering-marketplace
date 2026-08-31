@@ -16,14 +16,28 @@ Set **Required** in Dashboard → Plugins → Required.
 | `040-destructive-ops.mdc` | Confirm destructive git, cloud, and filesystem ops. |
 | `050-supply-chain.mdc` | Dependency and install hygiene. |
 
-## Context budget
+## Skills
 
-Combined always-applied rule bodies must stay within **4096** UTF-8 bytes. See [docs/tiers.md](../../docs/tiers.md).
+| Skill | Use when |
+| --- | --- |
+| `confirm-destructive-op` | Before destructive commands covered by hooks or rule 040 |
+| `secret-exposure-response` | A secret may have leaked into git, logs, or chat |
 
 ## Hooks
 
-Mechanical enforcement hooks ship in this plugin (POSIX `sh`). Rules state
-policy; hooks enforce when installed. See `hooks/hooks.json` for event wiring.
+| Hook | Event | Enforces |
+| --- | --- | --- |
+| `protect-shell.sh` | `beforeShellExecution` | rm, git destructive, SQL DROP/DELETE, Redis flush, AWS deletes, find -delete |
+| `protect-read.sh` | `beforeReadFile` / `beforeTabFileRead` | Deny `.env`, keys, credentials paths |
+| `secret-scan.sh` | `preToolUse` Write/StrReplace; git commit/push | Deny known secret patterns in writes and staged commits |
+
+Rules state policy; hooks enforce when installed. See `hooks/hooks.json`.
+
+Extended AWS/k8s deletes: **cloud-aws** `dangerous-aws-command.sh`, **platform-kubernetes** `dangerous-k8s-command.sh`.
+
+## Context budget
+
+Combined always-applied rule bodies must stay within **4096** UTF-8 bytes.
 
 ## Eval suite
 

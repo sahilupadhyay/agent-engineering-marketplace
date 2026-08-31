@@ -1,0 +1,15 @@
+{
+  "id": "databricks-job-review-use-when",
+  "plugin": "data-databricks",
+  "claim": "databricks-job-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/databricks-job-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

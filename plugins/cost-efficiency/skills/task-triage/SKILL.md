@@ -1,33 +1,17 @@
 ---
 name: task-triage
-description: Use when the selected model and task complexity appear mismatched, or when the user asks which model tier fits the work.
+description: Use when choosing model tier or scoping task complexity before implementation.
 ---
 
 # Task triage
 
-## Assess complexity
+## Classify
+- **Simple** — single file, config, docs → minimal capable model.
+- **Normal** — multi-file, familiar patterns → balanced model.
+- **Critical** — security, prod, unclear architecture → strongest reliable model.
 
-Classify the request:
+## Rules
+Do not sacrifice correctness for cost. Escalate model when verification fails twice.
 
-- **Light** — one file, obvious fix, docs/config, rename, Q&A
-- **Mid** — multi-file, unfamiliar code, integration, non-trivial debug
-- **Heavy** — architecture, production risk, security-critical, unclear root cause
-
-## Compare to selection
-
-If the user's selected model is heavier than needed, recommend switching down
-and wait for confirmation before substantive work.
-
-If the selected model is lighter than the task requires, recommend switching up
-before deep implementation.
-
-## Respond
-
-State recommended tier, current selection (if known), one-line reason, and a
-chooser when they differ. Do not proceed on a mismatched heavy model until the
-user confirms.
-
-## Correctness guard
-
-Never downgrade model choice when correctness, security, or production risk is
-in play. Cost savings must not skip investigation or verification.
+## Report
+Recommended tier and why; what would trigger escalation.

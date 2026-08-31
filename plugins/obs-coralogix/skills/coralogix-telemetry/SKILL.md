@@ -1,24 +1,21 @@
 ---
 name: coralogix-telemetry
-description: Use when querying logs, traces, or alerts in Coralogix.
+description: Use when querying Coralogix logs, metrics, or traces via user-connected MCP tools.
 ---
 
 # Coralogix telemetry
 
 ## Preconditions
-
-Use Coralogix MCP tools the user already connected in Cursor. This plugin does
-not ship `mcp.json` or a query dialect of its own. If no Coralogix MCP is
-available, ask the user to connect one before inventing queries.
-
-When a tool schema is present, follow that schema. Do not invent a query
-language the connected tool does not document.
+Use Coralogix MCP tools the user **already connected** — no bundled mcp.json. Generic
+telemetry patterns → **obs-telemetry**.
 
 ## Workflow
+1. Confirm time range, application, and environment with user.
+2. Search logs before summarizing with MCP tools — do not invent a query language or
+   events the tools did not return.
+3. Redact secrets and tokens from queries and summaries.
+4. Correlate traces to errors when MCP supports it.
+5. Report findings with query filters used.
 
-1. Confirm time range, application, and environment from the user request.
-2. Prefer the connected tool's search or alert APIs over guessed Lucene.
-3. Redact secrets and personal data from pasted log lines in the reply.
-4. Summarize findings: error rate, exemplar traces, and open alerts.
-
-Do not change production alert thresholds without explicit user intent.
+## Safety
+Read-only unless user explicitly asks to change alerts or dashboards.

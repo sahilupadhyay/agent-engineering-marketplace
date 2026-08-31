@@ -1,0 +1,15 @@
+{
+  "id": "vue-review-use-when",
+  "plugin": "frontend-vue",
+  "claim": "vue-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/vue-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

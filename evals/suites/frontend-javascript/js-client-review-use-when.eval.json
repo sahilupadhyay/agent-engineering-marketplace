@@ -1,0 +1,15 @@
+{
+  "id": "js-client-review-use-when",
+  "plugin": "frontend-javascript",
+  "claim": "js-client-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/js-client-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

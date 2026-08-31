@@ -1,0 +1,15 @@
+{
+  "id": "triage-min-capable-model",
+  "plugin": "cost-efficiency",
+  "claim": "triage-min-capable-model content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/task-triage/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "correctness",
+    "flags": "i"
+  }
+}

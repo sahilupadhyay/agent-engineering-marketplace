@@ -1,0 +1,15 @@
+{
+  "id": "config-change-intake",
+  "plugin": "engineering-core",
+  "claim": "config-change-intake content check for engineering-core.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/config-change-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Intake",
+    "flags": "i"
+  }
+}

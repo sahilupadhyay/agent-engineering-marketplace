@@ -1,22 +1,18 @@
 ---
 name: aws-review
-description: Use when reviewing AWS resource changes, CLI commands, service configuration, or account-level impact.
+description: Use when reviewing AWS resources, CLI commands, or service configuration.
 ---
 
-# AWS review
+# aws review
 
-## Scope
-
-Applies when editing Terraform, CloudFormation, CDK, AWS CLI scripts, or files
-under infrastructure paths that provision or mutate AWS resources.
+## Preconditions
+User-connected AWS context. Optional AWS Knowledge MCP for docs — no bundled mcp.json.
+Destructive CLI gated by **security-core** and **cloud-aws** hooks.
 
 ## Workflow
+1. Confirm account and region.
+2. Review least-privilege IAM, encryption, and public exposure.
+3. Report blast radius..
 
-1. **Identify resources** — list services, regions, and environments touched.
-2. **Classify risk** — read-only vs mutating vs destructive; prod vs non-prod.
-3. **Check conventions** — naming, tags, encryption, logging, and modules match the repo.
-4. **Verify dependencies** — VPCs, IAM roles, KMS keys, and state backends resolve.
-5. **Recommend safer alternatives** — prefer change sets, targeted applies, and rollbacks.
-6. **Report gaps** — cite what was inspected; escalate when prod impact is unclear.
-
-Confirm with the user before destructive or production-impacting AWS operations.
+## Report
+Commands run, risks, and rollback plan.

@@ -1,0 +1,15 @@
+{
+  "id": "react-no-fetch-in-render",
+  "plugin": "frontend-react",
+  "claim": "react-no-fetch-in-render content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/react-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "fetch-in-render",
+    "flags": "i"
+  }
+}

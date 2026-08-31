@@ -1,0 +1,15 @@
+{
+  "id": "scope-style-review-use-when",
+  "plugin": "code-quality",
+  "claim": "scope-style-review-use-when content check for code-quality.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/scope-and-style-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

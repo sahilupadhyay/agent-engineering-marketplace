@@ -5,8 +5,23 @@ description: Use when designing or reviewing REST endpoints, handlers, or JSON c
 
 # HTTP API review
 
-1. **Contract** — methods, paths, status codes, error shape.
-2. **Validation** — input schema at boundary; fail closed.
-3. **Auth** — authentication vs authorization checks on each route.
-4. **Compatibility** — additive vs breaking JSON changes.
-5. **Report** — OpenAPI gaps; point to api-docs skill for spec files.
+## Preconditions
+OpenAPI/spec work → **api-docs**. Handler code → this skill.
+
+## Contract
+Methods, paths, status codes, error envelope matching the repo.
+
+## Validation
+Sanitize at boundary; fail closed on auth failures.
+
+## Auth
+Authentication vs authorization per route.
+
+## Compatibility
+Additive JSON fields; version breaking changes explicitly.
+
+## Safety
+No stack traces or secrets in error JSON.
+
+## Report
+Gaps vs **api-docs** OpenAPI files if any.

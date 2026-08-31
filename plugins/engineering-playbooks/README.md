@@ -34,3 +34,9 @@ Zero always-applied rule bytes (skills only).
 ## Eval suite
 
 Deterministic cases live in `evals/suites/engineering-playbooks/` in the marketplace repo.
+
+## Related plugins
+
+- **git-workflow** — commit/PR commands (no duplicate commit-and-pr skill here)
+- **testing** — verification ladder and `write-focused-test`
+- **atlassian-confluence** / **jira-workflow** — Atlassian MCP workflows

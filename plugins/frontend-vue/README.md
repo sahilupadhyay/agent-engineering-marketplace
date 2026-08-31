@@ -9,6 +9,10 @@ Set **Default Off** in Dashboard → Plugins. Enable when the repository ships `
 ## Rule
 
 `010-vue-sfc-discipline.mdc` — glob-scoped rule (no `alwaysApply`). Applies to `.vue` files.
+
+## Skill
+
+`vue-review` — load when the task matches the skill description.
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no

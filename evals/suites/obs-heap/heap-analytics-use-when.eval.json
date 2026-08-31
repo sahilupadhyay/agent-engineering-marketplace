@@ -1,0 +1,15 @@
+{
+  "id": "heap-analytics-use-when",
+  "plugin": "obs-heap",
+  "claim": "heap-analytics-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/heap-analytics/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

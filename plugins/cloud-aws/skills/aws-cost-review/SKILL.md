@@ -1,22 +1,17 @@
 ---
 name: aws-cost-review
-description: Use when changing instance classes, NAT gateways, or idle AWS resources that affect infrastructure spend.
+description: Use when reviewing AWS cost drivers in infrastructure changes.
 ---
 
-# AWS cost review
+# aws cost review
 
-## Scope
-
-Instance types, NAT gateways, idle load balancers, unattached EBS, and
-always-on non-prod stacks. This is **not** model-selection guidance; do not
-use it in place of `cost-efficiency`.
+## Preconditions
+User-connected AWS context. Optional AWS Knowledge MCP for docs — no bundled mcp.json.
+Destructive CLI gated by **security-core** and **cloud-aws** hooks.
 
 ## Workflow
+1. Flag idle resources, oversized instances, NAT costs.
+2. Not model selection (see cost-efficiency)..
 
-1. **Name the resources** — instance class, NAT, or idle service in the diff.
-2. **Compare to existing** — same family already used in the env, or a silent upsize.
-3. **NAT and data transfer** — extra NAT or cross-AZ traffic the chart does not need.
-4. **Idle** — unused IPs, empty clusters, or forgotten non-prod that runs 24/7.
-5. **Report** — cheaper equivalent that matches existing modules, or confirm the cost is intended.
-
-Do not recommend deleting production capacity without user confirmation.
+## Report
+Commands run, risks, and rollback plan.

@@ -1,0 +1,15 @@
+{
+  "id": "coralogix-search-before-summarize",
+  "plugin": "obs-coralogix",
+  "claim": "coralogix-search-before-summarize content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/coralogix-telemetry/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Search logs before",
+    "flags": "i"
+  }
+}

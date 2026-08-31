@@ -1,0 +1,15 @@
+{
+  "id": "angular-review-use-when",
+  "plugin": "frontend-angular",
+  "claim": "angular-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/angular-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

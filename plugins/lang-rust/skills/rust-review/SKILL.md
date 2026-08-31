@@ -5,8 +5,9 @@ description: Use when changing Rust crates, async services, or Cargo dependencie
 
 # Rust review
 
-1. **Errors** — no unwrap in libs; meaningful context on ? chains.
-2. **Unsafe** — justify and minimize scope.
-3. **Deps** — match workspace versions; no duplicate HTTP clients.
-4. **Tests** — cover new public APIs and error paths.
-5. **Report** — breaking changes, MSRV impact, and test gaps.
+## Review
+1. **Errors** — Result and ? in library paths; document unwrap in tests only.
+2. **Unsafe** — minimal scope with safety comments.
+3. **Deps** — workspace versions; no duplicate HTTP stacks.
+4. **Tests** — cover public API and error paths.
+5. **Report** — MSRV and breaking changes.

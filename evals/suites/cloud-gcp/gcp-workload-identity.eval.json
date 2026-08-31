@@ -1,10 +1,10 @@
 {
   "id": "gcp-workload-identity",
   "plugin": "cloud-gcp",
-  "claim": "Rule body mentions workload identity over downloaded keys.",
+  "claim": "gcp-workload-identity content check.",
   "activation": "unknown",
   "target": {
-    "file": "rules/010-gcp-safety.mdc",
+    "file": "skills/gcp-review/SKILL.md",
     "section": "body"
   },
   "assert": {

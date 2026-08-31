@@ -1,0 +1,15 @@
+{
+  "id": "playbooks-related-plugins",
+  "plugin": "engineering-playbooks",
+  "claim": "playbooks-related-plugins content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "README.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Related plugins",
+    "flags": "i"
+  }
+}

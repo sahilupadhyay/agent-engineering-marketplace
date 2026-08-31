@@ -9,6 +9,10 @@ Set **Default Off** in Dashboard → Plugins. Enable when the repository contain
 ## Rule
 
 `010-java-service-discipline.mdc` — glob-scoped rule (no `alwaysApply`). Applies to `.java`, `pom.xml`, and Gradle build files.
+
+## Skill
+
+`java-service-review` — load when the task matches the skill description.
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no

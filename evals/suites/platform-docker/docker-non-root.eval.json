@@ -1,0 +1,15 @@
+{
+  "id": "docker-non-root",
+  "plugin": "platform-docker",
+  "claim": "docker-non-root content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/docker-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "non-root",
+    "flags": "i"
+  }
+}

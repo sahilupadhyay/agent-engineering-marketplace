@@ -1,0 +1,15 @@
+{
+  "id": "resolve-review-verify-ladder",
+  "plugin": "git-workflow",
+  "claim": "resolve-review-verify-ladder content check for git-workflow.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/resolve-review-feedback/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "verification ladder",
+    "flags": "i"
+  }
+}

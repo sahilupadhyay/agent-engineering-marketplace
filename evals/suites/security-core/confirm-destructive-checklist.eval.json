@@ -1,0 +1,15 @@
+{
+  "id": "confirm-destructive-checklist",
+  "plugin": "security-core",
+  "claim": "confirm-destructive-checklist content check for security-core.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/confirm-destructive-op/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "confirm with the user",
+    "flags": "i"
+  }
+}

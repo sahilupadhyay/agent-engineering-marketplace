@@ -1,0 +1,15 @@
+{
+  "id": "diagram-trust-boundaries",
+  "plugin": "diagram-workflow",
+  "claim": "diagram-trust-boundaries content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/architecture-diagram/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "trust bound",
+    "flags": "i"
+  }
+}

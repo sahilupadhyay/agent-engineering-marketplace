@@ -13,6 +13,10 @@ React components or hooks.
 `010-react-component-discipline.mdc` — glob-scoped rule (no `alwaysApply`). Applies
 to `.tsx` and `.jsx` files.
 
+
+## Skill
+
+`react-review` — load when the task matches the skill description.
 ## Context budget
 
 Default-off tier allows **zero** always-applied rule bytes. This plugin ships no

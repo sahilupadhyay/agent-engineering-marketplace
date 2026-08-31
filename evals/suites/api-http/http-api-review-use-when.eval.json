@@ -1,0 +1,15 @@
+{
+  "id": "http-api-review-use-when",
+  "plugin": "api-http",
+  "claim": "http-api-review-use-when content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/http-api-review/SKILL.md",
+    "section": "frontmatter"
+  },
+  "assert": {
+    "type": "contains",
+    "value": "Use when",
+    "ignoreCase": true
+  }
+}

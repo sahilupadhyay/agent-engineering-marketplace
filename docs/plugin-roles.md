@@ -11,8 +11,8 @@ skills-only patterns.
 
 | Plugin | Tier | Responsibility | Rules | Skills | Hooks |
 | --- | --- | --- | ---: | ---: | ---: |
-| `engineering-core` | Required | Task intake, evidence before change, minimal diff, context efficiency | 7 | 1 (`config-change-review`) | — |
-| `security-core` | Required | Secrets, auth, input trust, destructive ops, supply chain | 5 | — | 3 (`protect-shell`, `protect-read`, `secret-scan`) |
+| `engineering-core` | Required | Task intake, evidence before change, minimal diff, context efficiency | 7 | 1 (`config-change-review`, intake workflow) | — |
+| `security-core` | Required | Secrets, auth, input trust, destructive ops, supply chain | 5 | 2 (`confirm-destructive-op`, `secret-exposure-response`) | 3 (`protect-shell`, `protect-read`, `secret-scan`) |
 
 **Non-goals:** Stack-specific guidance (use stack plugins). Deep verification ladder (use `testing`).
 
@@ -20,10 +20,10 @@ skills-only patterns.
 
 | Plugin | Tier | Responsibility | Rules | Skills | Hooks |
 | --- | --- | --- | ---: | ---: | ---: |
-| `git-workflow` | Default On | Commit identity, branch/PR conventions, review commands | 2 | 1 (`resolve-review-feedback`) | — |
-| `code-quality` | Default On | Scope discipline, readability, refactor only when needed | 3 | — | — |
-| `testing` | Default On | When to test, proportionality, verification ladder | 3 | — | — |
-| `session-closeout` | Default On | Agent-mode closeout table (skills, confidence, quality, security, performance) | 1 | — | — |
+| `git-workflow` | Default On | Commit identity, branch/PR conventions, review commands | 2 | 1 (`resolve-review-feedback`, gh API + verify ladder) | — |
+| `code-quality` | Default On | Scope discipline, readability, refactor only when needed | 3 | 1 (`scope-and-style-review`) | — |
+| `testing` | Default On | When to test, proportionality, verification ladder | 3 | 1 (`write-focused-test`); command `/verify` | — |
+| `session-closeout` | Default On | Agent-mode closeout table (skills, confidence, quality, security, performance) | 1 | — (rule sufficient; README documents non-goals) | — |
 
 **Non-goals:** Stack test patterns (use stack + `testing` together). Git hooks for destructive shell (use `security-core`).
 
@@ -37,24 +37,24 @@ skills-only patterns.
 
 ## Backend
 
-| Plugin | Tier | Globs (summary) | Responsibility |
-| --- | --- | --- | --- |
-| `backend-node` | Default Off | `**/*.{ts,js,mjs,cjs}` in server paths | Node/TS service discipline |
-| `backend-python` | Default Off | `**/*.py` | Python service discipline |
-| `backend-java` | Default Off | `**/*.java` | Java service discipline |
-| `backend-go` | Default Off | `**/*.go` | Go service discipline |
+| Plugin | Tier | Globs (summary) | Skill | Responsibility |
+| --- | --- | --- | --- | --- |
+| `backend-node` | Default Off | `**/*.{ts,js,mjs,cjs}` in server paths | `node-service-review` | Node/TS service discipline |
+| `backend-python` | Default Off | `**/*.py` | `python-service-review` | Python service discipline |
+| `backend-java` | Default Off | `**/*.java` | `java-service-review` | Java service discipline |
+| `backend-go` | Default Off | `**/*.go` | `go-service-review` | Go service discipline |
 
 **Non-goals:** One plugin per language, not per framework variant. Deep framework playbooks belong in skills (future).
 
 ## Frontend
 
-| Plugin | Tier | Globs (summary) | Responsibility |
-| --- | --- | --- | --- |
-| `frontend-react` | Default Off | `**/*.{tsx,jsx}` | React component and hook discipline |
-| `frontend-htmlcss` | Default Off | `**/*.{html,css,scss}` | Markup, a11y, design tokens; skill `markup-review` |
-| `frontend-javascript` | Default Off | `**/*.{js,ts,mjs,cjs}` (client) | Typed client boundaries |
-| `frontend-angular` | Default Off | `**/*.{ts,html}` in Angular trees | Angular component discipline |
-| `frontend-vue` | Default Off | `**/*.vue` | Vue SFC discipline |
+| Plugin | Tier | Globs (summary) | Skill | Responsibility |
+| --- | --- | --- | --- | --- |
+| `frontend-react` | Default Off | `**/*.{tsx,jsx}` | `react-review` | React component and hook discipline |
+| `frontend-htmlcss` | Default Off | `**/*.{html,css,scss}` | `markup-review` | Markup, a11y, design tokens |
+| `frontend-javascript` | Default Off | `**/*.{js,ts,mjs,cjs}` (client) | `js-client-review` | Typed client boundaries |
+| `frontend-angular` | Default Off | `**/*.{ts,html}` in Angular trees | `angular-review` | Angular component discipline |
+| `frontend-vue` | Default Off | `**/*.vue` | `vue-review` | Vue SFC discipline |
 
 **Non-goals:** Replacing your design system. Core Web Vitals deep dives (future skill).
 
@@ -75,7 +75,7 @@ skills-only patterns.
 | Plugin | Tier | Responsibility | Rules | Skills | Hooks |
 | --- | --- | --- | ---: | ---: | ---: |
 | `cloud-aws` | Default Off | AWS, Terraform, CloudFormation safety and reviews | 4 | 4 | 2 |
-| `platform-docker` | Default Off | Dockerfile and Compose safety | 1 | — | — |
+| `platform-docker` | Default Off | Dockerfile and Compose safety | 1 | 1 (`docker-review`) | — |
 | `platform-kubernetes` | Default Off | K8s/Helm workload safety | 1 | 1 (`k8s-manifest-review`) | 1 |
 
 **`cloud-aws` skills:** `aws-review`, `infrastructure-review`, `deployment-check`, `aws-cost-review`.

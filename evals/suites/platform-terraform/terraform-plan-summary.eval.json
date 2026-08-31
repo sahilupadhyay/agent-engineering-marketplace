@@ -1,0 +1,15 @@
+{
+  "id": "terraform-plan-summary",
+  "plugin": "platform-terraform",
+  "claim": "terraform-plan-summary content check.",
+  "activation": "unknown",
+  "target": {
+    "file": "skills/terraform-review/SKILL.md",
+    "section": "body"
+  },
+  "assert": {
+    "type": "regex",
+    "pattern": "Plan",
+    "flags": "i"
+  }
+}
